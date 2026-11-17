@@ -1,0 +1,28 @@
+{
+  "run": "tum_fr3_s1",
+  "params": {
+    "track_high_thresh": 0.2411,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.2411,
+    "track_buffer": 60,
+    "match_thresh": 0.9,
+    "fuse_score": true,
+    "class_aware": true
+  },
+  "tracker_update_ms": {
+    "passes": 5,
+    "median": 2.599,
+    "p95": 4.603,
+    "per_pass_median": [
+      2.995,
+      2.395,
+      2.483,
+      2.743,
+      2.599
+    ],
+    "target_ms": 2.0,
+    "meets_target": false
+  },
+  "note": "fresh process, tracker only, no image or depth work before or between passes",
+  "created_utc": "2026-11-11T07:39:13+00:00"
+}

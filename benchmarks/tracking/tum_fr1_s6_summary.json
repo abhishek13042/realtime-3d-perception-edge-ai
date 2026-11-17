@@ -1,0 +1,62 @@
+{
+  "run": "tum_fr1_s6",
+  "file": "tum_fr1_s6.jsonl",
+  "sequence": "rgbd_dataset_freiburg1_desk",
+  "stride": 6,
+  "params": {
+    "track_high_thresh": 0.2411,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.2411,
+    "track_buffer": 15,
+    "match_thresh": 0.7,
+    "fuse_score": true,
+    "class_aware": true
+  },
+  "n_processed_frames": 96,
+  "n_tracks": 48,
+  "n_confirmed_tracks": 18,
+  "min_track_len": 3,
+  "n_tracked_boxes": 125,
+  "status_counts": {
+    "valid": 99,
+    "low_coverage": 25,
+    "no_depth": 1
+  },
+  "frames_without_tracks": 29,
+  "tracker_update_ms_in_run": {
+    "n": 86,
+    "median": 2.914,
+    "p95": 5.516,
+    "mean": 3.123,
+    "min": 1.044,
+    "max": 7.779
+  },
+  "tracker_update_ms": {
+    "passes": 3,
+    "median": 2.778,
+    "p95": 4.58,
+    "per_pass_median": [
+      2.724,
+      2.778,
+      3.377
+    ],
+    "target_ms": 2.0,
+    "meets_target": false
+  },
+  "tracker_update_note": "Tracker.update only (2D association), excluding frame loading, depth and 3D. R8 figure = tracker_update_ms: tracker-only passes, median of the per-pass medians. _in_run is interleaved with image decoding and depth work (cache effects).",
+  "depth_3d_total_ms": 1911.6,
+  "created_utc": "2026-11-11T07:35:12+00:00",
+  "git_commit": null,
+  "git_dirty": true,
+  "determinism": {
+    "identical": true,
+    "file_roundtrip_identical": true
+  },
+  "spot_check_3d": {
+    "frames": 20,
+    "boxes": 35,
+    "max_abs_diff_m": 4.988091323321342e-07,
+    "mismatches": 0,
+    "pass": true
+  }
+}

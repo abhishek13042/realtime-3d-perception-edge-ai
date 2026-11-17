@@ -1,0 +1,48 @@
+# Manual object inventory for the TUM tracking evaluation (spec 04.2 R1).
+#
+# Method: I counted the distinct physical objects per class by eye from contact sheets of every 30th frame
+# (benchmarks/tracking/contact/*.jpg, scripts/make_contact_sheets.py), with operational detections
+# (conf >= 0.2411) drawn as a guide. Counted 2026-11-11, before any 04.2 tracking metric was computed.
+#
+# This is a MANUAL COUNT with its own uncertainty (`range`). It is pseudo ground truth for the fragmentation
+# proxy only (confirmed tracks per object). It is never used to tune anything except that proxy on fr1.
+# Only classes the detector reports on >= 50 frames (benchmarks/detection/tum_presence.json) are counted, and only
+# where the class corresponds to real objects. A class the detector uses for a different object is listed under
+# `not_counted` and is left out of the fragmentation proxy (it still counts in stability and jumps).
+# Movable classes (configs/tracker.yaml excluded_static_classes, e.g. person) are not counted.
+
+rgbd_dataset_freiburg1_desk:
+  frames_inspected: 20          # #0..#570 step 30
+  counts:
+    tv:       {n: 4, range: [3, 5], note: "monitors on the two facing desks; the far ones are partly visible"}
+    keyboard: {n: 3, range: [2, 4], note: "desktop keyboards; the laptop's own keyboard is also detected as keyboard (not counted)"}
+    laptop:   {n: 2, range: [1, 2], note: "black ThinkPad plus a second laptop at the back; monitors are often also labelled laptop"}
+    mouse:    {n: 2, range: [1, 3]}
+    book:     {n: 4, range: [3, 5], note: "two blue books, the OpenCV book, one photo book"}
+    chair:    {n: 2, range: [1, 3], note: "chairs behind the desks, mostly cut off at the image edge"}
+    cup:      {n: 1, range: [1, 2], note: "pen holder / mug on the desk"}
+  not_counted:
+    remote: "the gamepad is detected as remote; a single object, under 50 frames"
+    cell phone: "under 50 frames"
+    dining table: "under 50 frames"
+
+rgbd_dataset_freiburg3_long_office_household:
+  frames_inspected: 83          # #0..#2460 step 30
+  counts:
+    chair:        {n: 6, range: [5, 7], note: "purple and yellow chairs at the front desk, dark and yellow chairs at the back desk, the teddy's chair, one spare"}
+    bottle:       {n: 12, range: [9, 15], note: "4 large bottles on the partition, small bottles at the back of the front desk, 1-2 on the back desk; least certain count"}
+    book:         {n: 8, range: [6, 10], note: "striped book, Katalog magazine, stacked blue and red books on the back desk, books on the cabinet"}
+    tv:           {n: 4, range: [3, 5], note: "monitors on the back desk"}
+    keyboard:     {n: 3, range: [2, 4]}
+    cup:          {n: 3, range: [2, 4], note: "blue mug and white cups on the front desk"}
+    mouse:        {n: 3, range: [2, 3]}
+    teddy bear:   {n: 1, range: [1, 1], note: "static on a chair; not excluded"}
+    bowl:         {n: 2, range: [1, 3], note: "plates/bowls on the front desk"}
+    dining table: {n: 2, range: [2, 3], note: "front and back desks"}
+  not_counted:
+    cell phone: "small dark object/stapler; class unreliable"
+    scissors: "one pair, often missed; detector label unstable"
+    spoon: "cutlery, unreliable"
+    refrigerator: "the white cabinet; a misclassification"
+    apple: "the rubber duck; a misclassification"
+    cat: "excluded movable class (detector fires on the teddy)"

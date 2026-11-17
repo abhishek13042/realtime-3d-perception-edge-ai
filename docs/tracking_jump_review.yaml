@@ -1,0 +1,21 @@
+# By-eye review of the 8 largest jumps per stride on fr3 (spec 04.2 AC3).
+# Key: "s<stride>:<track_id>:<frame_a>" (frame_a = processed frame index, from eval_fr3_report.json largest_jumps).
+# Categories: switch | depth outlier | pose/time. Reviewed 2026-11-11 from benchmarks/tracking/jump_gallery_fr3_s{1,6}.jpg.
+
+"s1:1518:2377": {category: depth outlier, note: "same chair; seat truncated at the bottom image edge, box region hits floor/background"}
+"s1:1518:2153": {category: depth outlier, note: "same chair as above, same truncation at the bottom edge"}
+"s1:165:356": {category: depth outlier, note: "thin chair back at the right image edge; box region alternates chair and background"}
+"s1:165:355": {category: depth outlier, note: "same as 165 above"}
+"s1:165:327": {category: depth outlier, note: "same as 165 above"}
+"s1:165:325": {category: depth outlier, note: "same as 165 above"}
+"s1:165:328": {category: depth outlier, note: "same as 165 above"}
+"s1:35:300": {category: depth outlier, note: "thin bottle; background bleed into the depth sample"}
+
+"s6:1268:354": {category: depth outlier, note: "same chair; seat truncated at the bottom edge"}
+"s6:322:155": {category: switch, note: "likely: a different monitor after a gap and a camera turn"}
+"s6:1268:352": {category: depth outlier, note: "same chair, bottom-edge truncation"}
+"s6:88:35": {category: switch, note: "green bottle -> adjacent clear bottle"}
+"s6:1244:396": {category: depth outlier, note: "same chair, bottom-edge truncation"}
+"s6:1268:356": {category: depth outlier, note: "same chair, bottom-edge truncation"}
+"s6:1244:346": {category: depth outlier, note: "same chair after a gap, bottom-edge truncation"}
+"s6:108:30": {category: switch, note: "small desk bottle -> green bottle on the partition, after a 15-processed-frame gap"}

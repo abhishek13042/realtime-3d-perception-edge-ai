@@ -1,0 +1,58 @@
+{
+  "frame": "SUN 009543 (xtion)",
+  "run": "sun_val_full.jsonl",
+  "conf_operational": 0.2411,
+  "n_cloud_points": 99795,
+  "voxel_m": 0.01,
+  "open3d_png": true,
+  "gt_boxes": [
+    "sofa_chair",
+    "sofa_chair",
+    "fire_place",
+    "tv"
+  ],
+  "objects": [
+    {
+      "det": "chair 0.60",
+      "status": "valid",
+      "z_m": 1.91,
+      "centre_cam_m": [
+        0.524,
+        0.35,
+        1.872
+      ],
+      "nearest_gt": "sofa_chair",
+      "dist_to_gt_box_m": 0.0
+    },
+    {
+      "det": "tv 0.53",
+      "status": "low_coverage",
+      "z_m": 3.291,
+      "centre_cam_m": [
+        -0.305,
+        -1.084,
+        3.29
+      ],
+      "nearest_gt": "tv",
+      "dist_to_gt_box_m": 0.104
+    },
+    {
+      "det": "tv 0.35",
+      "status": "no_depth",
+      "z_m": null,
+      "centre_cam_m": null
+    },
+    {
+      "det": "couch 0.26",
+      "status": "valid",
+      "z_m": 1.412,
+      "centre_cam_m": [
+        -0.478,
+        0.311,
+        1.454
+      ],
+      "nearest_gt": "sofa_chair",
+      "dist_to_gt_box_m": 0.01
+    }
+  ]
+}

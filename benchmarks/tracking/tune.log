@@ -1,0 +1,40 @@
+s1 buf=15 match=0.7 ca=True   frag=6.833  jumps/100=0.000  stab_med=0.0199  rec=0.438
+s1 buf=15 match=0.7 ca=False  frag=6.667  jumps/100=0.000  stab_med=0.0215  rec=0.417
+s1 buf=15 match=0.8 ca=True   frag=6.556  jumps/100=0.000  stab_med=0.0226  rec=0.41
+s1 buf=15 match=0.8 ca=False  frag=5.556  jumps/100=0.057  stab_med=0.0261  rec=0.396
+s1 buf=15 match=0.9 ca=True   frag=4.833  jumps/100=0.000  stab_med=0.0322  rec=0.591
+s1 buf=15 match=0.9 ca=False  frag=3.722  jumps/100=0.145  stab_med=0.0369  rec=0.613
+s1 buf=30 match=0.7 ca=True   frag=6.833  jumps/100=0.000  stab_med=0.0199  rec=0.441
+s1 buf=30 match=0.7 ca=False  frag=6.667  jumps/100=0.000  stab_med=0.0215  rec=0.431
+s1 buf=30 match=0.8 ca=True   frag=6.500  jumps/100=0.117  stab_med=0.0226  rec=0.423
+s1 buf=30 match=0.8 ca=False  frag=5.444  jumps/100=0.113  stab_med=0.0268  rec=0.422
+s1 buf=30 match=0.9 ca=True   frag=4.778  jumps/100=0.050  stab_med=0.0323  rec=0.605
+s1 buf=30 match=0.9 ca=False  frag=3.611  jumps/100=0.191  stab_med=0.0391  rec=0.638
+s1 buf=60 match=0.7 ca=True   frag=6.889  jumps/100=0.000  stab_med=0.0208  rec=0.45
+s1 buf=60 match=0.7 ca=False  frag=6.722  jumps/100=0.151  stab_med=0.0236  rec=0.446
+s1 buf=60 match=0.8 ca=True   frag=6.389  jumps/100=0.116  stab_med=0.0231  rec=0.446
+s1 buf=60 match=0.8 ca=False  frag=5.389  jumps/100=0.112  stab_med=0.0268  rec=0.44
+s1 buf=60 match=0.9 ca=True   frag=4.722  jumps/100=0.100  stab_med=0.0323  rec=0.615
+s1 buf=60 match=0.9 ca=False  frag=3.500  jumps/100=0.238  stab_med=0.0413  rec=0.665
+stride 1: chosen {'track_buffer': 60, 'match_thresh': 0.9, 'class_aware': True} — fragmentation 6.500 -> 4.722 (>= 0.05 better) with jump rate 0.100 <= reference 0.117 per 100 valid track-frames
+s6 buf=15 match=0.7 ca=True   frag=1.000  jumps/100=0.000  stab_med=0.0404  rec=0.211
+s6 buf=15 match=0.7 ca=False  frag=1.222  jumps/100=3.175  stab_med=0.1724  rec=0.385
+s6 buf=15 match=0.8 ca=True   frag=1.222  jumps/100=0.000  stab_med=0.0355  rec=0.296
+s6 buf=15 match=0.8 ca=False  frag=1.278  jumps/100=3.922  stab_med=0.2706  rec=0.455
+s6 buf=15 match=0.9 ca=True   frag=1.222  jumps/100=0.000  stab_med=0.0391  rec=0.441
+s6 buf=15 match=0.9 ca=False  frag=1.278  jumps/100=4.636  stab_med=0.3029  rec=0.61
+s6 buf=30 match=0.7 ca=True   frag=1.056  jumps/100=0.000  stab_med=0.0404  rec=0.385
+s6 buf=30 match=0.7 ca=False  frag=1.278  jumps/100=3.077  stab_med=0.1724  rec=0.524
+s6 buf=30 match=0.8 ca=True   frag=1.278  jumps/100=1.190  stab_med=0.0355  rec=0.542
+s6 buf=30 match=0.8 ca=False  frag=1.278  jumps/100=2.804  stab_med=0.2706  rec=0.643
+s6 buf=30 match=0.9 ca=True   frag=1.222  jumps/100=0.862  stab_med=0.0391  rec=0.607
+s6 buf=30 match=0.9 ca=False  frag=1.278  jumps/100=3.846  stab_med=0.2855  rec=0.725
+s6 buf=60 match=0.7 ca=True   frag=1.056  jumps/100=0.000  stab_med=0.0404  rec=0.556
+s6 buf=60 match=0.7 ca=False  frag=1.278  jumps/100=3.077  stab_med=0.1724  rec=0.688
+s6 buf=60 match=0.8 ca=True   frag=1.278  jumps/100=1.190  stab_med=0.0355  rec=0.684
+s6 buf=60 match=0.8 ca=False  frag=1.389  jumps/100=4.505  stab_med=0.2706  rec=0.778
+s6 buf=60 match=0.9 ca=True   frag=1.222  jumps/100=0.862  stab_med=0.0391  rec=0.739
+s6 buf=60 match=0.9 ca=False  frag=1.278  jumps/100=3.846  stab_med=0.2855  rec=0.806
+stride 6: chosen {'track_buffer': 15, 'match_thresh': 0.7, 'class_aware': True} — fragmentation 1.278 -> 1.000 (>= 0.05 better) with jump rate 0.000 <= reference 1.190 per 100 valid track-frames
+wrote D:\Project 5 CV\benchmarks\tracking\eval_fr1_tune.json and per_stride in D:\Project 5 CV\configs\tracker.yaml
+EXIT 0

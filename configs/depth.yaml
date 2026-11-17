@@ -1,0 +1,17 @@
+# Depth association and object geometry (specs 03.1, 03.2). Values chosen by spec 03.3 on SUN RGB-D val (scripts/tune_depth.py; benchmarks/geometry/tune_val.json). Oracle median 3D centre error 28.4 cm at valid fraction 0.82 (R5 iteration 2, at the iteration-1 R6 thresholds).
+# Frozen for Phase 05; do not tune on test.
+
+association:
+  shrink: 0.7            # box shrink factor about its centre (width and height both x shrink)
+  estimator: A           # A = median of valid depths; B = nearest significant histogram mode
+  bin_m: 0.05            # estimator B histogram bin width (m); unused by A
+  m_frac: 0.15           # estimator B: significant-bin fraction; unused by A
+
+status:
+  n_min: 20              # fewer valid pixels -> no_depth
+  tau_cov: 0.3            # valid fraction below this -> low_coverage
+  tau_spread_m: 0.5       # spread (1.4826 * MAD) above this -> low_coverage
+
+centre:
+  k: 3.0                 # inlier band: |z - estimate| <= k * max(spread, sigma_floor)
+  sigma_floor_m: 0.02    # floor on the band width (m); fixed, not tuned

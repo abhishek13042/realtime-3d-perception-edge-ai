@@ -1,0 +1,60 @@
+# By-eye review of the spec 03.3 worst-12 gallery (benchmarks/geometry/depth_tuning_worst12.png), 2026-11-10.
+# Keys come from tune_val.json worst12[].key. scripts/tune_depth.py copies these into docs/depth_tuning.md.
+"005676:chair:622_95":
+  category: occluder in box
+  note: near chair fills the sampling region; GT chair is 4.5 m behind it; weak link (IoU 0.18)
+"008249:chair:285_138":
+  category: background bleed + missing depth
+  note: dark chair under a desk has holes; region reads the wall behind; weak link (IoU 0.10)
+"008180:chair:141_116":
+  category: background bleed (thin structure)
+  note: chair back is thin; region sees the wall behind; weak link (IoU 0.19)
+"008210:chair:190_174":
+  category: occluder in box
+  note: round table in front covers most of the chair box
+"009418:chair:0_76":
+  category: background bleed + missing depth
+  note: truncated dark chair at the image edge; region reads the wall; weak link (IoU 0.15)
+"005420:table:440_0":
+  category: background bleed (thin structure)
+  note: see-through table frame and stool; region reads the floor/wall behind
+"005064:table:324_63":
+  category: GT box issue
+  note: visible table at ~1.5 m, linked 3D box (IoU 0.85) placed at 3.7 m
+"008165:chair:0_239":
+  category: background bleed + missing depth
+  note: dark truncated chair with depth holes; region reads the wall
+"008249:chair:515_144":
+  category: background bleed + missing depth
+  note: same scene as 008249 above; chair under desk, weak link (IoU 0.13)
+"008161:table:391_189":
+  category: occluder in box
+  note: office chair in front of the table fills the region
+"006080:bed:459_136":
+  category: GT box issue or link mismatch
+  note: two beds; estimate on the near bed, GT centre 1.1 m to the side and 1.7 m deeper
+"005121:bed:489_317":
+  category: GT box issue or link mismatch
+  note: two beds; estimate 1.2 m off laterally (also seen in the smoke run)
+# Added 2026-11-11 after the R5 second iteration (shrink 0.7) changed the worst-12 set.
+"009329:chair:122_202":
+  category: background bleed + link mismatch
+  note: open chair back; region reads the wall behind; link IoU 0.02, so the 3D box is likely another chair
+"007733:chair:343_181":
+  category: occluder in box
+  note: a nearer dark chair covers the region; GT chair is 1.9 m deeper
+"007135:table:74_295":
+  category: occluder in box
+  note: chair in front of the table fills the region
+"007427:chair:246_195":
+  category: background bleed (thin structure)
+  note: tall open-back chair; region reads the wall behind (link IoU 0.84)
+"005162:sofa:397_235":
+  category: GT box issue
+  note: store scene; sofa face visible at ~1.2 m, linked 3D box centred at 3.05 m
+"007135:chair:21_243":
+  category: occluder in box
+  note: narrow truncated chair; a nearer chair fills the region
+"008574:sofa:283_139":
+  category: background bleed
+  note: blurry frame, sofa back low in box; region reads the wall; weak link (IoU 0.19)

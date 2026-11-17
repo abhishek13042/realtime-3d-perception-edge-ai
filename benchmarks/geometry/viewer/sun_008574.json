@@ -1,0 +1,52 @@
+{
+  "frame": "SUN 008574 (xtion)",
+  "run": "sun_val_full.jsonl",
+  "conf_operational": 0.2411,
+  "n_cloud_points": 81955,
+  "voxel_m": 0.01,
+  "open3d_png": true,
+  "gt_boxes": [
+    "desk",
+    "chair",
+    "laptop",
+    "plant",
+    "cubby",
+    "drawer",
+    "tv",
+    "plant",
+    "toy",
+    "sofa"
+  ],
+  "objects": [
+    {
+      "det": "chair 0.73",
+      "status": "low_coverage",
+      "z_m": 2.913,
+      "centre_cam_m": [
+        -0.299,
+        0.5,
+        2.898
+      ],
+      "nearest_gt": "desk",
+      "dist_to_gt_box_m": 0.0
+    },
+    {
+      "det": "tv 0.45",
+      "status": "no_depth",
+      "z_m": null,
+      "centre_cam_m": null
+    },
+    {
+      "det": "tv 0.30",
+      "status": "valid",
+      "z_m": 4.977,
+      "centre_cam_m": [
+        -1.933,
+        -0.728,
+        4.977
+      ],
+      "nearest_gt": "drawer",
+      "dist_to_gt_box_m": 0.202
+    }
+  ]
+}

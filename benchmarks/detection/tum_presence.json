@@ -1,0 +1,191 @@
+{
+  "conf_operational": 0.2411,
+  "sequences": {
+    "rgbd_dataset_freiburg1_desk": {
+      "n_frames": 573,
+      "frames_with_detection": 572,
+      "share_with_detection": 0.9983,
+      "per_class": {
+        "keyboard": {
+          "frames": 354,
+          "detections": 401
+        },
+        "book": {
+          "frames": 350,
+          "detections": 637
+        },
+        "tv": {
+          "frames": 291,
+          "detections": 530
+        },
+        "laptop": {
+          "frames": 287,
+          "detections": 436
+        },
+        "mouse": {
+          "frames": 278,
+          "detections": 353
+        },
+        "chair": {
+          "frames": 187,
+          "detections": 232
+        },
+        "cup": {
+          "frames": 60,
+          "detections": 60
+        },
+        "remote": {
+          "frames": 25,
+          "detections": 25
+        },
+        "cell phone": {
+          "frames": 12,
+          "detections": 12
+        },
+        "dining table": {
+          "frames": 5,
+          "detections": 6
+        },
+        "person": {
+          "frames": 2,
+          "detections": 2
+        },
+        "backpack": {
+          "frames": 1,
+          "detections": 1
+        },
+        "teddy bear": {
+          "frames": 1,
+          "detections": 1
+        },
+        "handbag": {
+          "frames": 1,
+          "detections": 1
+        },
+        "couch": {
+          "frames": 1,
+          "detections": 1
+        }
+      }
+    },
+    "rgbd_dataset_freiburg3_long_office_household": {
+      "n_frames": 2485,
+      "frames_with_detection": 2484,
+      "share_with_detection": 0.9996,
+      "per_class": {
+        "chair": {
+          "frames": 1720,
+          "detections": 2747
+        },
+        "bottle": {
+          "frames": 1625,
+          "detections": 6277
+        },
+        "book": {
+          "frames": 1400,
+          "detections": 2207
+        },
+        "tv": {
+          "frames": 904,
+          "detections": 1506
+        },
+        "keyboard": {
+          "frames": 810,
+          "detections": 1174
+        },
+        "cup": {
+          "frames": 755,
+          "detections": 1057
+        },
+        "mouse": {
+          "frames": 733,
+          "detections": 1100
+        },
+        "teddy bear": {
+          "frames": 409,
+          "detections": 414
+        },
+        "person": {
+          "frames": 379,
+          "detections": 394
+        },
+        "bowl": {
+          "frames": 209,
+          "detections": 223
+        },
+        "dining table": {
+          "frames": 173,
+          "detections": 178
+        },
+        "cell phone": {
+          "frames": 127,
+          "detections": 130
+        },
+        "scissors": {
+          "frames": 108,
+          "detections": 110
+        },
+        "spoon": {
+          "frames": 86,
+          "detections": 91
+        },
+        "refrigerator": {
+          "frames": 83,
+          "detections": 85
+        },
+        "cat": {
+          "frames": 80,
+          "detections": 81
+        },
+        "apple": {
+          "frames": 52,
+          "detections": 52
+        },
+        "knife": {
+          "frames": 30,
+          "detections": 34
+        },
+        "sports ball": {
+          "frames": 22,
+          "detections": 22
+        },
+        "laptop": {
+          "frames": 22,
+          "detections": 22
+        },
+        "remote": {
+          "frames": 20,
+          "detections": 20
+        },
+        "fork": {
+          "frames": 14,
+          "detections": 14
+        },
+        "dog": {
+          "frames": 13,
+          "detections": 13
+        },
+        "banana": {
+          "frames": 9,
+          "detections": 9
+        },
+        "donut": {
+          "frames": 8,
+          "detections": 8
+        },
+        "cake": {
+          "frames": 3,
+          "detections": 3
+        },
+        "handbag": {
+          "frames": 1,
+          "detections": 1
+        },
+        "sink": {
+          "frames": 1,
+          "detections": 1
+        }
+      }
+    }
+  }
+}

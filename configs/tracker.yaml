@@ -1,0 +1,25 @@
+# Tracker configuration (spec 04.1 R3). All tracking thresholds live here.
+# Starting values are the Ultralytics 8.4.208 bytetrack.yaml defaults, except track_high_thresh = new_track_thresh =
+# conf_operational (0.2411, chosen on SUN val in spec 02.3), so the operating point is not tuned again here.
+# track_buffer, match_thresh and class_aware are tuned per stride on fr1_desk only by spec 04.2 R3 (per_stride below).
+
+bytetrack:
+  track_high_thresh: 0.2411   # first-stage association threshold (= detector conf_operational)
+  track_low_thresh: 0.1       # second-stage (low-score) association lower bound; below this a detection is ignored
+  new_track_thresh: 0.2411    # an unmatched detection at or above this starts a new track
+  track_buffer: 30            # lost tracks are kept this many PROCESSED frames (stride-dependent; see per_stride)
+  match_thresh: 0.8           # first-stage assignment cost threshold (1 - IoU, score-fused)
+  fuse_score: true            # fuse detection score into the IoU cost
+
+class_aware: true             # one tracker per class, IDs unique across classes (spec 04.1 R2); false = class-agnostic
+
+# Per-stride overrides, FROZEN 2026-11-11 by spec 04.2 R3 tuning on fr1_desk only (benchmarks/tracking/eval_fr1_tune.json).
+# Do not edit by hand; any change after the fr3 report must be logged in PROGRESS.md and the report re-run (R7).
+per_stride:
+  1: {track_buffer: 60, match_thresh: 0.9, class_aware: true}
+  6: {track_buffer: 15, match_thresh: 0.7, class_aware: true}
+
+min_track_len: 3              # processed frames with a matched detection before a track counts as confirmed (04.2 metrics)
+
+# Classes that can move; excluded from the world-frame (static-object) metrics of spec 04.2. Tracked normally.
+excluded_static_classes: [person, cat, dog, bird, horse, sheep, cow, sports ball, frisbee, kite]

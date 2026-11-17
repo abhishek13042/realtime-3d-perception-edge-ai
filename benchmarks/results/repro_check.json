@@ -1,0 +1,249 @@
+{
+  "spec": "05.4 R3",
+  "label": "Measured: from-scratch re-runs vs the reported values",
+  "tolerances": {
+    "sun_test_200": {
+      "kind": "abs",
+      "tol": 1e-09,
+      "unit": "m",
+      "what": "per-object 3D centre error, 05.2"
+    },
+    "fr3_s1_metrics": {
+      "kind": "exact",
+      "tol": 0.0,
+      "unit": null,
+      "what": "04.2 fr3 stride-1 metrics"
+    },
+    "detection_map": {
+      "kind": "abs",
+      "tol": 0.001,
+      "unit": "mAP",
+      "what": "02.3 SUN test mAP@[.5:.95]"
+    },
+    "pipeline_median": {
+      "kind": "rel",
+      "tol": 0.15,
+      "unit": "ms",
+      "what": "05.3 pipeline median per list"
+    }
+  },
+  "items": {
+    "sun_test_200": {
+      "item": "sun_test_200",
+      "what": "per-object 3D centre error, 05.2",
+      "tolerance": {
+        "kind": "abs",
+        "tol": 1e-09,
+        "unit": "m"
+      },
+      "n_reported": 925,
+      "n_rerun": 925,
+      "max_abs_diff": 0.0,
+      "nan_mismatch": 0,
+      "pass": true,
+      "n_images": 200,
+      "images_with_objects": 198,
+      "rows_identical": true,
+      "statuses_identical": true,
+      "output_boxes_identical": true,
+      "seconds": 5.3,
+      "reported_file": "benchmarks/results/localization_sun_test_objects.npz",
+      "reported_sha256": "05119265ce85ec8bb4296d731ed54c697a0e10e8cab5809955f58bc74ba2777b",
+      "created_utc": "2026-11-11T08:25:07+00:00",
+      "wall_s": 11.6
+    },
+    "fr3_s1_metrics": {
+      "item": "fr3_s1_metrics",
+      "what": "04.2 fr3 stride-1 metrics",
+      "tolerance": {
+        "kind": "exact",
+        "tol": 0.0,
+        "unit": null
+      },
+      "differences": [],
+      "pass": true,
+      "n_frames": 2485,
+      "seconds": 68.8,
+      "reported_file": "benchmarks/tracking/eval_fr3_report.json",
+      "reported_sha256": "f17bbf8425340eec908e86eaf05ad4b9296c04c04b3e7022954fad953b028b14",
+      "detections": "benchmarks/detection/tum_fr3_long_office_full.jsonl",
+      "created_utc": "2026-11-11T08:26:19+00:00",
+      "wall_s": 72.3
+    },
+    "detection_map": {
+      "item": "detection_map",
+      "what": "02.3 SUN test mAP@[.5:.95]",
+      "tolerance": {
+        "kind": "abs",
+        "tol": 0.001,
+        "unit": "mAP"
+      },
+      "reported": 0.22791,
+      "rerun": 0.22791,
+      "diff": 0.0,
+      "rel_diff": 0.0,
+      "pass": true,
+      "AP50": {
+        "reported": 0.32217,
+        "rerun": 0.32217
+      },
+      "run_settings_match": {
+        "weights_sha256": true,
+        "head": true,
+        "imgsz": true,
+        "conf": true
+      },
+      "n_images": 5050,
+      "detector_seconds": 1069.4,
+      "rerun_file": "benchmarks/detection/repro_sun_test_full.jsonl",
+      "reported_file": "benchmarks/detection/eval_baseline.json",
+      "reported_sha256": "5688d6648c4d454b70ed833721237d1e1a30a33fe9ca10f150ca6212e02dd799",
+      "created_utc": "2026-11-11T08:47:04+00:00",
+      "wall_s": 1236.5
+    },
+    "pipeline_median": {
+      "item": "pipeline_median",
+      "what": "05.3 pipeline median per list",
+      "tolerance": {
+        "kind": "rel",
+        "tol": 0.15,
+        "unit": "ms"
+      },
+      "per_list": {
+        "tum_fr1_desk_200": {
+          "item": "pipeline_median",
+          "what": "05.3 pipeline median per list",
+          "tolerance": {
+            "kind": "rel",
+            "tol": 0.15,
+            "unit": "ms"
+          },
+          "reported": 119.445,
+          "rerun": 156.94459999212995,
+          "diff": 37.49959999212996,
+          "rel_diff": 0.31394867924257996,
+          "pass": false
+        },
+        "tum_fr3_long_office_200": {
+          "item": "pipeline_median",
+          "what": "05.3 pipeline median per list",
+          "tolerance": {
+            "kind": "rel",
+            "tol": 0.15,
+            "unit": "ms"
+          },
+          "reported": 121.946,
+          "rerun": 167.61795000638813,
+          "diff": 45.67195000638813,
+          "rel_diff": 0.3745260197660287,
+          "pass": false
+        },
+        "sunrgbd_test_200": {
+          "item": "pipeline_median",
+          "what": "05.3 pipeline median per list",
+          "tolerance": {
+            "kind": "rel",
+            "tol": 0.15,
+            "unit": "ms"
+          },
+          "reported": 125.586,
+          "rerun": 134.5189000130631,
+          "diff": 8.932900013063104,
+          "rel_diff": 0.07112974386526448,
+          "pass": true
+        }
+      },
+      "machine_state": {
+        "heavy_processes": [],
+        "cpu_percent_3s": 20.0,
+        "idle": true
+      },
+      "reported_under_load": false,
+      "reported_file": "benchmarks/results/pipeline_profile.json",
+      "reported_sha256": "08edf8bc19c39575384a10ec5f1789608909f2070b4ec5abcddc11173d154192",
+      "pass": false,
+      "created_utc": "2026-11-11T09:27:23+00:00",
+      "wall_s": 153.4
+    }
+  },
+  "all_pass": false,
+  "header": {
+    "git_commit": null,
+    "git_dirty": true,
+    "created_utc": "2026-11-11T09:27:24+00:00",
+    "config_sha256": {
+      "depth": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+      "tracker": "8832026648357df7e38285345124f605ee44e4080a1fb287cefaa8ae3b59e818",
+      "detector": "05c49ce46d9f16153d678b3650c42f6cf36d6429ac4a148bad57c4c579b4e09f",
+      "class_map": "2900a9d8a812d2e044f4c4ab46b6839c2267795c69aa504430bde219dec0ef4b"
+    }
+  },
+  "history": {
+    "pipeline_median": [
+      {
+        "item": "pipeline_median",
+        "what": "05.3 pipeline median per list",
+        "tolerance": {
+          "kind": "rel",
+          "tol": 0.15,
+          "unit": "ms"
+        },
+        "per_list": {
+          "tum_fr1_desk_200": {
+            "item": "pipeline_median",
+            "what": "05.3 pipeline median per list",
+            "tolerance": {
+              "kind": "rel",
+              "tol": 0.15,
+              "unit": "ms"
+            },
+            "reported": 119.445,
+            "rerun": 145.2321499818936,
+            "diff": 25.787149981893606,
+            "rel_diff": 0.2158914143069497,
+            "pass": false
+          },
+          "tum_fr3_long_office_200": {
+            "item": "pipeline_median",
+            "what": "05.3 pipeline median per list",
+            "tolerance": {
+              "kind": "rel",
+              "tol": 0.15,
+              "unit": "ms"
+            },
+            "reported": 121.946,
+            "rerun": 179.85035001765937,
+            "diff": 57.90435001765937,
+            "rel_diff": 0.4748359931253126,
+            "pass": false
+          },
+          "sunrgbd_test_200": {
+            "item": "pipeline_median",
+            "what": "05.3 pipeline median per list",
+            "tolerance": {
+              "kind": "rel",
+              "tol": 0.15,
+              "unit": "ms"
+            },
+            "reported": 125.586,
+            "rerun": 143.12150003388524,
+            "diff": 17.535500033885242,
+            "rel_diff": 0.13962941756155337,
+            "pass": true
+          }
+        },
+        "machine_state": {
+          "heavy_processes": [],
+          "cpu_percent_3s": 39.6,
+          "idle": false
+        },
+        "reported_under_load": false,
+        "reported_file": "benchmarks/results/pipeline_profile.json",
+        "reported_sha256": "08edf8bc19c39575384a10ec5f1789608909f2070b4ec5abcddc11173d154192",
+        "pass": false,
+        "created_utc": "2026-11-11T09:22:38+00:00",
+        "wall_s": 173.7
+      }
+    ]
+  }
+}

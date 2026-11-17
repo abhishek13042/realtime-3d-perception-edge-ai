@@ -1,0 +1,121 @@
+{
+  "frame": "TUM rgbd_dataset_freiburg3_long_office_household frame 1242 (t=1341848024.158762, undistort=off)",
+  "run": "tum_fr3_long_office_full.jsonl",
+  "conf_operational": 0.2411,
+  "n_cloud_points": 52963,
+  "voxel_m": 0.01,
+  "open3d_png": true,
+  "gt_boxes": [],
+  "objects": [
+    {
+      "det": "keyboard 0.92",
+      "status": "valid",
+      "z_m": 1.586,
+      "centre_cam_m": [
+        -0.27,
+        -0.108,
+        1.594
+      ]
+    },
+    {
+      "det": "tv 0.83",
+      "status": "valid",
+      "z_m": 1.557,
+      "centre_cam_m": [
+        -0.426,
+        -0.367,
+        1.586
+      ]
+    },
+    {
+      "det": "mouse 0.78",
+      "status": "valid",
+      "z_m": 1.536,
+      "centre_cam_m": [
+        0.078,
+        -0.096,
+        1.536
+      ]
+    },
+    {
+      "det": "tv 0.78",
+      "status": "valid",
+      "z_m": 1.915,
+      "centre_cam_m": [
+        0.506,
+        -0.675,
+        1.947
+      ]
+    },
+    {
+      "det": "keyboard 0.70",
+      "status": "valid",
+      "z_m": 1.853,
+      "centre_cam_m": [
+        0.707,
+        -0.308,
+        1.873
+      ]
+    },
+    {
+      "det": "chair 0.64",
+      "status": "valid",
+      "z_m": 2.028,
+      "centre_cam_m": [
+        1.0,
+        0.387,
+        2.04
+      ]
+    },
+    {
+      "det": "book 0.57",
+      "status": "valid",
+      "z_m": 1.632,
+      "centre_cam_m": [
+        0.351,
+        -0.221,
+        1.655
+      ]
+    },
+    {
+      "det": "chair 0.33",
+      "status": "valid",
+      "z_m": 0.761,
+      "centre_cam_m": [
+        -0.151,
+        0.254,
+        0.787
+      ]
+    },
+    {
+      "det": "tv 0.32",
+      "status": "valid",
+      "z_m": 1.529,
+      "centre_cam_m": [
+        -0.821,
+        -0.56,
+        1.529
+      ]
+    },
+    {
+      "det": "bottle 0.32",
+      "status": "valid",
+      "z_m": 2.053,
+      "centre_cam_m": [
+        0.888,
+        -0.53,
+        2.053
+      ]
+    },
+    {
+      "det": "chair 0.32",
+      "status": "valid",
+      "z_m": 0.752,
+      "centre_cam_m": [
+        -0.154,
+        0.199,
+        0.754
+      ]
+    }
+  ]
+}

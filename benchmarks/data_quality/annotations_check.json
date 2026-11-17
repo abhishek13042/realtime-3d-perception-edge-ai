@@ -1,0 +1,87 @@
+{
+ "images": 600,
+ "seed": 0,
+ "split": "test",
+ "transforms": {
+  "correct (unflip . Rtilt^T)": {
+   "boxes": 3843,
+   "median_abs_err_m": 0.19,
+   "median_z_extent_m": 0.97,
+   "frac_err_lt_extent": 0.925,
+   "pass": true
+  },
+  "control: unflip . Rtilt (tilt applied the wrong way)": {
+   "boxes": 1361,
+   "median_abs_err_m": 0.528,
+   "median_z_extent_m": 0.898,
+   "frac_err_lt_extent": 0.658,
+   "pass": true
+  },
+  "control: unflip only (tilt ignored)": {
+   "boxes": 3453,
+   "median_abs_err_m": 0.457,
+   "median_z_extent_m": 0.747,
+   "frac_err_lt_extent": 0.659,
+   "pass": true
+  },
+  "control: no axis swap (upright used as camera)": {
+   "boxes": 1,
+   "median_abs_err_m": 0.24,
+   "median_z_extent_m": 1.588,
+   "frac_err_lt_extent": 1.0,
+   "pass": true
+  }
+ },
+ "correct_by_sensor": {
+  "kv1": {
+   "boxes": 617,
+   "median_abs_err_m": 0.185,
+   "median_z_extent_m": 0.878,
+   "frac_err_lt_extent": 0.932,
+   "pass": true
+  },
+  "kv2": {
+   "boxes": 1727,
+   "median_abs_err_m": 0.216,
+   "median_z_extent_m": 1.004,
+   "frac_err_lt_extent": 0.906,
+   "pass": true
+  },
+  "realsense": {
+   "boxes": 365,
+   "median_abs_err_m": 0.216,
+   "median_z_extent_m": 1.059,
+   "frac_err_lt_extent": 0.926,
+   "pass": true
+  },
+  "xtion": {
+   "boxes": 1134,
+   "median_abs_err_m": 0.149,
+   "median_z_extent_m": 0.893,
+   "frac_err_lt_extent": 0.951,
+   "pass": true
+  }
+ },
+ "overlays": [
+  "sun_000162_kv2.png",
+  "sun_000453_kv2.png",
+  "sun_000779_kv2.png",
+  "sun_000786_kv2.png",
+  "sun_000990_kv2.png",
+  "sun_001083_kv2.png",
+  "sun_001119_kv2.png",
+  "sun_001312_kv2.png",
+  "sun_001564_kv2.png",
+  "sun_001700_kv2.png",
+  "sun_001747_kv2.png",
+  "sun_001935_kv1.png",
+  "sun_002839_xtion.png",
+  "sun_002866_xtion.png",
+  "sun_002945_xtion.png",
+  "sun_003095_xtion.png",
+  "sun_003125_xtion.png",
+  "sun_004429_xtion.png",
+  "sun_004442_xtion.png",
+  "sun_005004_realsense.png"
+ ]
+}

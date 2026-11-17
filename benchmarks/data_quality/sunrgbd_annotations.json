@@ -1,0 +1,686 @@
+{
+ "source": "SUNRGBDMeta3DBB_v2.mat, SUNRGBDMeta2DBB_v2.mat, allsplit.mat",
+ "val": {
+  "frac": 0.1,
+  "seed": 0,
+  "carved_from": "official alltrain",
+  "group": "sequenceName"
+ },
+ "n_images": 10335,
+ "official": {
+  "train": 5285,
+  "test": 5050,
+  "unassigned": 0
+ },
+ "splits": {
+  "train": {
+   "images": 4757,
+   "images_with_3d_boxes": 4738,
+   "boxes3d": 29370,
+   "boxes2d": 37603,
+   "n_classes3d": 724,
+   "benchmark10_boxes3d": {
+    "bed": 719,
+    "table": 2398,
+    "sofa": 649,
+    "chair": 8534,
+    "toilet": 163,
+    "desk": 934,
+    "dresser": 177,
+    "night_stand": 272,
+    "bookshelf": 204,
+    "bathtub": 65
+   },
+   "top50_classes3d": [
+    [
+     "chair",
+     8534
+    ],
+    [
+     "table",
+     2398
+    ],
+    [
+     "pillow",
+     1477
+    ],
+    [
+     "sofa_chair",
+     984
+    ],
+    [
+     "desk",
+     934
+    ],
+    [
+     "bed",
+     719
+    ],
+    [
+     "sofa",
+     649
+    ],
+    [
+     "computer",
+     642
+    ],
+    [
+     "box",
+     545
+    ],
+    [
+     "lamp",
+     496
+    ],
+    [
+     "garbage_bin",
+     456
+    ],
+    [
+     "cabinet",
+     398
+    ],
+    [
+     "shelf",
+     368
+    ],
+    [
+     "drawer",
+     311
+    ],
+    [
+     "sink",
+     293
+    ],
+    [
+     "night_stand",
+     272
+    ],
+    [
+     "kitchen_counter",
+     259
+    ],
+    [
+     "endtable",
+     248
+    ],
+    [
+     "kitchen_cabinet",
+     230
+    ],
+    [
+     "stool",
+     217
+    ],
+    [
+     "picture",
+     216
+    ],
+    [
+     "coffee_table",
+     212
+    ],
+    [
+     "bookshelf",
+     204
+    ],
+    [
+     "keyboard",
+     192
+    ],
+    [
+     "painting",
+     188
+    ],
+    [
+     "whiteboard",
+     182
+    ],
+    [
+     "dresser",
+     177
+    ],
+    [
+     "cpu",
+     175
+    ],
+    [
+     "tv",
+     170
+    ],
+    [
+     "toilet",
+     163
+    ],
+    [
+     "paper",
+     154
+    ],
+    [
+     "file_cabinet",
+     149
+    ],
+    [
+     "ottoman",
+     145
+    ],
+    [
+     "bench",
+     138
+    ],
+    [
+     "monitor",
+     134
+    ],
+    [
+     "printer",
+     121
+    ],
+    [
+     "recycle_bin",
+     121
+    ],
+    [
+     "plant",
+     113
+    ],
+    [
+     "door",
+     112
+    ],
+    [
+     "book",
+     112
+    ],
+    [
+     "fridge",
+     109
+    ],
+    [
+     "books",
+     105
+    ],
+    [
+     "papers",
+     99
+    ],
+    [
+     "towel",
+     96
+    ],
+    [
+     "mirror",
+     96
+    ],
+    [
+     "laptop",
+     95
+    ],
+    [
+     "curtain",
+     94
+    ],
+    [
+     "cup",
+     92
+    ],
+    [
+     "bottle",
+     89
+    ],
+    [
+     "clothes",
+     89
+    ]
+   ]
+  },
+  "val": {
+   "images": 528,
+   "images_with_3d_boxes": 525,
+   "boxes3d": 3117,
+   "boxes2d": 3970,
+   "n_classes3d": 267,
+   "benchmark10_boxes3d": {
+    "bed": 78,
+    "table": 282,
+    "sofa": 77,
+    "chair": 1001,
+    "toilet": 14,
+    "desk": 104,
+    "dresser": 16,
+    "night_stand": 32,
+    "bookshelf": 9,
+    "bathtub": 8
+   },
+   "top50_classes3d": [
+    [
+     "chair",
+     1001
+    ],
+    [
+     "table",
+     282
+    ],
+    [
+     "pillow",
+     125
+    ],
+    [
+     "desk",
+     104
+    ],
+    [
+     "sofa_chair",
+     83
+    ],
+    [
+     "computer",
+     82
+    ],
+    [
+     "bed",
+     78
+    ],
+    [
+     "sofa",
+     77
+    ],
+    [
+     "garbage_bin",
+     55
+    ],
+    [
+     "lamp",
+     50
+    ],
+    [
+     "box",
+     43
+    ],
+    [
+     "sink",
+     36
+    ],
+    [
+     "shelf",
+     35
+    ],
+    [
+     "cabinet",
+     33
+    ],
+    [
+     "paper",
+     33
+    ],
+    [
+     "night_stand",
+     32
+    ],
+    [
+     "kitchen_counter",
+     32
+    ],
+    [
+     "drawer",
+     31
+    ],
+    [
+     "kitchen_cabinet",
+     29
+    ],
+    [
+     "painting",
+     24
+    ],
+    [
+     "tv",
+     23
+    ],
+    [
+     "file_cabinet",
+     21
+    ],
+    [
+     "picture",
+     19
+    ],
+    [
+     "endtable",
+     18
+    ],
+    [
+     "cpu",
+     17
+    ],
+    [
+     "bench",
+     17
+    ],
+    [
+     "dresser",
+     16
+    ],
+    [
+     "recycle_bin",
+     15
+    ],
+    [
+     "printer",
+     15
+    ],
+    [
+     "machine",
+     15
+    ],
+    [
+     "toilet",
+     14
+    ],
+    [
+     "mirror",
+     14
+    ],
+    [
+     "microwave",
+     13
+    ],
+    [
+     "door",
+     13
+    ],
+    [
+     "keyboard",
+     13
+    ],
+    [
+     "towel",
+     13
+    ],
+    [
+     "clothes",
+     12
+    ],
+    [
+     "stack_of_chairs",
+     12
+    ],
+    [
+     "plant",
+     11
+    ],
+    [
+     "whiteboard",
+     10
+    ],
+    [
+     "coffee_table",
+     10
+    ],
+    [
+     "counter",
+     10
+    ],
+    [
+     "fridge",
+     9
+    ],
+    [
+     "back_pack",
+     9
+    ],
+    [
+     "cup",
+     9
+    ],
+    [
+     "bookshelf",
+     9
+    ],
+    [
+     "stool",
+     9
+    ],
+    [
+     "laptop",
+     9
+    ],
+    [
+     "plate",
+     9
+    ],
+    [
+     "poster",
+     9
+    ]
+   ]
+  },
+  "test": {
+   "images": 5050,
+   "images_with_3d_boxes": 5028,
+   "boxes3d": 32170,
+   "boxes2d": 38647,
+   "n_classes3d": 825,
+   "benchmark10_boxes3d": {
+    "bed": 545,
+    "table": 2452,
+    "sofa": 640,
+    "chair": 10429,
+    "toilet": 151,
+    "desk": 2155,
+    "dresser": 223,
+    "night_stand": 263,
+    "bookshelf": 302,
+    "bathtub": 52
+   },
+   "top50_classes3d": [
+    [
+     "chair",
+     10429
+    ],
+    [
+     "table",
+     2452
+    ],
+    [
+     "desk",
+     2155
+    ],
+    [
+     "pillow",
+     876
+    ],
+    [
+     "sofa_chair",
+     725
+    ],
+    [
+     "box",
+     717
+    ],
+    [
+     "sofa",
+     640
+    ],
+    [
+     "monitor",
+     595
+    ],
+    [
+     "garbage_bin",
+     574
+    ],
+    [
+     "bed",
+     545
+    ],
+    [
+     "shelf",
+     513
+    ],
+    [
+     "cabinet",
+     422
+    ],
+    [
+     "lamp",
+     382
+    ],
+    [
+     "sink",
+     364
+    ],
+    [
+     "endtable",
+     302
+    ],
+    [
+     "bookshelf",
+     302
+    ],
+    [
+     "kitchen_counter",
+     269
+    ],
+    [
+     "night_stand",
+     263
+    ],
+    [
+     "drawer",
+     252
+    ],
+    [
+     "painting",
+     228
+    ],
+    [
+     "dresser",
+     223
+    ],
+    [
+     "keyboard",
+     209
+    ],
+    [
+     "door",
+     200
+    ],
+    [
+     "recycle_bin",
+     184
+    ],
+    [
+     "kitchen_cabinet",
+     176
+    ],
+    [
+     "counter",
+     166
+    ],
+    [
+     "file_cabinet",
+     160
+    ],
+    [
+     "fridge",
+     159
+    ],
+    [
+     "toilet",
+     151
+    ],
+    [
+     "ottoman",
+     150
+    ],
+    [
+     "coffee_table",
+     150
+    ],
+    [
+     "whiteboard",
+     149
+    ],
+    [
+     "curtain",
+     146
+    ],
+    [
+     "picture",
+     145
+    ],
+    [
+     "paper",
+     137
+    ],
+    [
+     "cpu",
+     131
+    ],
+    [
+     "printer",
+     129
+    ],
+    [
+     "bottle",
+     122
+    ],
+    [
+     "tv",
+     120
+    ],
+    [
+     "computer",
+     108
+    ],
+    [
+     "bench",
+     106
+    ],
+    [
+     "stool",
+     104
+    ],
+    [
+     "bag",
+     99
+    ],
+    [
+     "clothes",
+     98
+    ],
+    [
+     "microwave",
+     95
+    ],
+    [
+     "laptop",
+     93
+    ],
+    [
+     "books",
+     93
+    ],
+    [
+     "dresser_mirror",
+     88
+    ],
+    [
+     "towel",
+     83
+    ],
+    [
+     "plant",
+     82
+    ]
+   ]
+  }
+ },
+ "test_sensors": {
+  "kv2": 1860,
+  "kv1": 930,
+  "xtion": 1688,
+  "realsense": 572
+ }
+}

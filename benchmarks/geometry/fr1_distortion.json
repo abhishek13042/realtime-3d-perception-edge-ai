@@ -1,0 +1,84 @@
+{
+  "spec": "03.2 R6 / AC4",
+  "label": "Measured (no GT): centre displacement raw vs undistorted pixels",
+  "sequence": "rgbd_dataset_freiburg1_desk",
+  "run": "benchmarks/detection/tum_fr1_desk_full.jsonl",
+  "conf_operational": 0.2411,
+  "K": [
+    [
+      517.3,
+      0.0,
+      318.6
+    ],
+    [
+      0.0,
+      516.5,
+      255.3
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "dist_k1_k2_p1_p2_k3": [
+    0.2624,
+    -0.9531,
+    -0.0054,
+    0.0026,
+    1.1633
+  ],
+  "params": {
+    "shrink": 0.5,
+    "estimator": "B",
+    "bin_m": 0.05,
+    "m_frac": 0.15,
+    "n_min": 20,
+    "tau_cov": 0.3,
+    "tau_spread_m": 0.25,
+    "centre_k": 2.0,
+    "sigma_floor_m": 0.02
+  },
+  "n_frames": 572,
+  "overall": {
+    "n": 2533,
+    "median_cm": 0.856,
+    "p90_cm": 2.102,
+    "max_cm": 6.147
+  },
+  "by_box_centre_radius": {
+    "0-100px": {
+      "n": 258,
+      "median_cm": 0.062,
+      "p90_cm": 0.192,
+      "max_cm": 0.48
+    },
+    "100-200px": {
+      "n": 980,
+      "median_cm": 0.54,
+      "p90_cm": 1.286,
+      "max_cm": 3.093
+    },
+    "200-300px": {
+      "n": 1103,
+      "median_cm": 1.2,
+      "p90_cm": 2.527,
+      "max_cm": 5.463
+    },
+    "300-1000px": {
+      "n": 192,
+      "median_cm": 1.53,
+      "p90_cm": 3.441,
+      "max_cm": 6.147
+    }
+  },
+  "relative_to_depth": {
+    "median_pct": 0.861,
+    "p90_pct": 1.501
+  },
+  "rule": {
+    "threshold_p90_cm": 2.0,
+    "p90_cm": 2.102,
+    "decision": "enable undistortion for fr1"
+  }
+}

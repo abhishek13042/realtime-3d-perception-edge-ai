@@ -1,0 +1,111 @@
+{
+  "spec": "03.1 R9 / AC3; 03.2 R7 / AC5",
+  "label": "Measured: numpy CPU, local laptop (decode excluded)",
+  "machine": {
+    "cpu": "Intel Core i3-1115G4 (2C/4T)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "ram_gb": 7.7
+  },
+  "threads": {
+    "openblas": 4
+  },
+  "python": "3.14.0",
+  "numpy": "2.5.4",
+  "frames": {
+    "list": "configs/benchmark_frames/tum_rgbd_dataset_freiburg1_desk_200.txt",
+    "n": 200,
+    "warmup": 10
+  },
+  "detections": {
+    "run": "benchmarks/detection/tum_fr1_desk_full.jsonl",
+    "conf_operational": 0.2411,
+    "max_boxes": 50,
+    "boxes_per_frame": {
+      "median": 4.0,
+      "max": 11,
+      "total": 936
+    }
+  },
+  "params": {
+    "shrink": 0.5,
+    "estimator": "B",
+    "bin_m": 0.05,
+    "m_frac": 0.15,
+    "n_min": 20,
+    "tau_cov": 0.3,
+    "tau_spread_m": 0.25,
+    "centre_k": 2.0,
+    "sigma_floor_m": 0.02
+  },
+  "status_counts": {
+    "valid": 757,
+    "low_coverage": 123,
+    "no_depth": 56
+  },
+  "per_box_ms_stress50": {
+    "association": 0.141,
+    "centres": 0.354
+  },
+  "stages_ms": {
+    "association": {
+      "n": 200,
+      "median": 1.059,
+      "p95": 1.912,
+      "mean": 1.106,
+      "min": 0.066,
+      "max": 2.673
+    },
+    "centres": {
+      "n": 200,
+      "median": 2.283,
+      "p95": 4.244,
+      "mean": 2.453,
+      "min": 0.004,
+      "max": 15.059
+    },
+    "association_plus_centres": {
+      "n": 200,
+      "median": 3.416,
+      "p95": 6.09,
+      "mean": 3.559,
+      "min": 0.07,
+      "max": 17.731
+    },
+    "frame_cloud_stride2_rgb": {
+      "n": 200,
+      "median": 5.039,
+      "p95": 6.984,
+      "mean": 5.303,
+      "min": 4.175,
+      "max": 8.274
+    },
+    "stress50_association": {
+      "n": 200,
+      "median": 7.068,
+      "p95": 8.27,
+      "mean": 7.158,
+      "min": 5.246,
+      "max": 12.337
+    },
+    "stress50_centres": {
+      "n": 200,
+      "median": 17.707,
+      "p95": 22.66,
+      "mean": 18.076,
+      "min": 12.42,
+      "max": 30.515
+    }
+  },
+  "targets": {
+    "association_median_lt_ms": 5.0,
+    "centres_median_lt_ms": 5.0,
+    "frame_cloud_stride2_median_lt_ms": 30.0
+  },
+  "pass": {
+    "association": true,
+    "centres": true,
+    "stress50_association": false,
+    "stress50_centres": false,
+    "frame_cloud_stride2": true
+  }
+}

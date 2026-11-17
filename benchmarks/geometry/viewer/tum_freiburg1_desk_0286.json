@@ -1,0 +1,41 @@
+{
+  "frame": "TUM rgbd_dataset_freiburg1_desk frame 286 (t=1305031463.659766, undistort=on)",
+  "run": "tum_fr1_desk_full.jsonl",
+  "conf_operational": 0.2411,
+  "n_cloud_points": 12102,
+  "voxel_m": 0.01,
+  "open3d_png": true,
+  "gt_boxes": [],
+  "objects": [
+    {
+      "det": "mouse 0.71",
+      "status": "valid",
+      "z_m": 0.96,
+      "centre_cam_m": [
+        -0.054,
+        -0.26,
+        0.96
+      ]
+    },
+    {
+      "det": "laptop 0.68",
+      "status": "low_coverage",
+      "z_m": 1.053,
+      "centre_cam_m": [
+        -0.435,
+        -0.351,
+        1.053
+      ]
+    },
+    {
+      "det": "book 0.41",
+      "status": "valid",
+      "z_m": 0.717,
+      "centre_cam_m": [
+        0.276,
+        -0.036,
+        0.718
+      ]
+    }
+  ]
+}

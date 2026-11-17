@@ -1,0 +1,881 @@
+{
+  "spec": "05.4 R1",
+  "label": "Measured: rule-selected SUN test failure cases (detected mode)",
+  "rules": {
+    "large_error": 12,
+    "no_depth": 8,
+    "missed": 8,
+    "false_positive": 8
+  },
+  "items": {
+    "large_error": [
+      {
+        "key": "large_error:000741:plant:153_31",
+        "group": "large_error",
+        "image_id": "000741",
+        "sensor": "kv2",
+        "class": "potted plant",
+        "raw_class": "plant",
+        "box": [
+          154.0,
+          31.0,
+          263.2,
+          183.6
+        ],
+        "score": 0.45,
+        "status": "valid",
+        "gt_centre": [
+          -1.594,
+          -1.098,
+          5.513
+        ],
+        "err3d_m": 3.906,
+        "valid_frac": 0.354,
+        "link_iou": 0.54
+      },
+      {
+        "key": "large_error:000754:sofa_chair:0_157",
+        "group": "large_error",
+        "image_id": "000754",
+        "sensor": "kv2",
+        "class": "couch",
+        "raw_class": "sofa_chair",
+        "box": [
+          0.0,
+          157.3,
+          275.5,
+          287.0
+        ],
+        "score": 0.399,
+        "status": "valid",
+        "gt_centre": [
+          -1.323,
+          -0.342,
+          4.131
+        ],
+        "err3d_m": 2.966,
+        "valid_frac": 0.392,
+        "link_iou": 0.669
+      },
+      {
+        "key": "large_error:003948:chair:0_252",
+        "group": "large_error",
+        "image_id": "003948",
+        "sensor": "xtion",
+        "class": "chair",
+        "raw_class": "chair",
+        "box": [
+          0.1,
+          252.4,
+          43.7,
+          321.1
+        ],
+        "score": 0.274,
+        "status": "valid",
+        "gt_centre": [
+          -0.806,
+          0.694,
+          2.14
+        ],
+        "err3d_m": 2.894,
+        "valid_frac": 0.779,
+        "link_iou": 0.025
+      },
+      {
+        "key": "large_error:003387:chair:421_194",
+        "group": "large_error",
+        "image_id": "003387",
+        "sensor": "xtion",
+        "class": "chair",
+        "raw_class": "chair",
+        "box": [
+          421.0,
+          194.7,
+          463.1,
+          251.2
+        ],
+        "score": 0.586,
+        "status": "valid",
+        "gt_centre": [
+          0.981,
+          0.512,
+          2.867
+        ],
+        "err3d_m": 2.758,
+        "valid_frac": 1.0,
+        "link_iou": 0.045
+      },
+      {
+        "key": "large_error:000581:chair:274_45",
+        "group": "large_error",
+        "image_id": "000581",
+        "sensor": "kv2",
+        "class": "chair",
+        "raw_class": "chair",
+        "box": [
+          274.3,
+          45.1,
+          357.0,
+          95.4
+        ],
+        "score": 0.499,
+        "status": "valid",
+        "gt_centre": [
+          -0.243,
+          -0.92,
+          3.311
+        ],
+        "err3d_m": 2.684,
+        "valid_frac": 0.35,
+        "link_iou": 0.164
+      },
+      {
+        "key": "large_error:001390:chair:327_228",
+        "group": "large_error",
+        "image_id": "001390",
+        "sensor": "kv2",
+        "class": "chair",
+        "raw_class": "chair",
+        "box": [
+          327.2,
+          228.6,
+          399.8,
+          257.5
+        ],
+        "score": 0.637,
+        "status": "valid",
+        "gt_centre": [
+          -0.185,
+          -0.586,
+          5.553
+        ],
+        "err3d_m": 2.678,
+        "valid_frac": 0.93,
+        "link_iou": 0.181
+      },
+      {
+        "key": "large_error:001277:chair:193_148",
+        "group": "large_error",
+        "image_id": "001277",
+        "sensor": "kv2",
+        "class": "chair",
+        "raw_class": "chair",
+        "box": [
+          193.7,
+          148.0,
+          264.4,
+          198.5
+        ],
+        "score": 0.623,
+        "status": "valid",
+        "gt_centre": [
+          -1.468,
+          -1.141,
+          4.918
+        ],
+        "err3d_m": 2.613,
+        "valid_frac": 0.978,
+        "link_iou": 0.233
+      },
+      {
+        "key": "large_error:003037:chair:294_208",
+        "group": "large_error",
+        "image_id": "003037",
+        "sensor": "xtion",
+        "class": "chair",
+        "raw_class": "chair",
+        "box": [
+          294.2,
+          208.9,
+          336.8,
+          309.1
+        ],
+        "score": 0.248,
+        "status": "valid",
+        "gt_centre": [
+          0.024,
+          0.226,
+          4.068
+        ],
+        "err3d_m": 2.609,
+        "valid_frac": 0.901,
+        "link_iou": 0.699
+      },
+      {
+        "key": "large_error:004541:chair:270_138",
+        "group": "large_error",
+        "image_id": "004541",
+        "sensor": "realsense",
+        "class": "chair",
+        "raw_class": "chair",
+        "box": [
+          270.6,
+          138.0,
+          402.4,
+          187.3
+        ],
+        "score": 0.645,
+        "status": "valid",
+        "gt_centre": [
+          -0.082,
+          -0.97,
+          4.817
+        ],
+        "err3d_m": 2.558,
+        "valid_frac": 0.98,
+        "link_iou": 0.284
+      },
+      {
+        "key": "large_error:001287:chair:425_216",
+        "group": "large_error",
+        "image_id": "001287",
+        "sensor": "kv2",
+        "class": "chair",
+        "raw_class": "chair",
+        "box": [
+          425.8,
+          216.8,
+          503.7,
+          274.6
+        ],
+        "score": 0.623,
+        "status": "valid",
+        "gt_centre": [
+          0.802,
+          -0.651,
+          4.371
+        ],
+        "err3d_m": 2.477,
+        "valid_frac": 0.971,
+        "link_iou": 0.168
+      },
+      {
+        "key": "large_error:001288:chair:138_79",
+        "group": "large_error",
+        "image_id": "001288",
+        "sensor": "kv2",
+        "class": "chair",
+        "raw_class": "chair",
+        "box": [
+          138.4,
+          79.8,
+          178.5,
+          102.6
+        ],
+        "score": 0.339,
+        "status": "valid",
+        "gt_centre": [
+          -1.143,
+          -0.578,
+          3.514
+        ],
+        "err3d_m": 2.438,
+        "valid_frac": 0.876,
+        "link_iou": 0.0
+      },
+      {
+        "key": "large_error:000274:chair:551_132",
+        "group": "large_error",
+        "image_id": "000274",
+        "sensor": "kv2",
+        "class": "chair",
+        "raw_class": "chair",
+        "box": [
+          551.2,
+          132.7,
+          596.5,
+          175.3
+        ],
+        "score": 0.386,
+        "status": "valid",
+        "gt_centre": [
+          1.392,
+          -0.189,
+          3.122
+        ],
+        "err3d_m": 2.43,
+        "valid_frac": 0.801,
+        "link_iou": 0.028
+      }
+    ],
+    "no_depth": [
+      {
+        "key": "no_depth:004807:monitor:97_2",
+        "group": "no_depth",
+        "image_id": "004807",
+        "sensor": "realsense",
+        "class": "tv",
+        "raw_class": "monitor",
+        "box": [
+          97.6,
+          2.0,
+          237.2,
+          128.1
+        ],
+        "score": 0.856,
+        "status": "no_depth",
+        "gt_centre": [
+          -0.595,
+          -0.73,
+          2.49
+        ],
+        "err3d_m": null,
+        "valid_frac": 0.0,
+        "link_iou": 0.654
+      },
+      {
+        "key": "no_depth:000071:monitor:61_217",
+        "group": "no_depth",
+        "image_id": "000071",
+        "sensor": "kv2",
+        "class": "tv",
+        "raw_class": "monitor",
+        "box": [
+          61.4,
+          217.2,
+          158.8,
+          302.9
+        ],
+        "score": 0.802,
+        "status": "no_depth",
+        "gt_centre": [
+          -1.169,
+          0.016,
+          2.462
+        ],
+        "err3d_m": null,
+        "valid_frac": 0.0,
+        "link_iou": 0.684
+      },
+      {
+        "key": "no_depth:001281:monitor:434_20",
+        "group": "no_depth",
+        "image_id": "001281",
+        "sensor": "kv2",
+        "class": "tv",
+        "raw_class": "monitor",
+        "box": [
+          434.6,
+          20.1,
+          505.2,
+          67.1
+        ],
+        "score": 0.787,
+        "status": "no_depth",
+        "gt_centre": [
+          0.802,
+          -1.689,
+          4.08
+        ],
+        "err3d_m": null,
+        "valid_frac": 0.008,
+        "link_iou": 0.743
+      },
+      {
+        "key": "no_depth:004694:keyboard:363_149",
+        "group": "no_depth",
+        "image_id": "004694",
+        "sensor": "realsense",
+        "class": "keyboard",
+        "raw_class": "keyboard",
+        "box": [
+          363.2,
+          149.4,
+          471.2,
+          178.2
+        ],
+        "score": 0.782,
+        "status": "no_depth",
+        "gt_centre": [
+          0.248,
+          -0.481,
+          2.99
+        ],
+        "err3d_m": null,
+        "valid_frac": 0.004,
+        "link_iou": 0.808
+      },
+      {
+        "key": "no_depth:002330:tv:465_2",
+        "group": "no_depth",
+        "image_id": "002330",
+        "sensor": "kv1",
+        "class": "tv",
+        "raw_class": "tv",
+        "box": [
+          465.9,
+          2.2,
+          560.8,
+          171.8
+        ],
+        "score": 0.768,
+        "status": "no_depth",
+        "gt_centre": [
+          1.248,
+          -0.626,
+          2.627
+        ],
+        "err3d_m": null,
+        "valid_frac": 0.0,
+        "link_iou": 0.727
+      },
+      {
+        "key": "no_depth:004821:monitor:315_50",
+        "group": "no_depth",
+        "image_id": "004821",
+        "sensor": "realsense",
+        "class": "tv",
+        "raw_class": "monitor",
+        "box": [
+          315.5,
+          50.8,
+          434.6,
+          152.0
+        ],
+        "score": 0.727,
+        "status": "no_depth",
+        "gt_centre": [
+          0.079,
+          -0.495,
+          2.323
+        ],
+        "err3d_m": null,
+        "valid_frac": 0.0,
+        "link_iou": 0.682
+      },
+      {
+        "key": "no_depth:000110:tv:104_126",
+        "group": "no_depth",
+        "image_id": "000110",
+        "sensor": "kv2",
+        "class": "tv",
+        "raw_class": "tv",
+        "box": [
+          104.7,
+          126.8,
+          229.5,
+          245.7
+        ],
+        "score": 0.716,
+        "status": "no_depth",
+        "gt_centre": [
+          -1.18,
+          -0.41,
+          2.998
+        ],
+        "err3d_m": null,
+        "valid_frac": 0.002,
+        "link_iou": 0.631
+      },
+      {
+        "key": "no_depth:000074:monitor:238_105",
+        "group": "no_depth",
+        "image_id": "000074",
+        "sensor": "kv2",
+        "class": "tv",
+        "raw_class": "monitor",
+        "box": [
+          238.9,
+          105.7,
+          297.8,
+          175.5
+        ],
+        "score": 0.713,
+        "status": "no_depth",
+        "gt_centre": [
+          -0.663,
+          -0.759,
+          3.194
+        ],
+        "err3d_m": null,
+        "valid_frac": 0.0,
+        "link_iou": 0.672
+      }
+    ],
+    "missed": [
+      {
+        "key": "missed:005046:chair:138_40",
+        "group": "missed",
+        "image_id": "005046",
+        "sensor": "realsense",
+        "class": "chair",
+        "raw_class": "chair",
+        "box": [
+          138.9,
+          40.7,
+          680.0,
+          530.0
+        ],
+        "score": null,
+        "status": "valid",
+        "gt_centre": [
+          0.005,
+          0.129,
+          0.986
+        ],
+        "err3d_m": 0.09,
+        "valid_frac": 0.512,
+        "link_iou": 0.732,
+        "gt_box_area_px": 264743.8
+      },
+      {
+        "key": "missed:004898:chair:68_12",
+        "group": "missed",
+        "image_id": "004898",
+        "sensor": "realsense",
+        "class": "chair",
+        "raw_class": "chair",
+        "box": [
+          68.4,
+          12.9,
+          481.0,
+          530.0
+        ],
+        "score": null,
+        "status": "valid",
+        "gt_centre": [
+          -0.062,
+          0.124,
+          1.414
+        ],
+        "err3d_m": 0.177,
+        "valid_frac": 0.824,
+        "link_iou": 0.893,
+        "gt_box_area_px": 213374.8
+      },
+      {
+        "key": "missed:000051:table:0_0",
+        "group": "missed",
+        "image_id": "000051",
+        "sensor": "kv2",
+        "class": "dining table",
+        "raw_class": "table",
+        "box": [
+          0.0,
+          0.0,
+          729.0,
+          529.0
+        ],
+        "score": null,
+        "status": "valid",
+        "gt_centre": [
+          1.191,
+          -0.064,
+          1.419
+        ],
+        "err3d_m": 1.383,
+        "valid_frac": 0.858,
+        "link_iou": 0.997,
+        "gt_box_area_px": 385641.0
+      },
+      {
+        "key": "missed:000052:table:0_0",
+        "group": "missed",
+        "image_id": "000052",
+        "sensor": "kv2",
+        "class": "dining table",
+        "raw_class": "table",
+        "box": [
+          0.0,
+          0.0,
+          727.0,
+          529.0
+        ],
+        "score": null,
+        "status": "valid",
+        "gt_centre": [
+          0.019,
+          -0.037,
+          1.625
+        ],
+        "err3d_m": 0.809,
+        "valid_frac": 0.869,
+        "link_iou": 0.994,
+        "gt_box_area_px": 384583.0
+      },
+      {
+        "key": "missed:001079:sofa:0_0",
+        "group": "missed",
+        "image_id": "001079",
+        "sensor": "kv2",
+        "class": "couch",
+        "raw_class": "sofa",
+        "box": [
+          0.0,
+          0.0,
+          729.0,
+          529.0
+        ],
+        "score": null,
+        "status": "valid",
+        "gt_centre": [
+          0.343,
+          -0.387,
+          1.716
+        ],
+        "err3d_m": 0.548,
+        "valid_frac": 0.983,
+        "link_iou": 0.997,
+        "gt_box_area_px": 385641.0
+      },
+      {
+        "key": "missed:001071:sofa:73_2",
+        "group": "missed",
+        "image_id": "001071",
+        "sensor": "kv2",
+        "class": "couch",
+        "raw_class": "sofa",
+        "box": [
+          73.4,
+          2.5,
+          615.0,
+          502.4
+        ],
+        "score": null,
+        "status": "valid",
+        "gt_centre": [
+          -0.291,
+          -0.341,
+          1.482
+        ],
+        "err3d_m": 0.485,
+        "valid_frac": 1.0,
+        "link_iou": 0.7,
+        "gt_box_area_px": 270688.4
+      },
+      {
+        "key": "missed:002550:tv:0_162",
+        "group": "missed",
+        "image_id": "002550",
+        "sensor": "kv1",
+        "class": "tv",
+        "raw_class": "tv",
+        "box": [
+          0.0,
+          162.2,
+          459.5,
+          423.0
+        ],
+        "score": null,
+        "status": "valid",
+        "gt_centre": [
+          -0.136,
+          0.369,
+          0.923
+        ],
+        "err3d_m": 0.324,
+        "valid_frac": 0.991,
+        "link_iou": 0.807,
+        "gt_box_area_px": 119855.8
+      },
+      {
+        "key": "missed:001853:monitor:27_28",
+        "group": "missed",
+        "image_id": "001853",
+        "sensor": "kv2",
+        "class": "tv",
+        "raw_class": "monitor",
+        "box": [
+          27.4,
+          28.3,
+          272.7,
+          404.5
+        ],
+        "score": null,
+        "status": "low_coverage",
+        "gt_centre": [
+          -0.403,
+          -0.07,
+          0.853
+        ],
+        "err3d_m": 0.167,
+        "valid_frac": 0.475,
+        "link_iou": 0.643,
+        "gt_box_area_px": 92293.5
+      }
+    ],
+    "false_positive": [
+      {
+        "key": "false_positive:003228:refrigerator:185_29",
+        "group": "false_positive",
+        "image_id": "003228",
+        "sensor": "xtion",
+        "class": "refrigerator",
+        "raw_class": "refrigerator",
+        "box": [
+          185.1,
+          29.3,
+          552.2,
+          440.0
+        ],
+        "score": 0.969,
+        "status": "valid"
+      },
+      {
+        "key": "false_positive:002534:mouse:306_279",
+        "group": "false_positive",
+        "image_id": "002534",
+        "sensor": "kv1",
+        "class": "mouse",
+        "raw_class": "mouse",
+        "box": [
+          306.6,
+          279.7,
+          380.5,
+          342.2
+        ],
+        "score": 0.958,
+        "status": "valid"
+      },
+      {
+        "key": "false_positive:002122:person:395_2",
+        "group": "false_positive",
+        "image_id": "002122",
+        "sensor": "kv1",
+        "class": "person",
+        "raw_class": "person",
+        "box": [
+          395.9,
+          2.0,
+          560.7,
+          422.5
+        ],
+        "score": 0.951,
+        "status": "valid"
+      },
+      {
+        "key": "false_positive:004682:keyboard:509_173",
+        "group": "false_positive",
+        "image_id": "004682",
+        "sensor": "realsense",
+        "class": "keyboard",
+        "raw_class": "keyboard",
+        "box": [
+          509.2,
+          174.0,
+          653.7,
+          231.9
+        ],
+        "score": 0.948,
+        "status": "valid"
+      },
+      {
+        "key": "false_positive:004461:toilet:86_53",
+        "group": "false_positive",
+        "image_id": "004461",
+        "sensor": "xtion",
+        "class": "toilet",
+        "raw_class": "toilet",
+        "box": [
+          86.7,
+          53.8,
+          322.8,
+          358.1
+        ],
+        "score": 0.947,
+        "status": "valid"
+      },
+      {
+        "key": "false_positive:002542:keyboard:261_92",
+        "group": "false_positive",
+        "image_id": "002542",
+        "sensor": "kv1",
+        "class": "keyboard",
+        "raw_class": "keyboard",
+        "box": [
+          261.9,
+          92.3,
+          430.4,
+          142.5
+        ],
+        "score": 0.946,
+        "status": "valid"
+      },
+      {
+        "key": "false_positive:003599:bicycle:220_214",
+        "group": "false_positive",
+        "image_id": "003599",
+        "sensor": "xtion",
+        "class": "bicycle",
+        "raw_class": "bicycle",
+        "box": [
+          220.4,
+          214.6,
+          551.5,
+          432.5
+        ],
+        "score": 0.944,
+        "status": "valid"
+      },
+      {
+        "key": "false_positive:002093:person:405_1",
+        "group": "false_positive",
+        "image_id": "002093",
+        "sensor": "kv1",
+        "class": "person",
+        "raw_class": "person",
+        "box": [
+          405.2,
+          2.0,
+          561.0,
+          427.0
+        ],
+        "score": 0.944,
+        "status": "valid"
+      }
+    ]
+  },
+  "figures": {
+    "large_error": "benchmarks/results/failure_gallery_large_error.png",
+    "no_depth": "benchmarks/results/failure_gallery_no_depth.png",
+    "missed": "benchmarks/results/failure_gallery_missed.png",
+    "false_positive": "benchmarks/results/failure_gallery_false_positive.png"
+  },
+  "header": {
+    "git_commit": null,
+    "git_dirty": true,
+    "created_utc": "2026-11-11T08:20:14+00:00",
+    "input_sha256": {
+      "objects_npz": "05119265ce85ec8bb4296d731ed54c697a0e10e8cab5809955f58bc74ba2777b"
+    }
+  },
+  "counts": {
+    "per_group": {
+      "large_error": {
+        "occluder": 2,
+        "localisation": 1,
+        "GT-box problem": 8,
+        "background bleed": 1
+      },
+      "no_depth": {
+        "missing or invalid depth": 8
+      },
+      "missed": {
+        "truncation": 6,
+        "GT-box problem": 2
+      },
+      "false_positive": {
+        "GT-box problem": 7,
+        "misclassification": 1
+      }
+    },
+    "total": {
+      "GT-box problem": 17,
+      "missing or invalid depth": 8,
+      "truncation": 6,
+      "occluder": 2,
+      "localisation": 1,
+      "background bleed": 1,
+      "misclassification": 1
+    }
+  },
+  "background_bleed": {
+    "large_error_items": 12,
+    "background_bleed": 1,
+    "share": 0.083,
+    "dominates": false,
+    "next_most_common": "GT-box problem"
+  },
+  "review_sha256": "a6c53f6eff03187b0eadd265f912dd5f7fb9b30490b7afa404590e72e064012d",
+  "link_sensitivity": "weak GT 2D-3D links (IoU < 0.3) are quantified in 05.2: localization_sun_test.json -> <mode>.link_iou_lt_0.3_fraction and sensitivity_link_iou_ge_0.3_valid"
+}

@@ -1,0 +1,1579 @@
+{
+  "spec": "05.3 R3-R6",
+  "label": "Measured: PyTorch CPU pipeline, local laptop",
+  "under_load": false,
+  "backend": "pytorch-cpu",
+  "procedure": {
+    "runs": 3,
+    "fresh_process_per_run": true,
+    "warmup_iterations": 20,
+    "frames_per_list": 200,
+    "fps": "1000 / mean pipeline ms",
+    "boundaries": {
+      "detector": "model forward only",
+      "detect_total": "image -> boxes (pre+infer+post)",
+      "pipeline": "Frame -> FrameResult (detect+track+depth+geometry+assembly)",
+      "io": "Frame decode; never in pipeline FPS"
+    }
+  },
+  "machine": {
+    "cpu": "Intel Core i3-1115G4 (2C/4T)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "ram_gb": 7.7,
+    "python": "3.14.0"
+  },
+  "machine_state": {
+    "before": {
+      "heavy_processes": [],
+      "cpu_percent_3s": 15.2,
+      "idle": true
+    },
+    "after": {
+      "heavy_processes": [],
+      "cpu_percent_3s": 20.3,
+      "idle": true
+    }
+  },
+  "power": [
+    {
+      "run": 0,
+      "before": {
+        "plugged_in": true,
+        "battery_percent": 88,
+        "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)"
+      },
+      "after": {
+        "plugged_in": true,
+        "battery_percent": 90,
+        "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)"
+      }
+    },
+    {
+      "run": 1,
+      "before": {
+        "plugged_in": true,
+        "battery_percent": 90,
+        "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)"
+      },
+      "after": {
+        "plugged_in": true,
+        "battery_percent": 92,
+        "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)"
+      }
+    },
+    {
+      "run": 2,
+      "before": {
+        "plugged_in": true,
+        "battery_percent": 92,
+        "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)"
+      },
+      "after": {
+        "plugged_in": true,
+        "battery_percent": 93,
+        "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)"
+      }
+    }
+  ],
+  "threads": {
+    "torch": 4,
+    "torch_interop": 2,
+    "blas": [
+      {
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "version": "0.3.34.106.0"
+      },
+      {
+        "internal_api": "openmp",
+        "num_threads": 4,
+        "version": null
+      },
+      {
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "version": null
+      },
+      {
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "version": "0.3.31.dev"
+      }
+    ]
+  },
+  "versions": {
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "ultralytics": "8.4.208",
+    "numpy": "2.5.4",
+    "opencv-python": "5.0.0.93",
+    "lap": "0.5.14",
+    "psutil": "7.2.2"
+  },
+  "peak_rss_mb_per_run": [
+    396.8,
+    424.5,
+    390.0
+  ],
+  "wall_s_per_run": [
+    135.9,
+    122.9,
+    133.9
+  ],
+  "lists": {
+    "tum_fr1_desk_200": {
+      "stages_ms": {
+        "io": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 19.031,
+              "p95": 94.085,
+              "mean": 34.422,
+              "min": 13.189,
+              "max": 140.36
+            },
+            {
+              "n": 200,
+              "median": 59.858,
+              "p95": 89.075,
+              "mean": 51.693,
+              "min": 15.392,
+              "max": 94.565
+            },
+            {
+              "n": 200,
+              "median": 20.812,
+              "p95": 88.877,
+              "mean": 32.665,
+              "min": 14.893,
+              "max": 97.79
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 20.458,
+            "p95": 90.981,
+            "mean": 39.593,
+            "min": 13.189,
+            "max": 140.36
+          },
+          "run_spread_median_ms": [
+            19.031,
+            59.858
+          ]
+        },
+        "preprocess": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 4.919,
+              "p95": 7.587,
+              "mean": 5.353,
+              "min": 3.801,
+              "max": 18.503
+            },
+            {
+              "n": 200,
+              "median": 5.227,
+              "p95": 6.385,
+              "mean": 5.24,
+              "min": 3.476,
+              "max": 8.657
+            },
+            {
+              "n": 200,
+              "median": 5.601,
+              "p95": 8.384,
+              "mean": 5.795,
+              "min": 3.459,
+              "max": 26.361
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 5.208,
+            "p95": 7.334,
+            "mean": 5.462,
+            "min": 3.459,
+            "max": 26.361
+          },
+          "run_spread_median_ms": [
+            4.919,
+            5.601
+          ]
+        },
+        "detector": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 103.87,
+              "p95": 190.459,
+              "mean": 121.233,
+              "min": 85.523,
+              "max": 521.909
+            },
+            {
+              "n": 200,
+              "median": 99.888,
+              "p95": 149.196,
+              "mean": 108.05,
+              "min": 89.052,
+              "max": 171.915
+            },
+            {
+              "n": 200,
+              "median": 119.022,
+              "p95": 242.042,
+              "mean": 138.555,
+              "min": 90.466,
+              "max": 651.706
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 103.044,
+            "p95": 184.669,
+            "mean": 122.613,
+            "min": 85.523,
+            "max": 651.706
+          },
+          "run_spread_median_ms": [
+            99.888,
+            119.022
+          ]
+        },
+        "detect": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 104.117,
+              "p95": 190.694,
+              "mean": 121.468,
+              "min": 85.692,
+              "max": 523.081
+            },
+            {
+              "n": 200,
+              "median": 100.083,
+              "p95": 149.422,
+              "mean": 108.264,
+              "min": 89.248,
+              "max": 172.156
+            },
+            {
+              "n": 200,
+              "median": 119.266,
+              "p95": 242.304,
+              "mean": 138.805,
+              "min": 90.727,
+              "max": 652.407
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 103.263,
+            "p95": 184.915,
+            "mean": 122.846,
+            "min": 85.692,
+            "max": 652.407
+          },
+          "run_spread_median_ms": [
+            100.083,
+            119.266
+          ]
+        },
+        "detect_total": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 110.083,
+              "p95": 209.213,
+              "mean": 127.406,
+              "min": 90.001,
+              "max": 531.458
+            },
+            {
+              "n": 200,
+              "median": 105.771,
+              "p95": 155.521,
+              "mean": 114.085,
+              "min": 94.858,
+              "max": 178.693
+            },
+            {
+              "n": 200,
+              "median": 125.34,
+              "p95": 260.015,
+              "mean": 145.199,
+              "min": 94.695,
+              "max": 659.571
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 109.227,
+            "p95": 194.292,
+            "mean": 128.897,
+            "min": 90.001,
+            "max": 659.571
+          },
+          "run_spread_median_ms": [
+            105.771,
+            125.34
+          ]
+        },
+        "track": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 3.107,
+              "p95": 4.953,
+              "mean": 3.359,
+              "min": 1.232,
+              "max": 35.692
+            },
+            {
+              "n": 200,
+              "median": 3.083,
+              "p95": 4.538,
+              "mean": 3.202,
+              "min": 1.094,
+              "max": 6.414
+            },
+            {
+              "n": 200,
+              "median": 3.598,
+              "p95": 5.688,
+              "mean": 3.79,
+              "min": 2.031,
+              "max": 29.107
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 3.19,
+            "p95": 4.93,
+            "mean": 3.45,
+            "min": 1.094,
+            "max": 35.692
+          },
+          "run_spread_median_ms": [
+            3.083,
+            3.598
+          ]
+        },
+        "depth": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 0.923,
+              "p95": 1.56,
+              "mean": 0.96,
+              "min": 0.172,
+              "max": 5.856
+            },
+            {
+              "n": 200,
+              "median": 0.918,
+              "p95": 1.564,
+              "mean": 0.991,
+              "min": 0.145,
+              "max": 7.159
+            },
+            {
+              "n": 200,
+              "median": 1.036,
+              "p95": 1.824,
+              "mean": 1.104,
+              "min": 0.175,
+              "max": 5.794
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 0.946,
+            "p95": 1.654,
+            "mean": 1.019,
+            "min": 0.145,
+            "max": 7.159
+          },
+          "run_spread_median_ms": [
+            0.918,
+            1.036
+          ]
+        },
+        "geometry": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 4.642,
+              "p95": 9.358,
+              "mean": 5.439,
+              "min": 0.321,
+              "max": 57.042
+            },
+            {
+              "n": 200,
+              "median": 4.692,
+              "p95": 10.011,
+              "mean": 5.654,
+              "min": 0.266,
+              "max": 87.476
+            },
+            {
+              "n": 200,
+              "median": 5.476,
+              "p95": 10.904,
+              "mean": 6.131,
+              "min": 0.342,
+              "max": 49.895
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 4.986,
+            "p95": 10.326,
+            "mean": 5.741,
+            "min": 0.266,
+            "max": 87.476
+          },
+          "run_spread_median_ms": [
+            4.642,
+            5.476
+          ]
+        },
+        "assemble": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 0.039,
+              "p95": 0.065,
+              "mean": 0.044,
+              "min": 0.015,
+              "max": 0.398
+            },
+            {
+              "n": 200,
+              "median": 0.038,
+              "p95": 0.062,
+              "mean": 0.039,
+              "min": 0.014,
+              "max": 0.088
+            },
+            {
+              "n": 200,
+              "median": 0.042,
+              "p95": 0.071,
+              "mean": 0.052,
+              "min": 0.016,
+              "max": 1.449
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 0.039,
+            "p95": 0.068,
+            "mean": 0.045,
+            "min": 0.014,
+            "max": 1.449
+          },
+          "run_spread_median_ms": [
+            0.038,
+            0.042
+          ]
+        },
+        "pipeline": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 119.967,
+              "p95": 229.189,
+              "mean": 137.209,
+              "min": 96.503,
+              "max": 546.153
+            },
+            {
+              "n": 200,
+              "median": 114.823,
+              "p95": 169.189,
+              "mean": 123.97,
+              "min": 101.65,
+              "max": 200.675
+            },
+            {
+              "n": 200,
+              "median": 139.919,
+              "p95": 270.437,
+              "mean": 156.277,
+              "min": 101.751,
+              "max": 675.658
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 119.445,
+            "p95": 212.549,
+            "mean": 139.152,
+            "min": 96.503,
+            "max": 675.658
+          },
+          "run_spread_median_ms": [
+            114.823,
+            139.919
+          ]
+        }
+      },
+      "pipeline_fps_per_run": [
+        7.29,
+        8.07,
+        6.4
+      ],
+      "pipeline_fps_pooled": 7.19,
+      "pipeline_fps_from_median": 8.37,
+      "share_of_pipeline_median": {
+        "preprocess": 0.044,
+        "detect": 0.865,
+        "track": 0.027,
+        "depth": 0.008,
+        "geometry": 0.042,
+        "assemble": 0.0
+      },
+      "share_of_pipeline_mean": {
+        "preprocess": 0.039,
+        "detect": 0.883,
+        "track": 0.025,
+        "depth": 0.007,
+        "geometry": 0.041,
+        "assemble": 0.0
+      },
+      "reliability_per_run": [
+        {
+          "n_frames": 200,
+          "failed_frames": 0,
+          "failures": [],
+          "zero_object_frames": 0,
+          "mean_invalid_depth_rate": 0.2544,
+          "schema_errors_first5": 0,
+          "recovery": {
+            "recovered_gaps": 38,
+            "losses": 26,
+            "rate": 0.594,
+            "n_tracks": 52,
+            "n_static_confirmed": 44,
+            "tracker_stride_params": 1
+          }
+        },
+        {
+          "n_frames": 200,
+          "failed_frames": 0,
+          "failures": [],
+          "zero_object_frames": 0,
+          "mean_invalid_depth_rate": 0.2544,
+          "schema_errors_first5": 0,
+          "recovery": {
+            "recovered_gaps": 38,
+            "losses": 26,
+            "rate": 0.594,
+            "n_tracks": 52,
+            "n_static_confirmed": 44,
+            "tracker_stride_params": 1
+          }
+        },
+        {
+          "n_frames": 200,
+          "failed_frames": 0,
+          "failures": [],
+          "zero_object_frames": 0,
+          "mean_invalid_depth_rate": 0.2544,
+          "schema_errors_first5": 0,
+          "recovery": {
+            "recovered_gaps": 38,
+            "losses": 26,
+            "rate": 0.594,
+            "n_tracks": 52,
+            "n_static_confirmed": 44,
+            "tracker_stride_params": 1
+          }
+        }
+      ],
+      "mean_objects_per_frame": 4.99
+    },
+    "tum_fr3_long_office_200": {
+      "stages_ms": {
+        "io": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 21.933,
+              "p95": 93.449,
+              "mean": 40.902,
+              "min": 15.296,
+              "max": 121.86
+            },
+            {
+              "n": 200,
+              "median": 72.903,
+              "p95": 91.664,
+              "mean": 53.903,
+              "min": 15.609,
+              "max": 100.388
+            },
+            {
+              "n": 200,
+              "median": 25.204,
+              "p95": 91.85,
+              "mean": 45.969,
+              "min": 15.835,
+              "max": 104.84
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 24.08,
+            "p95": 92.657,
+            "mean": 46.925,
+            "min": 15.296,
+            "max": 121.86
+          },
+          "run_spread_median_ms": [
+            21.933,
+            72.903
+          ]
+        },
+        "preprocess": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 5.298,
+              "p95": 7.494,
+              "mean": 5.464,
+              "min": 3.671,
+              "max": 11.387
+            },
+            {
+              "n": 200,
+              "median": 5.101,
+              "p95": 6.442,
+              "mean": 5.277,
+              "min": 3.932,
+              "max": 7.581
+            },
+            {
+              "n": 200,
+              "median": 5.205,
+              "p95": 7.659,
+              "mean": 5.593,
+              "min": 3.922,
+              "max": 27.91
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 5.22,
+            "p95": 7.188,
+            "mean": 5.445,
+            "min": 3.671,
+            "max": 27.91
+          },
+          "run_spread_median_ms": [
+            5.101,
+            5.298
+          ]
+        },
+        "detector": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 116.893,
+              "p95": 187.542,
+              "mean": 130.144,
+              "min": 88.306,
+              "max": 607.707
+            },
+            {
+              "n": 200,
+              "median": 99.174,
+              "p95": 137.297,
+              "mean": 103.591,
+              "min": 92.803,
+              "max": 158.367
+            },
+            {
+              "n": 200,
+              "median": 106.946,
+              "p95": 189.915,
+              "mean": 126.681,
+              "min": 90.614,
+              "max": 836.205
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 103.12,
+            "p95": 176.531,
+            "mean": 120.139,
+            "min": 88.306,
+            "max": 836.205
+          },
+          "run_spread_median_ms": [
+            99.174,
+            116.893
+          ]
+        },
+        "detect": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 117.115,
+              "p95": 187.794,
+              "mean": 130.384,
+              "min": 88.517,
+              "max": 607.937
+            },
+            {
+              "n": 200,
+              "median": 99.382,
+              "p95": 137.516,
+              "mean": 103.812,
+              "min": 93.011,
+              "max": 158.605
+            },
+            {
+              "n": 200,
+              "median": 107.159,
+              "p95": 190.186,
+              "mean": 126.919,
+              "min": 90.832,
+              "max": 836.624
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 103.431,
+            "p95": 176.863,
+            "mean": 120.372,
+            "min": 88.517,
+            "max": 836.624
+          },
+          "run_spread_median_ms": [
+            99.382,
+            117.115
+          ]
+        },
+        "detect_total": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 122.562,
+              "p95": 196.377,
+              "mean": 136.44,
+              "min": 94.501,
+              "max": 612.967
+            },
+            {
+              "n": 200,
+              "median": 105.332,
+              "p95": 144.512,
+              "mean": 109.668,
+              "min": 97.615,
+              "max": 164.615
+            },
+            {
+              "n": 200,
+              "median": 113.311,
+              "p95": 197.819,
+              "mean": 133.115,
+              "min": 95.594,
+              "max": 847.794
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 108.849,
+            "p95": 183.16,
+            "mean": 126.408,
+            "min": 94.501,
+            "max": 847.794
+          },
+          "run_spread_median_ms": [
+            105.332,
+            122.562
+          ]
+        },
+        "track": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 3.814,
+              "p95": 6.215,
+              "mean": 3.968,
+              "min": 1.62,
+              "max": 10.155
+            },
+            {
+              "n": 200,
+              "median": 3.628,
+              "p95": 4.855,
+              "mean": 3.619,
+              "min": 1.519,
+              "max": 5.578
+            },
+            {
+              "n": 200,
+              "median": 3.746,
+              "p95": 6.139,
+              "mean": 3.945,
+              "min": 1.6,
+              "max": 11.648
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 3.738,
+            "p95": 5.693,
+            "mean": 3.844,
+            "min": 1.519,
+            "max": 11.648
+          },
+          "run_spread_median_ms": [
+            3.628,
+            3.814
+          ]
+        },
+        "depth": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 1.265,
+              "p95": 2.568,
+              "mean": 1.481,
+              "min": 0.012,
+              "max": 11.552
+            },
+            {
+              "n": 200,
+              "median": 1.185,
+              "p95": 2.176,
+              "mean": 1.265,
+              "min": 0.011,
+              "max": 3.992
+            },
+            {
+              "n": 200,
+              "median": 1.218,
+              "p95": 2.51,
+              "mean": 1.349,
+              "min": 0.009,
+              "max": 4.637
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 1.217,
+            "p95": 2.512,
+            "mean": 1.365,
+            "min": 0.009,
+            "max": 11.552
+          },
+          "run_spread_median_ms": [
+            1.185,
+            1.265
+          ]
+        },
+        "geometry": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 4.627,
+              "p95": 14.913,
+              "mean": 5.95,
+              "min": 0.0,
+              "max": 29.653
+            },
+            {
+              "n": 200,
+              "median": 4.131,
+              "p95": 13.05,
+              "mean": 5.435,
+              "min": 0.0,
+              "max": 26.091
+            },
+            {
+              "n": 200,
+              "median": 4.419,
+              "p95": 16.121,
+              "mean": 6.244,
+              "min": 0.0,
+              "max": 53.379
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 4.399,
+            "p95": 14.736,
+            "mean": 5.876,
+            "min": 0.0,
+            "max": 53.379
+          },
+          "run_spread_median_ms": [
+            4.131,
+            4.627
+          ]
+        },
+        "assemble": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 0.055,
+              "p95": 0.102,
+              "mean": 0.067,
+              "min": 0.001,
+              "max": 2.006
+            },
+            {
+              "n": 200,
+              "median": 0.054,
+              "p95": 0.079,
+              "mean": 0.052,
+              "min": 0.001,
+              "max": 0.12
+            },
+            {
+              "n": 200,
+              "median": 0.056,
+              "p95": 0.099,
+              "mean": 0.067,
+              "min": 0.001,
+              "max": 1.565
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 0.055,
+            "p95": 0.091,
+            "mean": 0.062,
+            "min": 0.001,
+            "max": 2.006
+          },
+          "run_spread_median_ms": [
+            0.054,
+            0.056
+          ]
+        },
+        "pipeline": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 134.496,
+              "p95": 212.676,
+              "mean": 147.906,
+              "min": 99.978,
+              "max": 621.47
+            },
+            {
+              "n": 200,
+              "median": 115.464,
+              "p95": 154.911,
+              "mean": 120.039,
+              "min": 102.616,
+              "max": 173.871
+            },
+            {
+              "n": 200,
+              "median": 126.336,
+              "p95": 224.131,
+              "mean": 144.721,
+              "min": 102.309,
+              "max": 867.674
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 121.946,
+            "p95": 202.738,
+            "mean": 137.556,
+            "min": 99.978,
+            "max": 867.674
+          },
+          "run_spread_median_ms": [
+            115.464,
+            134.496
+          ]
+        }
+      },
+      "pipeline_fps_per_run": [
+        6.76,
+        8.33,
+        6.91
+      ],
+      "pipeline_fps_pooled": 7.27,
+      "pipeline_fps_from_median": 8.2,
+      "share_of_pipeline_median": {
+        "preprocess": 0.043,
+        "detect": 0.848,
+        "track": 0.031,
+        "depth": 0.01,
+        "geometry": 0.036,
+        "assemble": 0.0
+      },
+      "share_of_pipeline_mean": {
+        "preprocess": 0.04,
+        "detect": 0.875,
+        "track": 0.028,
+        "depth": 0.01,
+        "geometry": 0.043,
+        "assemble": 0.0
+      },
+      "reliability_per_run": [
+        {
+          "n_frames": 200,
+          "failed_frames": 0,
+          "failures": [],
+          "zero_object_frames": 1,
+          "mean_invalid_depth_rate": 0.1652,
+          "schema_errors_first5": 0,
+          "recovery": {
+            "recovered_gaps": 52,
+            "losses": 60,
+            "rate": 0.464,
+            "n_tracks": 202,
+            "n_static_confirmed": 74,
+            "tracker_stride_params": 6
+          }
+        },
+        {
+          "n_frames": 200,
+          "failed_frames": 0,
+          "failures": [],
+          "zero_object_frames": 1,
+          "mean_invalid_depth_rate": 0.1652,
+          "schema_errors_first5": 0,
+          "recovery": {
+            "recovered_gaps": 52,
+            "losses": 60,
+            "rate": 0.464,
+            "n_tracks": 202,
+            "n_static_confirmed": 74,
+            "tracker_stride_params": 6
+          }
+        },
+        {
+          "n_frames": 200,
+          "failed_frames": 0,
+          "failures": [],
+          "zero_object_frames": 1,
+          "mean_invalid_depth_rate": 0.1652,
+          "schema_errors_first5": 0,
+          "recovery": {
+            "recovered_gaps": 52,
+            "losses": 60,
+            "rate": 0.464,
+            "n_tracks": 202,
+            "n_static_confirmed": 74,
+            "tracker_stride_params": 6
+          }
+        }
+      ],
+      "mean_objects_per_frame": 7.71
+    },
+    "sunrgbd_test_200": {
+      "stages_ms": {
+        "io": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 36.709,
+              "p95": 96.672,
+              "mean": 52.749,
+              "min": 16.17,
+              "max": 149.934
+            },
+            {
+              "n": 200,
+              "median": 21.997,
+              "p95": 87.257,
+              "mean": 40.022,
+              "min": 7.239,
+              "max": 100.777
+            },
+            {
+              "n": 200,
+              "median": 23.948,
+              "p95": 87.348,
+              "mean": 38.2,
+              "min": 8.429,
+              "max": 102.21
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 26.931,
+            "p95": 92.83,
+            "mean": 43.657,
+            "min": 7.239,
+            "max": 149.934
+          },
+          "run_spread_median_ms": [
+            21.997,
+            36.709
+          ]
+        },
+        "preprocess": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 6.006,
+              "p95": 8.353,
+              "mean": 6.224,
+              "min": 4.439,
+              "max": 20.104
+            },
+            {
+              "n": 200,
+              "median": 6.096,
+              "p95": 7.602,
+              "mean": 6.206,
+              "min": 4.791,
+              "max": 9.689
+            },
+            {
+              "n": 200,
+              "median": 6.424,
+              "p95": 8.828,
+              "mean": 6.652,
+              "min": 4.47,
+              "max": 15.665
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 6.153,
+            "p95": 8.348,
+            "mean": 6.361,
+            "min": 4.439,
+            "max": 20.104
+          },
+          "run_spread_median_ms": [
+            6.006,
+            6.424
+          ]
+        },
+        "detector": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 106.941,
+              "p95": 193.463,
+              "mean": 135.596,
+              "min": 90.119,
+              "max": 1580.429
+            },
+            {
+              "n": 200,
+              "median": 101.288,
+              "p95": 150.417,
+              "mean": 112.938,
+              "min": 90.512,
+              "max": 258.754
+            },
+            {
+              "n": 200,
+              "median": 117.976,
+              "p95": 192.382,
+              "mean": 131.672,
+              "min": 89.822,
+              "max": 731.239
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 106.917,
+            "p95": 185.916,
+            "mean": 126.735,
+            "min": 89.822,
+            "max": 1580.429
+          },
+          "run_spread_median_ms": [
+            101.288,
+            117.976
+          ]
+        },
+        "detect": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 107.167,
+              "p95": 193.738,
+              "mean": 135.84,
+              "min": 90.324,
+              "max": 1580.77
+            },
+            {
+              "n": 200,
+              "median": 101.485,
+              "p95": 150.713,
+              "mean": 113.174,
+              "min": 90.73,
+              "max": 259.056
+            },
+            {
+              "n": 200,
+              "median": 118.186,
+              "p95": 192.62,
+              "mean": 131.914,
+              "min": 90.004,
+              "max": 731.465
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 107.134,
+            "p95": 186.257,
+            "mean": 126.976,
+            "min": 90.004,
+            "max": 1580.77
+          },
+          "run_spread_median_ms": [
+            101.485,
+            118.186
+          ]
+        },
+        "detect_total": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 112.57,
+              "p95": 203.223,
+              "mean": 142.571,
+              "min": 95.299,
+              "max": 1602.005
+            },
+            {
+              "n": 200,
+              "median": 108.315,
+              "p95": 158.803,
+              "mean": 119.941,
+              "min": 96.149,
+              "max": 269.349
+            },
+            {
+              "n": 200,
+              "median": 124.39,
+              "p95": 199.807,
+              "mean": 139.157,
+              "min": 96.091,
+              "max": 739.261
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 113.262,
+            "p95": 195.735,
+            "mean": 133.89,
+            "min": 95.299,
+            "max": 1602.005
+          },
+          "run_spread_median_ms": [
+            108.315,
+            124.39
+          ]
+        },
+        "track": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 0.006,
+              "p95": 0.017,
+              "mean": 0.009,
+              "min": 0.004,
+              "max": 0.096
+            },
+            {
+              "n": 200,
+              "median": 0.006,
+              "p95": 0.017,
+              "mean": 0.009,
+              "min": 0.003,
+              "max": 0.106
+            },
+            {
+              "n": 200,
+              "median": 0.007,
+              "p95": 0.023,
+              "mean": 0.011,
+              "min": 0.003,
+              "max": 0.366
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 0.007,
+            "p95": 0.018,
+            "mean": 0.01,
+            "min": 0.003,
+            "max": 0.366
+          },
+          "run_spread_median_ms": [
+            0.006,
+            0.007
+          ]
+        },
+        "depth": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 1.443,
+              "p95": 3.149,
+              "mean": 1.549,
+              "min": 0.024,
+              "max": 5.301
+            },
+            {
+              "n": 200,
+              "median": 1.339,
+              "p95": 3.302,
+              "mean": 1.541,
+              "min": 0.024,
+              "max": 5.686
+            },
+            {
+              "n": 200,
+              "median": 1.452,
+              "p95": 3.725,
+              "mean": 1.627,
+              "min": 0.024,
+              "max": 6.211
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 1.404,
+            "p95": 3.424,
+            "mean": 1.572,
+            "min": 0.024,
+            "max": 6.211
+          },
+          "run_spread_median_ms": [
+            1.339,
+            1.452
+          ]
+        },
+        "geometry": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 5.689,
+              "p95": 21.943,
+              "mean": 8.202,
+              "min": 0.0,
+              "max": 136.312
+            },
+            {
+              "n": 200,
+              "median": 5.253,
+              "p95": 22.004,
+              "mean": 7.632,
+              "min": 0.0,
+              "max": 54.297
+            },
+            {
+              "n": 200,
+              "median": 5.77,
+              "p95": 25.707,
+              "mean": 8.219,
+              "min": 0.0,
+              "max": 32.762
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 5.509,
+            "p95": 23.133,
+            "mean": 8.018,
+            "min": 0.0,
+            "max": 136.312
+          },
+          "run_spread_median_ms": [
+            5.253,
+            5.77
+          ]
+        },
+        "assemble": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 0.037,
+              "p95": 0.088,
+              "mean": 0.042,
+              "min": 0.002,
+              "max": 0.191
+            },
+            {
+              "n": 200,
+              "median": 0.034,
+              "p95": 0.08,
+              "mean": 0.038,
+              "min": 0.002,
+              "max": 0.14
+            },
+            {
+              "n": 200,
+              "median": 0.038,
+              "p95": 0.09,
+              "mean": 0.043,
+              "min": 0.002,
+              "max": 0.272
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 0.037,
+            "p95": 0.088,
+            "mean": 0.041,
+            "min": 0.002,
+            "max": 0.272
+          },
+          "run_spread_median_ms": [
+            0.034,
+            0.038
+          ]
+        },
+        "pipeline": {
+          "runs": [
+            {
+              "n": 200,
+              "median": 122.964,
+              "p95": 219.401,
+              "mean": 152.372,
+              "min": 100.58,
+              "max": 1609.455
+            },
+            {
+              "n": 200,
+              "median": 118.417,
+              "p95": 172.121,
+              "mean": 129.161,
+              "min": 100.703,
+              "max": 279.256
+            },
+            {
+              "n": 200,
+              "median": 132.044,
+              "p95": 215.724,
+              "mean": 149.057,
+              "min": 96.967,
+              "max": 746.109
+            }
+          ],
+          "pooled": {
+            "n": 600,
+            "median": 125.586,
+            "p95": 208.942,
+            "mean": 143.53,
+            "min": 96.967,
+            "max": 1609.455
+          },
+          "run_spread_median_ms": [
+            118.417,
+            132.044
+          ]
+        }
+      },
+      "pipeline_fps_per_run": [
+        6.56,
+        7.74,
+        6.71
+      ],
+      "pipeline_fps_pooled": 6.97,
+      "pipeline_fps_from_median": 7.96,
+      "share_of_pipeline_median": {
+        "preprocess": 0.049,
+        "detect": 0.853,
+        "track": 0.0,
+        "depth": 0.011,
+        "geometry": 0.044,
+        "assemble": 0.0
+      },
+      "share_of_pipeline_mean": {
+        "preprocess": 0.044,
+        "detect": 0.885,
+        "track": 0.0,
+        "depth": 0.011,
+        "geometry": 0.056,
+        "assemble": 0.0
+      },
+      "reliability_per_run": [
+        {
+          "n_frames": 200,
+          "failed_frames": 0,
+          "failures": [],
+          "zero_object_frames": 15,
+          "mean_invalid_depth_rate": 0.2033,
+          "schema_errors_first5": 0
+        },
+        {
+          "n_frames": 200,
+          "failed_frames": 0,
+          "failures": [],
+          "zero_object_frames": 15,
+          "mean_invalid_depth_rate": 0.2033,
+          "schema_errors_first5": 0
+        },
+        {
+          "n_frames": 200,
+          "failed_frames": 0,
+          "failures": [],
+          "zero_object_frames": 15,
+          "mean_invalid_depth_rate": 0.2033,
+          "schema_errors_first5": 0
+        }
+      ],
+      "mean_objects_per_frame": 4.68
+    }
+  },
+  "bottleneck": {
+    "per_list": {
+      "tum_fr1_desk_200": {
+        "fps": 7.19,
+        "meets_10fps": false,
+        "dominant_stage": "detect",
+        "dominant_share_of_mean": 0.883
+      },
+      "tum_fr3_long_office_200": {
+        "fps": 7.27,
+        "meets_10fps": false,
+        "dominant_stage": "detect",
+        "dominant_share_of_mean": 0.875
+      },
+      "sunrgbd_test_200": {
+        "fps": 6.97,
+        "meets_10fps": false,
+        "dominant_stage": "detect",
+        "dominant_share_of_mean": 0.885
+      }
+    },
+    "target_fps": 10.0,
+    "statement": "Lowest pipeline FPS 6.97 (target 10, soft). The target is missed. Detection (preprocess + model + postprocess) is up to 93% of the mean pipeline time; depth, geometry and tracking together are the rest. Phase 06 levers, in the order the protocol lists them: ONNX Runtime FP32, ONNX Runtime INT8 (static quantisation), the input-size sweep (imgsz 640 -> 512 / 416, with the mAP change reported), and optionally OpenVINO. No measurement boundary was moved."
+  },
+  "header": {
+    "git_commit": null,
+    "git_dirty": true,
+    "created_utc": "2026-11-11T09:19:34+00:00",
+    "config_sha256": {
+      "depth": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+      "tracker": "8832026648357df7e38285345124f605ee44e4080a1fb287cefaa8ae3b59e818",
+      "detector": "05c49ce46d9f16153d678b3650c42f6cf36d6429ac4a148bad57c4c579b4e09f"
+    },
+    "input_sha256": {
+      "tum_rgbd_dataset_freiburg1_desk_200.txt": "3e5b0aab9badec5caceaa21991f7b34c4fcb05e2f1ad20b52b07476e21a04989",
+      "tum_rgbd_dataset_freiburg3_long_office_household_200.txt": "d425e412ed18bdbf8895e096dc6838bbff92d54e53081dcb36168a9211b2e8b9",
+      "sunrgbd_test_500.txt": "b0ec5a62bc42eedb1524d1ed971a029e2bca13d53758a99173b0d46217011e87"
+    },
+    "detector_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "imgsz": 640,
+    "conf": 0.001,
+    "conf_operational": 0.2411
+  }
+}

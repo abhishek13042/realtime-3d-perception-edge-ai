@@ -1,0 +1,55 @@
+{
+  "conf": 0.2411,
+  "test": {
+    "sofa_chair": {
+      "n_gt": 765,
+      "best_iou>=0.5_pred_class": {
+        "chair": 404,
+        "(none)": 200,
+        "couch": 155,
+        "person": 3,
+        "bed": 1
+      }
+    },
+    "sofa": {
+      "n_gt": 799,
+      "best_iou>=0.5_pred_class": {
+        "couch": 489,
+        "(none)": 200,
+        "chair": 86,
+        "bed": 16,
+        "dining table": 3
+      }
+    },
+    "chair": {
+      "n_gt": 12303,
+      "best_iou>=0.5_pred_class": {
+        "chair": 6386,
+        "(none)": 5762,
+        "dining table": 59,
+        "toilet": 28,
+        "couch": 20
+      }
+    },
+    "table": {
+      "n_gt": 3083,
+      "best_iou>=0.5_pred_class": {
+        "(none)": 2022,
+        "dining table": 845,
+        "chair": 118,
+        "bench": 39,
+        "bed": 26
+      }
+    },
+    "desk": {
+      "n_gt": 2432,
+      "best_iou>=0.5_pred_class": {
+        "(none)": 2064,
+        "dining table": 174,
+        "chair": 111,
+        "bench": 59,
+        "refrigerator": 11
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+# Spec 05.4 R2: by-eye review of the rule-selected failure gallery (benchmarks/results/failure_gallery_*.png).
+# One primary category per item, from perception.eval.failures.CATEGORIES. Reviewed 2026-11-11 from the rendered
+# panels plus the per-item numbers (estimated Z, GT Z, GT 2D-3D link IoU) in benchmarks/results/failure_gallery.json.
+# "GT-box problem" covers three cases, named in each note: a weak 2D-3D GT link (link IoU < 0.3, so the GT centre
+# probably belongs to a different instance), a GT 2D box that does not fit the visible object, and a real object
+# with no GT box of a mapped class (false positives only).
+
+# --- large_error: 12 largest 3D errors, detected mode, status valid ---
+"large_error:000741:plant:153_31": {category: occluder, note: "lamp shade in front of the plant fills most of the sampling region; est Z 1.82 vs GT 5.51 (link 0.54)"}
+"large_error:000754:sofa_chair:0_157": {category: localisation, note: "box spans a cluster of sofas at different depths; median lands on the nearest (1.42 vs GT 4.13, link 0.67)"}
+"large_error:003948:chair:0_252": {category: GT-box problem, note: "weak GT link (IoU 0.03); dark scene, estimate 4.52 m on the detected chair cannot be checked against this GT centre"}
+"large_error:003387:chair:421_194": {category: GT-box problem, note: "weak GT link (IoU 0.04); est 5.55 vs GT 2.87"}
+"large_error:000581:chair:274_45": {category: background bleed, note: "see-through wire chair; the region reads the bookshelf behind (est 5.6 vs GT 3.31); GT link also weak (0.16)"}
+"large_error:001390:chair:327_228": {category: GT-box problem, note: "weak GT link (IoU 0.18); estimate 2.92 m sits on the visible chair, GT centre 5.55 m is a chair further back"}
+"large_error:001277:chair:193_148": {category: GT-box problem, note: "weak GT link (IoU 0.23); estimate 2.54 m on the visible chair, GT 4.92 m"}
+"large_error:003037:chair:294_208": {category: occluder, note: "thin near object (pole/board) crosses the box; est 1.50 vs GT 4.07 (link 0.70)"}
+"large_error:004541:chair:270_138": {category: GT-box problem, note: "weak GT link (IoU 0.28); estimate 2.34 m on the visible chair, GT 4.82 m"}
+"large_error:001287:chair:425_216": {category: GT-box problem, note: "weak GT link (IoU 0.17); estimate 2.00 m on the visible chair, GT 4.37 m"}
+"large_error:001288:chair:138_79": {category: GT-box problem, note: "GT link IoU 0.00; est 5.41 vs GT 3.51"}
+"large_error:000274:chair:551_132": {category: GT-box problem, note: "weak GT link (IoU 0.03); est 5.26 vs GT 3.12"}
+
+# --- no_depth: matched objects with no usable depth, highest score first ---
+"no_depth:004807:monitor:97_2": {category: missing or invalid depth, note: "monitor screen returns no depth (valid frac 0.00)"}
+"no_depth:000071:monitor:61_217": {category: missing or invalid depth, note: "black monitor screen, no depth"}
+"no_depth:001281:monitor:434_20": {category: missing or invalid depth, note: "black monitor screen, frac 0.01"}
+"no_depth:004694:keyboard:363_149": {category: missing or invalid depth, note: "black keyboard on realsense, frac 0.004"}
+"no_depth:002330:tv:465_2": {category: missing or invalid depth, note: "tv screen, no depth (kv1)"}
+"no_depth:004821:monitor:315_50": {category: missing or invalid depth, note: "lit monitor screen, no depth (realsense)"}
+"no_depth:000110:tv:104_126": {category: missing or invalid depth, note: "black tv screen, frac 0.002"}
+"no_depth:000074:monitor:238_105": {category: missing or invalid depth, note: "black monitor screen, no depth"}
+
+# --- missed: GT objects with no detected-mode match, top-4 classes, largest GT box first ---
+"missed:005046:chair:138_40": {category: truncation, note: "chair very close, cut by the frame edges"}
+"missed:004898:chair:68_12": {category: truncation, note: "chair cut by the top and right edges"}
+"missed:000051:table:0_0": {category: GT-box problem, note: "GT table box covers the whole image; the table is almost hidden behind chairs"}
+"missed:000052:table:0_0": {category: GT-box problem, note: "GT table box covers nearly the whole image; table mostly hidden behind chairs"}
+"missed:001079:sofa:0_0": {category: truncation, note: "curved sofa fills the frame, no full outline visible"}
+"missed:001071:sofa:73_2": {category: truncation, note: "sofa cut by the top and bottom edges"}
+"missed:002550:tv:0_162": {category: truncation, note: "only the top of the tv is in frame"}
+"missed:001853:monitor:27_28": {category: truncation, note: "monitor seen edge-on and cut by the left edge"}
+
+# --- false_positive: output boxes matching no GT box, highest score first ---
+"false_positive:003228:refrigerator:185_29": {category: GT-box problem, note: "real refrigerator with no GT box of a mapped class"}
+"false_positive:002534:mouse:306_279": {category: GT-box problem, note: "real mouse, not annotated"}
+"false_positive:002122:person:395_2": {category: GT-box problem, note: "real person; people are not in the SUN class set"}
+"false_positive:004682:keyboard:509_173": {category: GT-box problem, note: "real keyboard, not annotated"}
+"false_positive:004461:toilet:86_53": {category: misclassification, note: "urinal detected as toilet"}
+"false_positive:002542:keyboard:261_92": {category: GT-box problem, note: "real keyboard, not annotated"}
+"false_positive:003599:bicycle:220_214": {category: GT-box problem, note: "real bicycle; bicycle is not in the SUN class map"}
+"false_positive:002093:person:405_1": {category: GT-box problem, note: "real person; people are not in the SUN class set"}

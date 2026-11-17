@@ -1,0 +1,546 @@
+{
+  "spec": "02.3",
+  "tag": "nms_ablation",
+  "label": "Measured: YOLO26-n pretrained (COCO), no fine-tuning, PyTorch CPU",
+  "runs": {
+    "val": "sun_val_nms",
+    "test": "sun_test_nms"
+  },
+  "run_header": {
+    "weights": "models/yolo26n.pt",
+    "weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "head": "one2many_nms",
+    "imgsz": 640,
+    "conf": 0.001,
+    "max_det": 300,
+    "iou_nms": 0.7,
+    "threads": 4,
+    "config_sha256": "05c49ce46d9f16153d678b3650c42f6cf36d6429ac4a148bad57c4c579b4e09f",
+    "git_commit": null,
+    "git_dirty": true,
+    "versions": {
+      "torch": "2.15.0+cpu",
+      "torchvision": "0.29.2+cpu",
+      "ultralytics": "8.4.208",
+      "numpy": "2.5.4",
+      "opencv-python": "5.0.0.93"
+    },
+    "python": "3.14.0",
+    "machine": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "run": "sun_test_nms",
+    "source": "sunrgbd_test",
+    "list": null,
+    "n_frames": 5050
+  },
+  "classes": [
+    "backpack",
+    "bed",
+    "bench",
+    "book",
+    "bottle",
+    "bowl",
+    "cell phone",
+    "chair",
+    "clock",
+    "couch",
+    "cup",
+    "dining table",
+    "keyboard",
+    "laptop",
+    "microwave",
+    "mouse",
+    "oven",
+    "potted plant",
+    "refrigerator",
+    "remote",
+    "sink",
+    "suitcase",
+    "teddy bear",
+    "toilet",
+    "tv",
+    "vase"
+  ],
+  "class_map": "configs/class_map.yaml",
+  "eval_settings": {
+    "pred_conf_floor": 0.001,
+    "coco_maxDets": 100,
+    "pr_iou": 0.5,
+    "low_n_below": 50
+  },
+  "gt_conversion": {
+    "val": {
+      "kept": 2172,
+      "unmapped": 1798,
+      "degenerate": 0,
+      "ignore": 0
+    },
+    "test": {
+      "kept": 20542,
+      "unmapped": 18097,
+      "degenerate": 8,
+      "ignore": 0
+    }
+  },
+  "val": {
+    "n_images": 528,
+    "n_gt": 2172,
+    "best_f1": {
+      "threshold": 0.23381951451301575,
+      "f1": 0.5021924763443343,
+      "precision": 0.5034706154558075,
+      "recall": 0.5009208103130756
+    },
+    "conf_operational": 0.2338,
+    "coco_summary": {
+      "mAP": 0.26668,
+      "AP50": 0.37261,
+      "AP75": 0.28435,
+      "AP_small": 0.04187,
+      "AP_medium": 0.15192,
+      "AP_large": 0.43542,
+      "AR1": 0.40256,
+      "AR10": 0.56655,
+      "AR100": 0.59317,
+      "AR_small": 0.28792,
+      "AR_medium": 0.49336,
+      "AR_large": 0.67907
+    },
+    "pr_grid": [
+      {
+        "threshold": 0.05,
+        "precision": 0.22560416029366778,
+        "recall": 0.679097605893186,
+        "f1": 0.33869115958668194,
+        "tp": 1475,
+        "n_pred": 6538,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.1,
+        "precision": 0.3318374470206931,
+        "recall": 0.6127992633517495,
+        "f1": 0.43053533883228207,
+        "tp": 1331,
+        "n_pred": 4011,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.15,
+        "precision": 0.41258031788975313,
+        "recall": 0.5616942909760589,
+        "f1": 0.4757262624293234,
+        "tp": 1220,
+        "n_pred": 2957,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.2,
+        "precision": 0.46828665568369027,
+        "recall": 0.5234806629834254,
+        "f1": 0.49434782608695654,
+        "tp": 1137,
+        "n_pred": 2428,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.25,
+        "precision": 0.5145348837209303,
+        "recall": 0.4889502762430939,
+        "f1": 0.5014164305949008,
+        "tp": 1062,
+        "n_pred": 2064,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.3,
+        "precision": 0.5538028169014084,
+        "recall": 0.4525782688766114,
+        "f1": 0.498099822650114,
+        "tp": 983,
+        "n_pred": 1775,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.35,
+        "precision": 0.5839228295819936,
+        "recall": 0.4180478821362799,
+        "f1": 0.48725516501207405,
+        "tp": 908,
+        "n_pred": 1555,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.4,
+        "precision": 0.6127379209370425,
+        "recall": 0.38535911602209943,
+        "f1": 0.4731486715658564,
+        "tp": 837,
+        "n_pred": 1366,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.45,
+        "precision": 0.6424344885883347,
+        "recall": 0.34990791896869244,
+        "f1": 0.4530551415797317,
+        "tp": 760,
+        "n_pred": 1183,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.5,
+        "precision": 0.6709233791748527,
+        "recall": 0.31445672191528545,
+        "f1": 0.42821316614420063,
+        "tp": 683,
+        "n_pred": 1018,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.55,
+        "precision": 0.7005586592178771,
+        "recall": 0.2886740331491713,
+        "f1": 0.40886860123899577,
+        "tp": 627,
+        "n_pred": 895,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.6,
+        "precision": 0.7182741116751269,
+        "recall": 0.2605893186003683,
+        "f1": 0.3824324324324324,
+        "tp": 566,
+        "n_pred": 788,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.65,
+        "precision": 0.7377049180327869,
+        "recall": 0.22790055248618785,
+        "f1": 0.3482237073513894,
+        "tp": 495,
+        "n_pred": 671,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.7,
+        "precision": 0.7710622710622711,
+        "recall": 0.1938305709023941,
+        "f1": 0.30978660779985284,
+        "tp": 421,
+        "n_pred": 546,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.75,
+        "precision": 0.7767653758542141,
+        "recall": 0.15699815837937384,
+        "f1": 0.26120260436614323,
+        "tp": 341,
+        "n_pred": 439,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.8,
+        "precision": 0.8233438485804416,
+        "recall": 0.12016574585635359,
+        "f1": 0.20972278023302532,
+        "tp": 261,
+        "n_pred": 317,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.85,
+        "precision": 0.855072463768116,
+        "recall": 0.08149171270718232,
+        "f1": 0.14880201765447668,
+        "tp": 177,
+        "n_pred": 207,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.9,
+        "precision": 0.8833333333333333,
+        "recall": 0.02440147329650092,
+        "f1": 0.047491039426523295,
+        "tp": 53,
+        "n_pred": 60,
+        "n_gt": 2172
+      },
+      {
+        "threshold": 0.95,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "n_pred": 0,
+        "n_gt": 2172
+      }
+    ],
+    "curve_points": 62470
+  },
+  "test": {
+    "n_images": 5050,
+    "n_gt": 20542,
+    "coco_summary": {
+      "mAP": 0.22633,
+      "AP50": 0.32021,
+      "AP75": 0.24401,
+      "AP_small": 0.02816,
+      "AP_medium": 0.12867,
+      "AP_large": 0.3122,
+      "AR1": 0.37818,
+      "AR10": 0.53894,
+      "AR100": 0.56228,
+      "AR_small": 0.23401,
+      "AR_medium": 0.48051,
+      "AR_large": 0.60858
+    },
+    "at_operational": {
+      "threshold": 0.2338,
+      "precision": 0.5101884991648771,
+      "recall": 0.5204459156849381,
+      "f1": 0.5152661638190712,
+      "tp": 10691,
+      "n_pred": 20955,
+      "n_gt": 20542
+    },
+    "per_class": {
+      "bench": {
+        "AP": 0.05592,
+        "AP50": 0.07133,
+        "n_gt": 140,
+        "low_n": false
+      },
+      "backpack": {
+        "AP": null,
+        "AP50": null,
+        "n_gt": 0,
+        "low_n": true
+      },
+      "suitcase": {
+        "AP": null,
+        "AP50": null,
+        "n_gt": 0,
+        "low_n": true
+      },
+      "bottle": {
+        "AP": 0.1133,
+        "AP50": 0.19125,
+        "n_gt": 146,
+        "low_n": false
+      },
+      "cup": {
+        "AP": 0.12485,
+        "AP50": 0.17921,
+        "n_gt": 91,
+        "low_n": false
+      },
+      "bowl": {
+        "AP": 0.09039,
+        "AP50": 0.14276,
+        "n_gt": 87,
+        "low_n": false
+      },
+      "chair": {
+        "AP": 0.38165,
+        "AP50": 0.59751,
+        "n_gt": 12295,
+        "low_n": false
+      },
+      "couch": {
+        "AP": 0.41175,
+        "AP50": 0.53361,
+        "n_gt": 1564,
+        "low_n": false
+      },
+      "potted plant": {
+        "AP": 0.12191,
+        "AP50": 0.20796,
+        "n_gt": 84,
+        "low_n": false
+      },
+      "bed": {
+        "AP": 0.51177,
+        "AP50": 0.74903,
+        "n_gt": 598,
+        "low_n": false
+      },
+      "dining table": {
+        "AP": 0.25237,
+        "AP50": 0.37299,
+        "n_gt": 3108,
+        "low_n": false
+      },
+      "toilet": {
+        "AP": 0.47301,
+        "AP50": 0.66255,
+        "n_gt": 157,
+        "low_n": false
+      },
+      "tv": {
+        "AP": 0.34102,
+        "AP50": 0.52461,
+        "n_gt": 954,
+        "low_n": false
+      },
+      "laptop": {
+        "AP": 0.39221,
+        "AP50": 0.48564,
+        "n_gt": 113,
+        "low_n": false
+      },
+      "mouse": {
+        "AP": 0.07256,
+        "AP50": 0.15453,
+        "n_gt": 54,
+        "low_n": false
+      },
+      "remote": {
+        "AP": 0.11925,
+        "AP50": 0.15261,
+        "n_gt": 15,
+        "low_n": true
+      },
+      "keyboard": {
+        "AP": 0.28911,
+        "AP50": 0.40664,
+        "n_gt": 211,
+        "low_n": false
+      },
+      "cell phone": {
+        "AP": 0.00191,
+        "AP50": 0.00293,
+        "n_gt": 12,
+        "low_n": true
+      },
+      "microwave": {
+        "AP": 0.31927,
+        "AP50": 0.42221,
+        "n_gt": 96,
+        "low_n": false
+      },
+      "oven": {
+        "AP": 0.04657,
+        "AP50": 0.06598,
+        "n_gt": 22,
+        "low_n": true
+      },
+      "sink": {
+        "AP": 0.48669,
+        "AP50": 0.69063,
+        "n_gt": 402,
+        "low_n": false
+      },
+      "refrigerator": {
+        "AP": 0.43226,
+        "AP50": 0.50824,
+        "n_gt": 160,
+        "low_n": false
+      },
+      "book": {
+        "AP": 0.02874,
+        "AP50": 0.0515,
+        "n_gt": 167,
+        "low_n": false
+      },
+      "clock": {
+        "AP": 0.12656,
+        "AP50": 0.17156,
+        "n_gt": 22,
+        "low_n": true
+      },
+      "vase": {
+        "AP": 0.01252,
+        "AP50": 0.01963,
+        "n_gt": 44,
+        "low_n": true
+      },
+      "teddy bear": {
+        "AP": null,
+        "AP50": null,
+        "n_gt": 0,
+        "low_n": true
+      }
+    },
+    "per_sensor": {
+      "kv1": {
+        "n_images": 930,
+        "n_gt": 2404,
+        "mAP": 0.30885,
+        "AP50": 0.41608,
+        "at_operational": {
+          "threshold": 0.2338,
+          "precision": 0.4345127250155183,
+          "recall": 0.5823627287853578,
+          "f1": 0.4976892996800568,
+          "tp": 1400,
+          "n_pred": 3222,
+          "n_gt": 2404
+        }
+      },
+      "kv2": {
+        "n_images": 1860,
+        "n_gt": 10285,
+        "mAP": 0.20622,
+        "AP50": 0.29366,
+        "at_operational": {
+          "threshold": 0.2338,
+          "precision": 0.540484997944924,
+          "recall": 0.5114244044725328,
+          "f1": 0.5255532797122445,
+          "tp": 5260,
+          "n_pred": 9732,
+          "n_gt": 10285
+        }
+      },
+      "realsense": {
+        "n_images": 572,
+        "n_gt": 2526,
+        "mAP": 0.25685,
+        "AP50": 0.35792,
+        "at_operational": {
+          "threshold": 0.2338,
+          "precision": 0.55741127348643,
+          "recall": 0.5285035629453682,
+          "f1": 0.5425726478358057,
+          "tp": 1335,
+          "n_pred": 2395,
+          "n_gt": 2526
+        }
+      },
+      "xtion": {
+        "n_images": 1688,
+        "n_gt": 5327,
+        "mAP": 0.25015,
+        "AP50": 0.35003,
+        "at_operational": {
+          "threshold": 0.2338,
+          "precision": 0.4809133071708883,
+          "recall": 0.5061009949314811,
+          "f1": 0.49318576785877616,
+          "tp": 2696,
+          "n_pred": 5606,
+          "n_gt": 5327
+        }
+      }
+    },
+    "sensitivity_desk_ignore": {
+      "strict": {
+        "AP": 0.25237,
+        "AP50": 0.37299,
+        "n_gt": 3108,
+        "low_n": false
+      },
+      "desk_as_ignore": {
+        "AP": 0.28033,
+        "AP50": 0.42234,
+        "n_gt": 3108
+      },
+      "n_desk_ignore_regions": 2431,
+      "all_classes_mAP_strict": 0.22633,
+      "all_classes_mAP_desk_ignore": 0.22755
+    }
+  }
+}

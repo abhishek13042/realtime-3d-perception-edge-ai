@@ -1,0 +1,15 @@
+# Detector configuration (spec 02.1 R6). All detection thresholds live here.
+weights: models/yolo26n.pt
+# Official Ultralytics release asset, AGPL-3.0 (decision D3); 5,544,453 bytes; hash recorded 2026-11-10.
+weights_url: https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt
+weights_sha256: 9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef
+
+head: one2one          # one2one = NMS-free (YOLO26 default design); one2many_nms = one-to-many branch + NMS
+iou: 0.7               # NMS IoU, used only by head: one2many_nms
+imgsz: 640             # letterbox square size; swept in Phase 06
+pad_value: 114
+threads: 4             # torch.set_num_threads; i3-1115G4 = 2 cores / 4 threads
+
+conf: 0.001            # evaluation threshold (COCO convention, spec 02.3)
+max_det: 300
+conf_operational: 0.2411  # max F1 @ IoU 0.5 on SUN val (spec 02.3 R6; eval_baseline.json)

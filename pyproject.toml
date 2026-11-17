@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perception"
+version = "0.1.0"
+description = "Real-Time 3D Perception and Edge Intelligence Platform"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "scipy",
+    "pyyaml",
+    "pillow",
+    "h5py",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "threadpoolctl==3.8.0"]  # threadpoolctl: thread labels in benchmark reports
+viz = ["open3d==0.20.0"]  # only scripts/view_pointcloud.py; core code never imports it
+# Phase 02 detection stack. Exact versions as installed and tested 2026-11-10 (Python 3.14, Windows, CPU).
+# torch/torchvision come from the CPU index: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+detection = [
+    "torch==2.15.0",
+    "torchvision==0.29.2",
+    "ultralytics==8.4.208",
+    "onnx==1.23.2",
+    "onnxruntime==1.31.1",
+    "pycocotools==2.0.11",
+    "psutil==7.2.2",
+    "lap==0.5.14",  # BSD-2; required by ultralytics ByteTrack (Phase 04). Pinned so ultralytics never auto-installs it
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

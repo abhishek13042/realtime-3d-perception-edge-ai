@@ -1,0 +1,3568 @@
+{
+ "stage": "tune",
+ "sequence": "rgbd_dataset_freiburg1_desk",
+ "grid": {
+  "track_buffer": [
+   15,
+   30,
+   60
+  ],
+  "match_thresh": [
+   0.7,
+   0.8,
+   0.9
+  ],
+  "class_aware": [
+   true,
+   false
+  ]
+ },
+ "objective": "R3: minimise fragmentation subject to jump rate <= the reference's; ties within TIE go to the reference.",
+ "tie": 0.05,
+ "d_jump": 0.75,
+ "reference_params": {
+  "track_high_thresh": 0.2411,
+  "track_low_thresh": 0.1,
+  "new_track_thresh": 0.2411,
+  "track_buffer": 30,
+  "match_thresh": 0.8,
+  "fuse_score": true,
+  "class_aware": true
+ },
+ "strides": {
+  "1": {
+   "rows": [
+    {
+     "params": {
+      "track_buffer": 15,
+      "match_thresh": 0.7,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 208,
+      "n_confirmed": 124,
+      "n_static_confirmed": 124,
+      "stability_m": {
+       "n_tracks": 72,
+       "median": 0.0199,
+       "p90": 0.0479
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 0,
+        "valid_pairs": 1249,
+        "per_100": 0.0
+       },
+       "0.75": {
+        "n_jumps": 0,
+        "valid_pairs": 1249,
+        "per_100": 0.0
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 1249,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 92,
+       "losses": 118,
+       "rate": 0.438
+      },
+      "coverage": {
+       "tracked_boxes": 1772,
+       "valid_share": 0.8217,
+       "status_counts": {
+        "valid": 1456,
+        "low_coverage": 285,
+        "no_depth": 31
+       },
+       "frames_without_tracks": 25,
+       "n_processed": 573
+      },
+      "mean_track_len": 13.29,
+      "fragmentation": {
+       "overall": 6.833,
+       "overall_range": [
+        5.125,
+        10.25
+       ],
+       "tracks": 123,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 27,
+         "objects": 4,
+         "tracks_per_object": 6.75
+        },
+        "keyboard": {
+         "tracks": 20,
+         "objects": 3,
+         "tracks_per_object": 6.667
+        },
+        "laptop": {
+         "tracks": 22,
+         "objects": 2,
+         "tracks_per_object": 11.0
+        },
+        "mouse": {
+         "tracks": 13,
+         "objects": 2,
+         "tracks_per_object": 6.5
+        },
+        "book": {
+         "tracks": 29,
+         "objects": 4,
+         "tracks_per_object": 7.25
+        },
+        "chair": {
+         "tracks": 9,
+         "objects": 2,
+         "tracks_per_object": 4.5
+        },
+        "cup": {
+         "tracks": 3,
+         "objects": 1,
+         "tracks_per_object": 3.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 15,
+      "match_thresh": 0.7,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 192,
+      "n_confirmed": 122,
+      "n_static_confirmed": 122,
+      "stability_m": {
+       "n_tracks": 76,
+       "median": 0.0215,
+       "p90": 0.0767
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 0,
+        "valid_pairs": 1324,
+        "per_100": 0.0
+       },
+       "0.75": {
+        "n_jumps": 0,
+        "valid_pairs": 1324,
+        "per_100": 0.0
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 1324,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 83,
+       "losses": 116,
+       "rate": 0.417
+      },
+      "coverage": {
+       "tracked_boxes": 1853,
+       "valid_share": 0.8192,
+       "status_counts": {
+        "valid": 1518,
+        "low_coverage": 303,
+        "no_depth": 32
+       },
+       "frames_without_tracks": 21,
+       "n_processed": 573
+      },
+      "mean_track_len": 14.33,
+      "fragmentation": {
+       "overall": 6.667,
+       "overall_range": [
+        5.0,
+        10.0
+       ],
+       "tracks": 120,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 29,
+         "objects": 4,
+         "tracks_per_object": 7.25
+        },
+        "keyboard": {
+         "tracks": 21,
+         "objects": 3,
+         "tracks_per_object": 7.0
+        },
+        "laptop": {
+         "tracks": 17,
+         "objects": 2,
+         "tracks_per_object": 8.5
+        },
+        "mouse": {
+         "tracks": 12,
+         "objects": 2,
+         "tracks_per_object": 6.0
+        },
+        "book": {
+         "tracks": 29,
+         "objects": 4,
+         "tracks_per_object": 7.25
+        },
+        "chair": {
+         "tracks": 9,
+         "objects": 2,
+         "tracks_per_object": 4.5
+        },
+        "cup": {
+         "tracks": 3,
+         "objects": 1,
+         "tracks_per_object": 3.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 15,
+      "match_thresh": 0.8,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 138,
+      "n_confirmed": 122,
+      "n_static_confirmed": 122,
+      "stability_m": {
+       "n_tracks": 81,
+       "median": 0.0226,
+       "p90": 0.0716
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 0,
+        "valid_pairs": 1715,
+        "per_100": 0.0
+       },
+       "0.75": {
+        "n_jumps": 0,
+        "valid_pairs": 1715,
+        "per_100": 0.0
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 1715,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 80,
+       "losses": 115,
+       "rate": 0.41
+      },
+      "coverage": {
+       "tracked_boxes": 2197,
+       "valid_share": 0.8375,
+       "status_counts": {
+        "valid": 1840,
+        "low_coverage": 324,
+        "no_depth": 33
+       },
+       "frames_without_tracks": 14,
+       "n_processed": 573
+      },
+      "mean_track_len": 17.81,
+      "fragmentation": {
+       "overall": 6.556,
+       "overall_range": [
+        4.917,
+        9.833
+       ],
+       "tracks": 118,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 26,
+         "objects": 4,
+         "tracks_per_object": 6.5
+        },
+        "keyboard": {
+         "tracks": 17,
+         "objects": 3,
+         "tracks_per_object": 5.667
+        },
+        "laptop": {
+         "tracks": 17,
+         "objects": 2,
+         "tracks_per_object": 8.5
+        },
+        "mouse": {
+         "tracks": 19,
+         "objects": 2,
+         "tracks_per_object": 9.5
+        },
+        "book": {
+         "tracks": 24,
+         "objects": 4,
+         "tracks_per_object": 6.0
+        },
+        "chair": {
+         "tracks": 11,
+         "objects": 2,
+         "tracks_per_object": 5.5
+        },
+        "cup": {
+         "tracks": 4,
+         "objects": 1,
+         "tracks_per_object": 4.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 15,
+      "match_thresh": 0.8,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 117,
+      "n_confirmed": 103,
+      "n_static_confirmed": 103,
+      "stability_m": {
+       "n_tracks": 78,
+       "median": 0.0261,
+       "p90": 0.1021
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 1,
+        "valid_pairs": 1766,
+        "per_100": 0.057
+       },
+       "0.75": {
+        "n_jumps": 1,
+        "valid_pairs": 1766,
+        "per_100": 0.057
+       },
+       "1.00": {
+        "n_jumps": 1,
+        "valid_pairs": 1766,
+        "per_100": 0.057
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 63,
+       "losses": 96,
+       "rate": 0.396
+      },
+      "coverage": {
+       "tracked_boxes": 2248,
+       "valid_share": 0.835,
+       "status_counts": {
+        "valid": 1877,
+        "low_coverage": 338,
+        "no_depth": 33
+       },
+       "frames_without_tracks": 11,
+       "n_processed": 573
+      },
+      "mean_track_len": 21.62,
+      "fragmentation": {
+       "overall": 5.556,
+       "overall_range": [
+        4.167,
+        8.333
+       ],
+       "tracks": 100,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 25,
+         "objects": 4,
+         "tracks_per_object": 6.25
+        },
+        "keyboard": {
+         "tracks": 14,
+         "objects": 3,
+         "tracks_per_object": 4.667
+        },
+        "laptop": {
+         "tracks": 7,
+         "objects": 2,
+         "tracks_per_object": 3.5
+        },
+        "mouse": {
+         "tracks": 19,
+         "objects": 2,
+         "tracks_per_object": 9.5
+        },
+        "book": {
+         "tracks": 23,
+         "objects": 4,
+         "tracks_per_object": 5.75
+        },
+        "chair": {
+         "tracks": 8,
+         "objects": 2,
+         "tracks_per_object": 4.0
+        },
+        "cup": {
+         "tracks": 4,
+         "objects": 1,
+         "tracks_per_object": 4.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 15,
+      "match_thresh": 0.9,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 100,
+      "n_confirmed": 91,
+      "n_static_confirmed": 91,
+      "stability_m": {
+       "n_tracks": 67,
+       "median": 0.0322,
+       "p90": 0.156
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 1,
+        "valid_pairs": 1982,
+        "per_100": 0.05
+       },
+       "0.75": {
+        "n_jumps": 0,
+        "valid_pairs": 1982,
+        "per_100": 0.0
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 1982,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 120,
+       "losses": 83,
+       "rate": 0.591
+      },
+      "coverage": {
+       "tracked_boxes": 2491,
+       "valid_share": 0.8342,
+       "status_counts": {
+        "valid": 2078,
+        "low_coverage": 371,
+        "no_depth": 42
+       },
+       "frames_without_tracks": 7,
+       "n_processed": 573
+      },
+      "mean_track_len": 27.22,
+      "fragmentation": {
+       "overall": 4.833,
+       "overall_range": [
+        3.625,
+        7.25
+       ],
+       "tracks": 87,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 16,
+         "objects": 4,
+         "tracks_per_object": 4.0
+        },
+        "keyboard": {
+         "tracks": 12,
+         "objects": 3,
+         "tracks_per_object": 4.0
+        },
+        "laptop": {
+         "tracks": 14,
+         "objects": 2,
+         "tracks_per_object": 7.0
+        },
+        "mouse": {
+         "tracks": 14,
+         "objects": 2,
+         "tracks_per_object": 7.0
+        },
+        "book": {
+         "tracks": 19,
+         "objects": 4,
+         "tracks_per_object": 4.75
+        },
+        "chair": {
+         "tracks": 9,
+         "objects": 2,
+         "tracks_per_object": 4.5
+        },
+        "cup": {
+         "tracks": 3,
+         "objects": 1,
+         "tracks_per_object": 3.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 15,
+      "match_thresh": 0.9,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 78,
+      "n_confirmed": 70,
+      "n_static_confirmed": 70,
+      "stability_m": {
+       "n_tracks": 57,
+       "median": 0.0369,
+       "p90": 0.2203
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 6,
+        "valid_pairs": 2063,
+        "per_100": 0.291
+       },
+       "0.75": {
+        "n_jumps": 3,
+        "valid_pairs": 2063,
+        "per_100": 0.145
+       },
+       "1.00": {
+        "n_jumps": 2,
+        "valid_pairs": 2063,
+        "per_100": 0.097
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 98,
+       "losses": 62,
+       "rate": 0.613
+      },
+      "coverage": {
+       "tracked_boxes": 2548,
+       "valid_share": 0.8403,
+       "status_counts": {
+        "valid": 2141,
+        "low_coverage": 365,
+        "no_depth": 42
+       },
+       "frames_without_tracks": 3,
+       "n_processed": 573
+      },
+      "mean_track_len": 36.21,
+      "fragmentation": {
+       "overall": 3.722,
+       "overall_range": [
+        2.792,
+        5.583
+       ],
+       "tracks": 67,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 13,
+         "objects": 4,
+         "tracks_per_object": 3.25
+        },
+        "keyboard": {
+         "tracks": 9,
+         "objects": 3,
+         "tracks_per_object": 3.0
+        },
+        "laptop": {
+         "tracks": 5,
+         "objects": 2,
+         "tracks_per_object": 2.5
+        },
+        "mouse": {
+         "tracks": 13,
+         "objects": 2,
+         "tracks_per_object": 6.5
+        },
+        "book": {
+         "tracks": 18,
+         "objects": 4,
+         "tracks_per_object": 4.5
+        },
+        "chair": {
+         "tracks": 6,
+         "objects": 2,
+         "tracks_per_object": 3.0
+        },
+        "cup": {
+         "tracks": 3,
+         "objects": 1,
+         "tracks_per_object": 3.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 30,
+      "match_thresh": 0.7,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 207,
+      "n_confirmed": 124,
+      "n_static_confirmed": 124,
+      "stability_m": {
+       "n_tracks": 72,
+       "median": 0.0199,
+       "p90": 0.0479
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 0,
+        "valid_pairs": 1250,
+        "per_100": 0.0
+       },
+       "0.75": {
+        "n_jumps": 0,
+        "valid_pairs": 1250,
+        "per_100": 0.0
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 1250,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 93,
+       "losses": 118,
+       "rate": 0.441
+      },
+      "coverage": {
+       "tracked_boxes": 1771,
+       "valid_share": 0.8216,
+       "status_counts": {
+        "valid": 1455,
+        "low_coverage": 285,
+        "no_depth": 31
+       },
+       "frames_without_tracks": 25,
+       "n_processed": 573
+      },
+      "mean_track_len": 13.3,
+      "fragmentation": {
+       "overall": 6.833,
+       "overall_range": [
+        5.125,
+        10.25
+       ],
+       "tracks": 123,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 27,
+         "objects": 4,
+         "tracks_per_object": 6.75
+        },
+        "keyboard": {
+         "tracks": 20,
+         "objects": 3,
+         "tracks_per_object": 6.667
+        },
+        "laptop": {
+         "tracks": 22,
+         "objects": 2,
+         "tracks_per_object": 11.0
+        },
+        "mouse": {
+         "tracks": 13,
+         "objects": 2,
+         "tracks_per_object": 6.5
+        },
+        "book": {
+         "tracks": 29,
+         "objects": 4,
+         "tracks_per_object": 7.25
+        },
+        "chair": {
+         "tracks": 9,
+         "objects": 2,
+         "tracks_per_object": 4.5
+        },
+        "cup": {
+         "tracks": 3,
+         "objects": 1,
+         "tracks_per_object": 3.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 30,
+      "match_thresh": 0.7,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 190,
+      "n_confirmed": 122,
+      "n_static_confirmed": 122,
+      "stability_m": {
+       "n_tracks": 76,
+       "median": 0.0215,
+       "p90": 0.0761
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 1,
+        "valid_pairs": 1327,
+        "per_100": 0.075
+       },
+       "0.75": {
+        "n_jumps": 0,
+        "valid_pairs": 1327,
+        "per_100": 0.0
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 1327,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 88,
+       "losses": 116,
+       "rate": 0.431
+      },
+      "coverage": {
+       "tracked_boxes": 1853,
+       "valid_share": 0.8192,
+       "status_counts": {
+        "valid": 1518,
+        "low_coverage": 303,
+        "no_depth": 32
+       },
+       "frames_without_tracks": 20,
+       "n_processed": 573
+      },
+      "mean_track_len": 14.35,
+      "fragmentation": {
+       "overall": 6.667,
+       "overall_range": [
+        5.0,
+        10.0
+       ],
+       "tracks": 120,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 29,
+         "objects": 4,
+         "tracks_per_object": 7.25
+        },
+        "keyboard": {
+         "tracks": 21,
+         "objects": 3,
+         "tracks_per_object": 7.0
+        },
+        "laptop": {
+         "tracks": 18,
+         "objects": 2,
+         "tracks_per_object": 9.0
+        },
+        "mouse": {
+         "tracks": 12,
+         "objects": 2,
+         "tracks_per_object": 6.0
+        },
+        "book": {
+         "tracks": 29,
+         "objects": 4,
+         "tracks_per_object": 7.25
+        },
+        "chair": {
+         "tracks": 8,
+         "objects": 2,
+         "tracks_per_object": 4.0
+        },
+        "cup": {
+         "tracks": 3,
+         "objects": 1,
+         "tracks_per_object": 3.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 30,
+      "match_thresh": 0.8,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 137,
+      "n_confirmed": 121,
+      "n_static_confirmed": 121,
+      "stability_m": {
+       "n_tracks": 81,
+       "median": 0.0226,
+       "p90": 0.1003
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 2,
+        "valid_pairs": 1716,
+        "per_100": 0.117
+       },
+       "0.75": {
+        "n_jumps": 2,
+        "valid_pairs": 1716,
+        "per_100": 0.117
+       },
+       "1.00": {
+        "n_jumps": 2,
+        "valid_pairs": 1716,
+        "per_100": 0.117
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 83,
+       "losses": 113,
+       "rate": 0.423
+      },
+      "coverage": {
+       "tracked_boxes": 2203,
+       "valid_share": 0.8352,
+       "status_counts": {
+        "valid": 1840,
+        "low_coverage": 330,
+        "no_depth": 33
+       },
+       "frames_without_tracks": 14,
+       "n_processed": 573
+      },
+      "mean_track_len": 18.01,
+      "fragmentation": {
+       "overall": 6.5,
+       "overall_range": [
+        4.875,
+        9.75
+       ],
+       "tracks": 117,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 25,
+         "objects": 4,
+         "tracks_per_object": 6.25
+        },
+        "keyboard": {
+         "tracks": 17,
+         "objects": 3,
+         "tracks_per_object": 5.667
+        },
+        "laptop": {
+         "tracks": 17,
+         "objects": 2,
+         "tracks_per_object": 8.5
+        },
+        "mouse": {
+         "tracks": 19,
+         "objects": 2,
+         "tracks_per_object": 9.5
+        },
+        "book": {
+         "tracks": 24,
+         "objects": 4,
+         "tracks_per_object": 6.0
+        },
+        "chair": {
+         "tracks": 11,
+         "objects": 2,
+         "tracks_per_object": 5.5
+        },
+        "cup": {
+         "tracks": 4,
+         "objects": 1,
+         "tracks_per_object": 4.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 30,
+      "match_thresh": 0.8,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 115,
+      "n_confirmed": 101,
+      "n_static_confirmed": 101,
+      "stability_m": {
+       "n_tracks": 77,
+       "median": 0.0268,
+       "p90": 0.1132
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 4,
+        "valid_pairs": 1775,
+        "per_100": 0.225
+       },
+       "0.75": {
+        "n_jumps": 2,
+        "valid_pairs": 1775,
+        "per_100": 0.113
+       },
+       "1.00": {
+        "n_jumps": 2,
+        "valid_pairs": 1775,
+        "per_100": 0.113
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 68,
+       "losses": 93,
+       "rate": 0.422
+      },
+      "coverage": {
+       "tracked_boxes": 2257,
+       "valid_share": 0.8352,
+       "status_counts": {
+        "valid": 1885,
+        "low_coverage": 339,
+        "no_depth": 33
+       },
+       "frames_without_tracks": 11,
+       "n_processed": 573
+      },
+      "mean_track_len": 22.14,
+      "fragmentation": {
+       "overall": 5.444,
+       "overall_range": [
+        4.083,
+        8.167
+       ],
+       "tracks": 98,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 23,
+         "objects": 4,
+         "tracks_per_object": 5.75
+        },
+        "keyboard": {
+         "tracks": 13,
+         "objects": 3,
+         "tracks_per_object": 4.333
+        },
+        "laptop": {
+         "tracks": 8,
+         "objects": 2,
+         "tracks_per_object": 4.0
+        },
+        "mouse": {
+         "tracks": 19,
+         "objects": 2,
+         "tracks_per_object": 9.5
+        },
+        "book": {
+         "tracks": 23,
+         "objects": 4,
+         "tracks_per_object": 5.75
+        },
+        "chair": {
+         "tracks": 8,
+         "objects": 2,
+         "tracks_per_object": 4.0
+        },
+        "cup": {
+         "tracks": 4,
+         "objects": 1,
+         "tracks_per_object": 4.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 30,
+      "match_thresh": 0.9,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 98,
+      "n_confirmed": 89,
+      "n_static_confirmed": 89,
+      "stability_m": {
+       "n_tracks": 66,
+       "median": 0.0323,
+       "p90": 0.1916
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 2,
+        "valid_pairs": 1990,
+        "per_100": 0.101
+       },
+       "0.75": {
+        "n_jumps": 1,
+        "valid_pairs": 1990,
+        "per_100": 0.05
+       },
+       "1.00": {
+        "n_jumps": 1,
+        "valid_pairs": 1990,
+        "per_100": 0.05
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 124,
+       "losses": 81,
+       "rate": 0.605
+      },
+      "coverage": {
+       "tracked_boxes": 2498,
+       "valid_share": 0.8343,
+       "status_counts": {
+        "valid": 2084,
+        "low_coverage": 372,
+        "no_depth": 42
+       },
+       "frames_without_tracks": 7,
+       "n_processed": 573
+      },
+      "mean_track_len": 27.91,
+      "fragmentation": {
+       "overall": 4.778,
+       "overall_range": [
+        3.583,
+        7.167
+       ],
+       "tracks": 86,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 15,
+         "objects": 4,
+         "tracks_per_object": 3.75
+        },
+        "keyboard": {
+         "tracks": 12,
+         "objects": 3,
+         "tracks_per_object": 4.0
+        },
+        "laptop": {
+         "tracks": 14,
+         "objects": 2,
+         "tracks_per_object": 7.0
+        },
+        "mouse": {
+         "tracks": 14,
+         "objects": 2,
+         "tracks_per_object": 7.0
+        },
+        "book": {
+         "tracks": 19,
+         "objects": 4,
+         "tracks_per_object": 4.75
+        },
+        "chair": {
+         "tracks": 9,
+         "objects": 2,
+         "tracks_per_object": 4.5
+        },
+        "cup": {
+         "tracks": 3,
+         "objects": 1,
+         "tracks_per_object": 3.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 30,
+      "match_thresh": 0.9,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 74,
+      "n_confirmed": 67,
+      "n_static_confirmed": 67,
+      "stability_m": {
+       "n_tracks": 58,
+       "median": 0.0391,
+       "p90": 0.2661
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 9,
+        "valid_pairs": 2099,
+        "per_100": 0.429
+       },
+       "0.75": {
+        "n_jumps": 4,
+        "valid_pairs": 2099,
+        "per_100": 0.191
+       },
+       "1.00": {
+        "n_jumps": 2,
+        "valid_pairs": 2099,
+        "per_100": 0.095
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 104,
+       "losses": 59,
+       "rate": 0.638
+      },
+      "coverage": {
+       "tracked_boxes": 2589,
+       "valid_share": 0.8393,
+       "status_counts": {
+        "valid": 2173,
+        "low_coverage": 374,
+        "no_depth": 42
+       },
+       "frames_without_tracks": 3,
+       "n_processed": 573
+      },
+      "mean_track_len": 38.46,
+      "fragmentation": {
+       "overall": 3.611,
+       "overall_range": [
+        2.708,
+        5.417
+       ],
+       "tracks": 65,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 13,
+         "objects": 4,
+         "tracks_per_object": 3.25
+        },
+        "keyboard": {
+         "tracks": 8,
+         "objects": 3,
+         "tracks_per_object": 2.667
+        },
+        "laptop": {
+         "tracks": 5,
+         "objects": 2,
+         "tracks_per_object": 2.5
+        },
+        "mouse": {
+         "tracks": 14,
+         "objects": 2,
+         "tracks_per_object": 7.0
+        },
+        "book": {
+         "tracks": 18,
+         "objects": 4,
+         "tracks_per_object": 4.5
+        },
+        "chair": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "cup": {
+         "tracks": 3,
+         "objects": 1,
+         "tracks_per_object": 3.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 60,
+      "match_thresh": 0.7,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 206,
+      "n_confirmed": 125,
+      "n_static_confirmed": 125,
+      "stability_m": {
+       "n_tracks": 73,
+       "median": 0.0208,
+       "p90": 0.0598
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 0,
+        "valid_pairs": 1248,
+        "per_100": 0.0
+       },
+       "0.75": {
+        "n_jumps": 0,
+        "valid_pairs": 1248,
+        "per_100": 0.0
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 1248,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 94,
+       "losses": 115,
+       "rate": 0.45
+      },
+      "coverage": {
+       "tracked_boxes": 1770,
+       "valid_share": 0.8215,
+       "status_counts": {
+        "valid": 1454,
+        "low_coverage": 285,
+        "no_depth": 31
+       },
+       "frames_without_tracks": 25,
+       "n_processed": 573
+      },
+      "mean_track_len": 13.19,
+      "fragmentation": {
+       "overall": 6.889,
+       "overall_range": [
+        5.167,
+        10.333
+       ],
+       "tracks": 124,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 28,
+         "objects": 4,
+         "tracks_per_object": 7.0
+        },
+        "keyboard": {
+         "tracks": 20,
+         "objects": 3,
+         "tracks_per_object": 6.667
+        },
+        "laptop": {
+         "tracks": 22,
+         "objects": 2,
+         "tracks_per_object": 11.0
+        },
+        "mouse": {
+         "tracks": 13,
+         "objects": 2,
+         "tracks_per_object": 6.5
+        },
+        "book": {
+         "tracks": 29,
+         "objects": 4,
+         "tracks_per_object": 7.25
+        },
+        "chair": {
+         "tracks": 9,
+         "objects": 2,
+         "tracks_per_object": 4.5
+        },
+        "cup": {
+         "tracks": 3,
+         "objects": 1,
+         "tracks_per_object": 3.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 60,
+      "match_thresh": 0.7,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 185,
+      "n_confirmed": 123,
+      "n_static_confirmed": 123,
+      "stability_m": {
+       "n_tracks": 77,
+       "median": 0.0236,
+       "p90": 0.1049
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 3,
+        "valid_pairs": 1327,
+        "per_100": 0.226
+       },
+       "0.75": {
+        "n_jumps": 2,
+        "valid_pairs": 1327,
+        "per_100": 0.151
+       },
+       "1.00": {
+        "n_jumps": 2,
+        "valid_pairs": 1327,
+        "per_100": 0.151
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 91,
+       "losses": 113,
+       "rate": 0.446
+      },
+      "coverage": {
+       "tracked_boxes": 1852,
+       "valid_share": 0.8191,
+       "status_counts": {
+        "valid": 1517,
+        "low_coverage": 303,
+        "no_depth": 32
+       },
+       "frames_without_tracks": 20,
+       "n_processed": 573
+      },
+      "mean_track_len": 14.28,
+      "fragmentation": {
+       "overall": 6.722,
+       "overall_range": [
+        5.042,
+        10.083
+       ],
+       "tracks": 121,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 30,
+         "objects": 4,
+         "tracks_per_object": 7.5
+        },
+        "keyboard": {
+         "tracks": 21,
+         "objects": 3,
+         "tracks_per_object": 7.0
+        },
+        "laptop": {
+         "tracks": 18,
+         "objects": 2,
+         "tracks_per_object": 9.0
+        },
+        "mouse": {
+         "tracks": 12,
+         "objects": 2,
+         "tracks_per_object": 6.0
+        },
+        "book": {
+         "tracks": 29,
+         "objects": 4,
+         "tracks_per_object": 7.25
+        },
+        "chair": {
+         "tracks": 8,
+         "objects": 2,
+         "tracks_per_object": 4.0
+        },
+        "cup": {
+         "tracks": 3,
+         "objects": 1,
+         "tracks_per_object": 3.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 60,
+      "match_thresh": 0.8,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 135,
+      "n_confirmed": 119,
+      "n_static_confirmed": 119,
+      "stability_m": {
+       "n_tracks": 81,
+       "median": 0.0231,
+       "p90": 0.1003
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 2,
+        "valid_pairs": 1727,
+        "per_100": 0.116
+       },
+       "0.75": {
+        "n_jumps": 2,
+        "valid_pairs": 1727,
+        "per_100": 0.116
+       },
+       "1.00": {
+        "n_jumps": 2,
+        "valid_pairs": 1727,
+        "per_100": 0.116
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 87,
+       "losses": 108,
+       "rate": 0.446
+      },
+      "coverage": {
+       "tracked_boxes": 2212,
+       "valid_share": 0.8359,
+       "status_counts": {
+        "valid": 1849,
+        "low_coverage": 330,
+        "no_depth": 33
+       },
+       "frames_without_tracks": 14,
+       "n_processed": 573
+      },
+      "mean_track_len": 18.39,
+      "fragmentation": {
+       "overall": 6.389,
+       "overall_range": [
+        4.792,
+        9.583
+       ],
+       "tracks": 115,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 24,
+         "objects": 4,
+         "tracks_per_object": 6.0
+        },
+        "keyboard": {
+         "tracks": 16,
+         "objects": 3,
+         "tracks_per_object": 5.333
+        },
+        "laptop": {
+         "tracks": 17,
+         "objects": 2,
+         "tracks_per_object": 8.5
+        },
+        "mouse": {
+         "tracks": 19,
+         "objects": 2,
+         "tracks_per_object": 9.5
+        },
+        "book": {
+         "tracks": 24,
+         "objects": 4,
+         "tracks_per_object": 6.0
+        },
+        "chair": {
+         "tracks": 11,
+         "objects": 2,
+         "tracks_per_object": 5.5
+        },
+        "cup": {
+         "tracks": 4,
+         "objects": 1,
+         "tracks_per_object": 4.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 60,
+      "match_thresh": 0.8,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 114,
+      "n_confirmed": 100,
+      "n_static_confirmed": 100,
+      "stability_m": {
+       "n_tracks": 77,
+       "median": 0.0268,
+       "p90": 0.1132
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 4,
+        "valid_pairs": 1778,
+        "per_100": 0.225
+       },
+       "0.75": {
+        "n_jumps": 2,
+        "valid_pairs": 1778,
+        "per_100": 0.112
+       },
+       "1.00": {
+        "n_jumps": 2,
+        "valid_pairs": 1778,
+        "per_100": 0.112
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 70,
+       "losses": 89,
+       "rate": 0.44
+      },
+      "coverage": {
+       "tracked_boxes": 2259,
+       "valid_share": 0.8353,
+       "status_counts": {
+        "valid": 1887,
+        "low_coverage": 339,
+        "no_depth": 33
+       },
+       "frames_without_tracks": 11,
+       "n_processed": 573
+      },
+      "mean_track_len": 22.38,
+      "fragmentation": {
+       "overall": 5.389,
+       "overall_range": [
+        4.042,
+        8.083
+       ],
+       "tracks": 97,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 22,
+         "objects": 4,
+         "tracks_per_object": 5.5
+        },
+        "keyboard": {
+         "tracks": 13,
+         "objects": 3,
+         "tracks_per_object": 4.333
+        },
+        "laptop": {
+         "tracks": 8,
+         "objects": 2,
+         "tracks_per_object": 4.0
+        },
+        "mouse": {
+         "tracks": 19,
+         "objects": 2,
+         "tracks_per_object": 9.5
+        },
+        "book": {
+         "tracks": 23,
+         "objects": 4,
+         "tracks_per_object": 5.75
+        },
+        "chair": {
+         "tracks": 8,
+         "objects": 2,
+         "tracks_per_object": 4.0
+        },
+        "cup": {
+         "tracks": 4,
+         "objects": 1,
+         "tracks_per_object": 4.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 60,
+      "match_thresh": 0.9,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 97,
+      "n_confirmed": 88,
+      "n_static_confirmed": 88,
+      "stability_m": {
+       "n_tracks": 65,
+       "median": 0.0323,
+       "p90": 0.2025
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 3,
+        "valid_pairs": 1995,
+        "per_100": 0.15
+       },
+       "0.75": {
+        "n_jumps": 2,
+        "valid_pairs": 1995,
+        "per_100": 0.1
+       },
+       "1.00": {
+        "n_jumps": 1,
+        "valid_pairs": 1995,
+        "per_100": 0.05
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 126,
+       "losses": 79,
+       "rate": 0.615
+      },
+      "coverage": {
+       "tracked_boxes": 2502,
+       "valid_share": 0.8345,
+       "status_counts": {
+        "valid": 2088,
+        "low_coverage": 372,
+        "no_depth": 42
+       },
+       "frames_without_tracks": 7,
+       "n_processed": 573
+      },
+      "mean_track_len": 28.27,
+      "fragmentation": {
+       "overall": 4.722,
+       "overall_range": [
+        3.542,
+        7.083
+       ],
+       "tracks": 85,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 14,
+         "objects": 4,
+         "tracks_per_object": 3.5
+        },
+        "keyboard": {
+         "tracks": 12,
+         "objects": 3,
+         "tracks_per_object": 4.0
+        },
+        "laptop": {
+         "tracks": 14,
+         "objects": 2,
+         "tracks_per_object": 7.0
+        },
+        "mouse": {
+         "tracks": 14,
+         "objects": 2,
+         "tracks_per_object": 7.0
+        },
+        "book": {
+         "tracks": 19,
+         "objects": 4,
+         "tracks_per_object": 4.75
+        },
+        "chair": {
+         "tracks": 9,
+         "objects": 2,
+         "tracks_per_object": 4.5
+        },
+        "cup": {
+         "tracks": 3,
+         "objects": 1,
+         "tracks_per_object": 3.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 60,
+      "match_thresh": 0.9,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 72,
+      "n_confirmed": 65,
+      "n_static_confirmed": 65,
+      "stability_m": {
+       "n_tracks": 57,
+       "median": 0.0413,
+       "p90": 0.2754
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 12,
+        "valid_pairs": 2101,
+        "per_100": 0.571
+       },
+       "0.75": {
+        "n_jumps": 5,
+        "valid_pairs": 2101,
+        "per_100": 0.238
+       },
+       "1.00": {
+        "n_jumps": 3,
+        "valid_pairs": 2101,
+        "per_100": 0.143
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 111,
+       "losses": 56,
+       "rate": 0.665
+      },
+      "coverage": {
+       "tracked_boxes": 2592,
+       "valid_share": 0.8383,
+       "status_counts": {
+        "valid": 2173,
+        "low_coverage": 375,
+        "no_depth": 44
+       },
+       "frames_without_tracks": 3,
+       "n_processed": 573
+      },
+      "mean_track_len": 39.69,
+      "fragmentation": {
+       "overall": 3.5,
+       "overall_range": [
+        2.625,
+        5.25
+       ],
+       "tracks": 63,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 13,
+         "objects": 4,
+         "tracks_per_object": 3.25
+        },
+        "keyboard": {
+         "tracks": 7,
+         "objects": 3,
+         "tracks_per_object": 2.333
+        },
+        "laptop": {
+         "tracks": 5,
+         "objects": 2,
+         "tracks_per_object": 2.5
+        },
+        "mouse": {
+         "tracks": 14,
+         "objects": 2,
+         "tracks_per_object": 7.0
+        },
+        "book": {
+         "tracks": 18,
+         "objects": 4,
+         "tracks_per_object": 4.5
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 3,
+         "objects": 1,
+         "tracks_per_object": 3.0
+        }
+       }
+      }
+     }
+    }
+   ],
+   "chosen": {
+    "track_buffer": 60,
+    "match_thresh": 0.9,
+    "class_aware": true
+   },
+   "reason": "fragmentation 6.500 -> 4.722 (>= 0.05 better) with jump rate 0.100 <= reference 0.117 per 100 valid track-frames"
+  },
+  "6": {
+   "rows": [
+    {
+     "params": {
+      "track_buffer": 15,
+      "match_thresh": 0.7,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 48,
+      "n_confirmed": 18,
+      "n_static_confirmed": 18,
+      "stability_m": {
+       "n_tracks": 2,
+       "median": 0.0404,
+       "p90": 0.0555
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 0,
+        "valid_pairs": 47,
+        "per_100": 0.0
+       },
+       "0.75": {
+        "n_jumps": 0,
+        "valid_pairs": 47,
+        "per_100": 0.0
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 47,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 4,
+       "losses": 15,
+       "rate": 0.211
+      },
+      "coverage": {
+       "tracked_boxes": 125,
+       "valid_share": 0.792,
+       "status_counts": {
+        "valid": 99,
+        "low_coverage": 25,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 29,
+       "n_processed": 96
+      },
+      "mean_track_len": 4.83,
+      "fragmentation": {
+       "overall": 1.0,
+       "overall_range": [
+        0.75,
+        1.5
+       ],
+       "tracks": 18,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "keyboard": {
+         "tracks": 3,
+         "objects": 3,
+         "tracks_per_object": 1.0
+        },
+        "laptop": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 4,
+         "objects": 4,
+         "tracks_per_object": 1.0
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 15,
+      "match_thresh": 0.7,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 45,
+      "n_confirmed": 22,
+      "n_static_confirmed": 22,
+      "stability_m": {
+       "n_tracks": 4,
+       "median": 0.1724,
+       "p90": 0.4647
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 3,
+        "valid_pairs": 63,
+        "per_100": 4.762
+       },
+       "0.75": {
+        "n_jumps": 2,
+        "valid_pairs": 63,
+        "per_100": 3.175
+       },
+       "1.00": {
+        "n_jumps": 1,
+        "valid_pairs": 63,
+        "per_100": 1.587
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 10,
+       "losses": 16,
+       "rate": 0.385
+      },
+      "coverage": {
+       "tracked_boxes": 139,
+       "valid_share": 0.7842,
+       "status_counts": {
+        "valid": 109,
+        "low_coverage": 29,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 23,
+       "n_processed": 96
+      },
+      "mean_track_len": 5.09,
+      "fragmentation": {
+       "overall": 1.222,
+       "overall_range": [
+        0.917,
+        1.833
+       ],
+       "tracks": 22,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 7,
+         "objects": 4,
+         "tracks_per_object": 1.75
+        },
+        "keyboard": {
+         "tracks": 6,
+         "objects": 3,
+         "tracks_per_object": 2.0
+        },
+        "laptop": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 3,
+         "objects": 4,
+         "tracks_per_object": 0.75
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 15,
+      "match_thresh": 0.8,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 39,
+      "n_confirmed": 22,
+      "n_static_confirmed": 22,
+      "stability_m": {
+       "n_tracks": 7,
+       "median": 0.0355,
+       "p90": 0.11
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 0,
+        "valid_pairs": 78,
+        "per_100": 0.0
+       },
+       "0.75": {
+        "n_jumps": 0,
+        "valid_pairs": 78,
+        "per_100": 0.0
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 78,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 8,
+       "losses": 19,
+       "rate": 0.296
+      },
+      "coverage": {
+       "tracked_boxes": 145,
+       "valid_share": 0.8069,
+       "status_counts": {
+        "valid": 117,
+        "low_coverage": 27,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 21,
+       "n_processed": 96
+      },
+      "mean_track_len": 5.68,
+      "fragmentation": {
+       "overall": 1.222,
+       "overall_range": [
+        0.917,
+        1.833
+       ],
+       "tracks": 22,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 4,
+         "objects": 4,
+         "tracks_per_object": 1.0
+        },
+        "keyboard": {
+         "tracks": 6,
+         "objects": 3,
+         "tracks_per_object": 2.0
+        },
+        "laptop": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 15,
+      "match_thresh": 0.8,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 35,
+      "n_confirmed": 23,
+      "n_static_confirmed": 23,
+      "stability_m": {
+       "n_tracks": 10,
+       "median": 0.2706,
+       "p90": 0.5401
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 8,
+        "valid_pairs": 102,
+        "per_100": 7.843
+       },
+       "0.75": {
+        "n_jumps": 4,
+        "valid_pairs": 102,
+        "per_100": 3.922
+       },
+       "1.00": {
+        "n_jumps": 2,
+        "valid_pairs": 102,
+        "per_100": 1.961
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 15,
+       "losses": 18,
+       "rate": 0.455
+      },
+      "coverage": {
+       "tracked_boxes": 168,
+       "valid_share": 0.8155,
+       "status_counts": {
+        "valid": 137,
+        "low_coverage": 30,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 12,
+       "n_processed": 96
+      },
+      "mean_track_len": 6.7,
+      "fragmentation": {
+       "overall": 1.278,
+       "overall_range": [
+        0.958,
+        1.917
+       ],
+       "tracks": 23,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "keyboard": {
+         "tracks": 7,
+         "objects": 3,
+         "tracks_per_object": 2.333
+        },
+        "laptop": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 4,
+         "objects": 4,
+         "tracks_per_object": 1.0
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 15,
+      "match_thresh": 0.9,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 29,
+      "n_confirmed": 23,
+      "n_static_confirmed": 23,
+      "stability_m": {
+       "n_tracks": 12,
+       "median": 0.0391,
+       "p90": 0.2024
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 1,
+        "valid_pairs": 115,
+        "per_100": 0.87
+       },
+       "0.75": {
+        "n_jumps": 0,
+        "valid_pairs": 115,
+        "per_100": 0.0
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 115,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 15,
+       "losses": 19,
+       "rate": 0.441
+      },
+      "coverage": {
+       "tracked_boxes": 174,
+       "valid_share": 0.8276,
+       "status_counts": {
+        "valid": 144,
+        "low_coverage": 29,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 15,
+       "n_processed": 96
+      },
+      "mean_track_len": 7.26,
+      "fragmentation": {
+       "overall": 1.222,
+       "overall_range": [
+        0.917,
+        1.833
+       ],
+       "tracks": 22,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 4,
+         "objects": 4,
+         "tracks_per_object": 1.0
+        },
+        "keyboard": {
+         "tracks": 5,
+         "objects": 3,
+         "tracks_per_object": 1.667
+        },
+        "laptop": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "chair": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 15,
+      "match_thresh": 0.9,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 27,
+      "n_confirmed": 23,
+      "n_static_confirmed": 23,
+      "stability_m": {
+       "n_tracks": 14,
+       "median": 0.3029,
+       "p90": 0.5243
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 10,
+        "valid_pairs": 151,
+        "per_100": 6.623
+       },
+       "0.75": {
+        "n_jumps": 7,
+        "valid_pairs": 151,
+        "per_100": 4.636
+       },
+       "1.00": {
+        "n_jumps": 5,
+        "valid_pairs": 151,
+        "per_100": 3.311
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 25,
+       "losses": 16,
+       "rate": 0.61
+      },
+      "coverage": {
+       "tracked_boxes": 208,
+       "valid_share": 0.8462,
+       "status_counts": {
+        "valid": 176,
+        "low_coverage": 31,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 9,
+       "n_processed": 96
+      },
+      "mean_track_len": 8.87,
+      "fragmentation": {
+       "overall": 1.278,
+       "overall_range": [
+        0.958,
+        1.917
+       ],
+       "tracks": 23,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "keyboard": {
+         "tracks": 6,
+         "objects": 3,
+         "tracks_per_object": 2.0
+        },
+        "laptop": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 4,
+         "objects": 4,
+         "tracks_per_object": 1.0
+        },
+        "chair": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 30,
+      "match_thresh": 0.7,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 47,
+      "n_confirmed": 19,
+      "n_static_confirmed": 19,
+      "stability_m": {
+       "n_tracks": 2,
+       "median": 0.0404,
+       "p90": 0.0555
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 0,
+        "valid_pairs": 49,
+        "per_100": 0.0
+       },
+       "0.75": {
+        "n_jumps": 0,
+        "valid_pairs": 49,
+        "per_100": 0.0
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 49,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 5,
+       "losses": 8,
+       "rate": 0.385
+      },
+      "coverage": {
+       "tracked_boxes": 127,
+       "valid_share": 0.7953,
+       "status_counts": {
+        "valid": 101,
+        "low_coverage": 25,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 27,
+       "n_processed": 96
+      },
+      "mean_track_len": 4.74,
+      "fragmentation": {
+       "overall": 1.056,
+       "overall_range": [
+        0.792,
+        1.583
+       ],
+       "tracks": 19,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "keyboard": {
+         "tracks": 3,
+         "objects": 3,
+         "tracks_per_object": 1.0
+        },
+        "laptop": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 4,
+         "objects": 4,
+         "tracks_per_object": 1.0
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 30,
+      "match_thresh": 0.7,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 44,
+      "n_confirmed": 23,
+      "n_static_confirmed": 23,
+      "stability_m": {
+       "n_tracks": 4,
+       "median": 0.1724,
+       "p90": 0.4647
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 3,
+        "valid_pairs": 65,
+        "per_100": 4.615
+       },
+       "0.75": {
+        "n_jumps": 2,
+        "valid_pairs": 65,
+        "per_100": 3.077
+       },
+       "1.00": {
+        "n_jumps": 1,
+        "valid_pairs": 65,
+        "per_100": 1.538
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 11,
+       "losses": 10,
+       "rate": 0.524
+      },
+      "coverage": {
+       "tracked_boxes": 144,
+       "valid_share": 0.7917,
+       "status_counts": {
+        "valid": 114,
+        "low_coverage": 29,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 20,
+       "n_processed": 96
+      },
+      "mean_track_len": 5.0,
+      "fragmentation": {
+       "overall": 1.278,
+       "overall_range": [
+        0.958,
+        1.917
+       ],
+       "tracks": 23,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 6,
+         "objects": 4,
+         "tracks_per_object": 1.5
+        },
+        "keyboard": {
+         "tracks": 6,
+         "objects": 3,
+         "tracks_per_object": 2.0
+        },
+        "laptop": {
+         "tracks": 5,
+         "objects": 2,
+         "tracks_per_object": 2.5
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 3,
+         "objects": 4,
+         "tracks_per_object": 0.75
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 30,
+      "match_thresh": 0.8,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 37,
+      "n_confirmed": 23,
+      "n_static_confirmed": 23,
+      "stability_m": {
+       "n_tracks": 7,
+       "median": 0.0355,
+       "p90": 0.2213
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 2,
+        "valid_pairs": 84,
+        "per_100": 2.381
+       },
+       "0.75": {
+        "n_jumps": 1,
+        "valid_pairs": 84,
+        "per_100": 1.19
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 84,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 13,
+       "losses": 11,
+       "rate": 0.542
+      },
+      "coverage": {
+       "tracked_boxes": 148,
+       "valid_share": 0.8108,
+       "status_counts": {
+        "valid": 120,
+        "low_coverage": 27,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 18,
+       "n_processed": 96
+      },
+      "mean_track_len": 5.74,
+      "fragmentation": {
+       "overall": 1.278,
+       "overall_range": [
+        0.958,
+        1.917
+       ],
+       "tracks": 23,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 4,
+         "objects": 4,
+         "tracks_per_object": 1.0
+        },
+        "keyboard": {
+         "tracks": 6,
+         "objects": 3,
+         "tracks_per_object": 2.0
+        },
+        "laptop": {
+         "tracks": 5,
+         "objects": 2,
+         "tracks_per_object": 2.5
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 30,
+      "match_thresh": 0.8,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 33,
+      "n_confirmed": 23,
+      "n_static_confirmed": 23,
+      "stability_m": {
+       "n_tracks": 10,
+       "median": 0.2706,
+       "p90": 0.5609
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 10,
+        "valid_pairs": 107,
+        "per_100": 9.346
+       },
+       "0.75": {
+        "n_jumps": 3,
+        "valid_pairs": 107,
+        "per_100": 2.804
+       },
+       "1.00": {
+        "n_jumps": 2,
+        "valid_pairs": 107,
+        "per_100": 1.869
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 18,
+       "losses": 10,
+       "rate": 0.643
+      },
+      "coverage": {
+       "tracked_boxes": 175,
+       "valid_share": 0.8114,
+       "status_counts": {
+        "valid": 142,
+        "low_coverage": 32,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 10,
+       "n_processed": 96
+      },
+      "mean_track_len": 7.0,
+      "fragmentation": {
+       "overall": 1.278,
+       "overall_range": [
+        0.958,
+        1.917
+       ],
+       "tracks": 23,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "keyboard": {
+         "tracks": 7,
+         "objects": 3,
+         "tracks_per_object": 2.333
+        },
+        "laptop": {
+         "tracks": 5,
+         "objects": 2,
+         "tracks_per_object": 2.5
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 4,
+         "objects": 4,
+         "tracks_per_object": 1.0
+        },
+        "chair": {
+         "tracks": 2,
+         "objects": 2,
+         "tracks_per_object": 1.0
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 30,
+      "match_thresh": 0.9,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 28,
+      "n_confirmed": 23,
+      "n_static_confirmed": 23,
+      "stability_m": {
+       "n_tracks": 12,
+       "median": 0.0391,
+       "p90": 0.3614
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 2,
+        "valid_pairs": 116,
+        "per_100": 1.724
+       },
+       "0.75": {
+        "n_jumps": 1,
+        "valid_pairs": 116,
+        "per_100": 0.862
+       },
+       "1.00": {
+        "n_jumps": 1,
+        "valid_pairs": 116,
+        "per_100": 0.862
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 17,
+       "losses": 11,
+       "rate": 0.607
+      },
+      "coverage": {
+       "tracked_boxes": 175,
+       "valid_share": 0.8229,
+       "status_counts": {
+        "valid": 144,
+        "low_coverage": 30,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 15,
+       "n_processed": 96
+      },
+      "mean_track_len": 7.35,
+      "fragmentation": {
+       "overall": 1.222,
+       "overall_range": [
+        0.917,
+        1.833
+       ],
+       "tracks": 22,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 4,
+         "objects": 4,
+         "tracks_per_object": 1.0
+        },
+        "keyboard": {
+         "tracks": 5,
+         "objects": 3,
+         "tracks_per_object": 1.667
+        },
+        "laptop": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "chair": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 30,
+      "match_thresh": 0.9,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 25,
+      "n_confirmed": 23,
+      "n_static_confirmed": 23,
+      "stability_m": {
+       "n_tracks": 15,
+       "median": 0.2855,
+       "p90": 0.5222
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 10,
+        "valid_pairs": 156,
+        "per_100": 6.41
+       },
+       "0.75": {
+        "n_jumps": 6,
+        "valid_pairs": 156,
+        "per_100": 3.846
+       },
+       "1.00": {
+        "n_jumps": 4,
+        "valid_pairs": 156,
+        "per_100": 2.564
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 29,
+       "losses": 11,
+       "rate": 0.725
+      },
+      "coverage": {
+       "tracked_boxes": 216,
+       "valid_share": 0.838,
+       "status_counts": {
+        "valid": 181,
+        "low_coverage": 34,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 6,
+       "n_processed": 96
+      },
+      "mean_track_len": 9.3,
+      "fragmentation": {
+       "overall": 1.278,
+       "overall_range": [
+        0.958,
+        1.917
+       ],
+       "tracks": 23,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "keyboard": {
+         "tracks": 6,
+         "objects": 3,
+         "tracks_per_object": 2.0
+        },
+        "laptop": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 60,
+      "match_thresh": 0.7,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 46,
+      "n_confirmed": 19,
+      "n_static_confirmed": 19,
+      "stability_m": {
+       "n_tracks": 2,
+       "median": 0.0404,
+       "p90": 0.0555
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 0,
+        "valid_pairs": 49,
+        "per_100": 0.0
+       },
+       "0.75": {
+        "n_jumps": 0,
+        "valid_pairs": 49,
+        "per_100": 0.0
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 49,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 5,
+       "losses": 4,
+       "rate": 0.556
+      },
+      "coverage": {
+       "tracked_boxes": 128,
+       "valid_share": 0.7969,
+       "status_counts": {
+        "valid": 102,
+        "low_coverage": 25,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 27,
+       "n_processed": 96
+      },
+      "mean_track_len": 4.74,
+      "fragmentation": {
+       "overall": 1.056,
+       "overall_range": [
+        0.792,
+        1.583
+       ],
+       "tracks": 19,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "keyboard": {
+         "tracks": 3,
+         "objects": 3,
+         "tracks_per_object": 1.0
+        },
+        "laptop": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 4,
+         "objects": 4,
+         "tracks_per_object": 1.0
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 60,
+      "match_thresh": 0.7,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 43,
+      "n_confirmed": 23,
+      "n_static_confirmed": 23,
+      "stability_m": {
+       "n_tracks": 4,
+       "median": 0.1724,
+       "p90": 0.4647
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 3,
+        "valid_pairs": 65,
+        "per_100": 4.615
+       },
+       "0.75": {
+        "n_jumps": 2,
+        "valid_pairs": 65,
+        "per_100": 3.077
+       },
+       "1.00": {
+        "n_jumps": 1,
+        "valid_pairs": 65,
+        "per_100": 1.538
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 11,
+       "losses": 5,
+       "rate": 0.688
+      },
+      "coverage": {
+       "tracked_boxes": 145,
+       "valid_share": 0.7931,
+       "status_counts": {
+        "valid": 115,
+        "low_coverage": 29,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 20,
+       "n_processed": 96
+      },
+      "mean_track_len": 5.0,
+      "fragmentation": {
+       "overall": 1.278,
+       "overall_range": [
+        0.958,
+        1.917
+       ],
+       "tracks": 23,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 6,
+         "objects": 4,
+         "tracks_per_object": 1.5
+        },
+        "keyboard": {
+         "tracks": 6,
+         "objects": 3,
+         "tracks_per_object": 2.0
+        },
+        "laptop": {
+         "tracks": 5,
+         "objects": 2,
+         "tracks_per_object": 2.5
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 3,
+         "objects": 4,
+         "tracks_per_object": 0.75
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 60,
+      "match_thresh": 0.8,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 37,
+      "n_confirmed": 23,
+      "n_static_confirmed": 23,
+      "stability_m": {
+       "n_tracks": 7,
+       "median": 0.0355,
+       "p90": 0.2213
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 2,
+        "valid_pairs": 84,
+        "per_100": 2.381
+       },
+       "0.75": {
+        "n_jumps": 1,
+        "valid_pairs": 84,
+        "per_100": 1.19
+       },
+       "1.00": {
+        "n_jumps": 0,
+        "valid_pairs": 84,
+        "per_100": 0.0
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 13,
+       "losses": 6,
+       "rate": 0.684
+      },
+      "coverage": {
+       "tracked_boxes": 148,
+       "valid_share": 0.8108,
+       "status_counts": {
+        "valid": 120,
+        "low_coverage": 27,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 18,
+       "n_processed": 96
+      },
+      "mean_track_len": 5.74,
+      "fragmentation": {
+       "overall": 1.278,
+       "overall_range": [
+        0.958,
+        1.917
+       ],
+       "tracks": 23,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 4,
+         "objects": 4,
+         "tracks_per_object": 1.0
+        },
+        "keyboard": {
+         "tracks": 6,
+         "objects": 3,
+         "tracks_per_object": 2.0
+        },
+        "laptop": {
+         "tracks": 5,
+         "objects": 2,
+         "tracks_per_object": 2.5
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 60,
+      "match_thresh": 0.8,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 33,
+      "n_confirmed": 25,
+      "n_static_confirmed": 25,
+      "stability_m": {
+       "n_tracks": 10,
+       "median": 0.2706,
+       "p90": 0.5609
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 13,
+        "valid_pairs": 111,
+        "per_100": 11.712
+       },
+       "0.75": {
+        "n_jumps": 5,
+        "valid_pairs": 111,
+        "per_100": 4.505
+       },
+       "1.00": {
+        "n_jumps": 3,
+        "valid_pairs": 111,
+        "per_100": 2.703
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 21,
+       "losses": 6,
+       "rate": 0.778
+      },
+      "coverage": {
+       "tracked_boxes": 179,
+       "valid_share": 0.8156,
+       "status_counts": {
+        "valid": 146,
+        "low_coverage": 32,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 10,
+       "n_processed": 96
+      },
+      "mean_track_len": 6.68,
+      "fragmentation": {
+       "overall": 1.389,
+       "overall_range": [
+        1.042,
+        2.083
+       ],
+       "tracks": 25,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "keyboard": {
+         "tracks": 7,
+         "objects": 3,
+         "tracks_per_object": 2.333
+        },
+        "laptop": {
+         "tracks": 6,
+         "objects": 2,
+         "tracks_per_object": 3.0
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "chair": {
+         "tracks": 2,
+         "objects": 2,
+         "tracks_per_object": 1.0
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 60,
+      "match_thresh": 0.9,
+      "class_aware": true
+     },
+     "metrics": {
+      "n_tracks": 28,
+      "n_confirmed": 23,
+      "n_static_confirmed": 23,
+      "stability_m": {
+       "n_tracks": 12,
+       "median": 0.0391,
+       "p90": 0.3614
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 2,
+        "valid_pairs": 116,
+        "per_100": 1.724
+       },
+       "0.75": {
+        "n_jumps": 1,
+        "valid_pairs": 116,
+        "per_100": 0.862
+       },
+       "1.00": {
+        "n_jumps": 1,
+        "valid_pairs": 116,
+        "per_100": 0.862
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 17,
+       "losses": 6,
+       "rate": 0.739
+      },
+      "coverage": {
+       "tracked_boxes": 175,
+       "valid_share": 0.8229,
+       "status_counts": {
+        "valid": 144,
+        "low_coverage": 30,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 15,
+       "n_processed": 96
+      },
+      "mean_track_len": 7.35,
+      "fragmentation": {
+       "overall": 1.222,
+       "overall_range": [
+        0.917,
+        1.833
+       ],
+       "tracks": 22,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 4,
+         "objects": 4,
+         "tracks_per_object": 1.0
+        },
+        "keyboard": {
+         "tracks": 5,
+         "objects": 3,
+         "tracks_per_object": 1.667
+        },
+        "laptop": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "chair": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "track_buffer": 60,
+      "match_thresh": 0.9,
+      "class_aware": false
+     },
+     "metrics": {
+      "n_tracks": 25,
+      "n_confirmed": 23,
+      "n_static_confirmed": 23,
+      "stability_m": {
+       "n_tracks": 15,
+       "median": 0.2855,
+       "p90": 0.5222
+      },
+      "id_switch_proxy": {
+       "0.50": {
+        "n_jumps": 10,
+        "valid_pairs": 156,
+        "per_100": 6.41
+       },
+       "0.75": {
+        "n_jumps": 6,
+        "valid_pairs": 156,
+        "per_100": 3.846
+       },
+       "1.00": {
+        "n_jumps": 4,
+        "valid_pairs": 156,
+        "per_100": 2.564
+       }
+      },
+      "recovery": {
+       "recovered_gaps": 29,
+       "losses": 7,
+       "rate": 0.806
+      },
+      "coverage": {
+       "tracked_boxes": 216,
+       "valid_share": 0.838,
+       "status_counts": {
+        "valid": 181,
+        "low_coverage": 34,
+        "no_depth": 1
+       },
+       "frames_without_tracks": 6,
+       "n_processed": 96
+      },
+      "mean_track_len": 9.3,
+      "fragmentation": {
+       "overall": 1.278,
+       "overall_range": [
+        0.958,
+        1.917
+       ],
+       "tracks": 23,
+       "objects": 18,
+       "per_class": {
+        "tv": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "keyboard": {
+         "tracks": 6,
+         "objects": 3,
+         "tracks_per_object": 2.0
+        },
+        "laptop": {
+         "tracks": 4,
+         "objects": 2,
+         "tracks_per_object": 2.0
+        },
+        "mouse": {
+         "tracks": 0,
+         "objects": 2,
+         "tracks_per_object": 0.0
+        },
+        "book": {
+         "tracks": 5,
+         "objects": 4,
+         "tracks_per_object": 1.25
+        },
+        "chair": {
+         "tracks": 3,
+         "objects": 2,
+         "tracks_per_object": 1.5
+        },
+        "cup": {
+         "tracks": 0,
+         "objects": 1,
+         "tracks_per_object": 0.0
+        }
+       }
+      }
+     }
+    }
+   ],
+   "chosen": {
+    "track_buffer": 15,
+    "match_thresh": 0.7,
+    "class_aware": true
+   },
+   "reason": "fragmentation 1.278 -> 1.000 (>= 0.05 better) with jump rate 0.000 <= reference 1.190 per 100 valid track-frames"
+  }
+ },
+ "header": {
+  "git_commit": null,
+  "git_dirty": true,
+  "config_sha256": {
+   "tracker_after_freeze": "3937ff39912db95e7b1eb7fbb4651d9221b3b479121beba0ac3c44d38203a8d4",
+   "depth": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+   "dataset": "1a30d6c8bee1fa5375f6a541d1efcf3c424838b20d6428fc0677682d31cf8ada"
+  },
+  "input_sha256": {
+   "detections": "792d88516e24eb52d288fc0f6cf7907f9a4a1e346874dd2e26c5e8eedb4f07df",
+   "inventory": "27d38fbddd38a321a0e4b34d801c38541689ecc45826ea18456b239485bab99c"
+  },
+  "created_utc": "2026-11-11T07:33:12+00:00",
+  "versions": {
+   "ultralytics": "8.4.208",
+   "lap": "0.5.14",
+   "numpy": "2.5.4",
+   "opencv-python": "5.0.0.93"
+  },
+  "python": "3.14.0",
+  "machine": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel"
+ }
+}

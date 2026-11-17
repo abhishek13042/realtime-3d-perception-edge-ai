@@ -1,0 +1,58 @@
+# Dataset configuration. The data root lives OUTSIDE the Git repo.
+data_root: D:/datasets
+
+depth:
+  min_m: 0.1        # below this, sensor readings are unreliable
+  max_m: 10.0       # generous upper bound; per-sensor limits are analysed in 01.4
+
+tum:
+  # Associate RGB and depth by nearest timestamp (TUM associate.py approach).
+  max_dt_s: 0.02
+  # "calibrated" = per-sequence fr1/fr2/fr3 values; "ros_default" = 525/525/319.5/239.5.
+  # Choice documented in docs/data_layout.md (spec 01.2 AC4).
+  intrinsics: calibrated
+  # fr1/fr2 colour images are distorted (fr1 k1 = 0.26). Spec 03.2 R6 measured the effect on object centres:
+  # p90 displacement 2.10 cm > 2 cm rule -> undistort pixel coordinates when back-projecting
+  # (benchmarks/geometry/fr1_distortion.json). Frames carry `dist`; images are not resampled.
+  undistort: true
+  depth_scale: 5000.0
+  sequences:
+    - rgbd_dataset_freiburg1_desk
+    - rgbd_dataset_freiburg3_long_office_household
+
+sunrgbd:
+  depth_scale: 1000.0
+
+# Only entries in this manifest can be downloaded (spec 01.1 R2).
+# Sizes measured with HTTP HEAD on 2026-11-07.
+manifest:
+  tum_fr1_desk:
+    url: https://cvg.cit.tum.de/rgbd/dataset/freiburg1/rgbd_dataset_freiburg1_desk.tgz
+    size_mb: 328
+    dest: tum
+    extract: true
+  tum_fr3_long_office:
+    url: https://cvg.cit.tum.de/rgbd/dataset/freiburg3/rgbd_dataset_freiburg3_long_office_household.tgz
+    size_mb: 1415
+    dest: tum
+    extract: true
+  sunrgbd_meta3d:
+    url: https://rgbd.cs.princeton.edu/data/SUNRGBDMeta3DBB_v2.mat
+    size_mb: 9
+    dest: sunrgbd
+    extract: false
+  sunrgbd_meta2d:
+    url: https://rgbd.cs.princeton.edu/data/SUNRGBDMeta2DBB_v2.mat
+    size_mb: 4
+    dest: sunrgbd
+    extract: false
+  sunrgbd_toolbox:
+    url: https://rgbd.cs.princeton.edu/data/SUNRGBDtoolbox.zip
+    size_mb: 544
+    dest: sunrgbd
+    extract: true
+  sunrgbd_images:
+    url: https://rgbd.cs.princeton.edu/data/SUNRGBD.zip
+    size_mb: 6567
+    dest: sunrgbd
+    extract: true

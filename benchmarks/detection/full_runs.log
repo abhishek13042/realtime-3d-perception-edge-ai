@@ -1,0 +1,97 @@
+﻿sun_val_full: 528 frames, 0 already done, 528 to run
+  100/528  175 ms/frame  eta 1.2 min
+  200/528  196 ms/frame  eta 1.1 min
+  300/528  205 ms/frame  eta 0.8 min
+  400/528  209 ms/frame  eta 0.4 min
+  500/528  216 ms/frame  eta 0.1 min
+  528/528  216 ms/frame  eta 0.0 min
+wrote benchmarks\detection\sun_val_full.jsonl: 528/528 frames
+tum_fr1_desk_full: 573 frames, 0 already done, 573 to run
+  100/573  164 ms/frame  eta 1.3 min
+  200/573  161 ms/frame  eta 1.0 min
+  300/573  161 ms/frame  eta 0.7 min
+  400/573  168 ms/frame  eta 0.5 min
+  500/573  176 ms/frame  eta 0.2 min
+  573/573  179 ms/frame  eta 0.0 min
+wrote benchmarks\detection\tum_fr1_desk_full.jsonl: 573/573 frames
+tum_fr3_long_office_full: 2485 frames, 0 already done, 2485 to run
+  100/2485  162 ms/frame  eta 6.4 min
+  200/2485  161 ms/frame  eta 6.1 min
+  300/2485  160 ms/frame  eta 5.8 min
+  400/2485  159 ms/frame  eta 5.5 min
+  500/2485  160 ms/frame  eta 5.3 min
+  600/2485  162 ms/frame  eta 5.1 min
+  700/2485  163 ms/frame  eta 4.8 min
+  800/2485  162 ms/frame  eta 4.6 min
+  900/2485  165 ms/frame  eta 4.4 min
+  1000/2485  170 ms/frame  eta 4.2 min
+  1100/2485  173 ms/frame  eta 4.0 min
+  1200/2485  176 ms/frame  eta 3.8 min
+  1300/2485  180 ms/frame  eta 3.6 min
+  1400/2485  180 ms/frame  eta 3.3 min
+  1500/2485  181 ms/frame  eta 3.0 min
+  1600/2485  178 ms/frame  eta 2.6 min
+  1700/2485  178 ms/frame  eta 2.3 min
+  1800/2485  175 ms/frame  eta 2.0 min
+  1900/2485  174 ms/frame  eta 1.7 min
+  2000/2485  173 ms/frame  eta 1.4 min
+  2100/2485  171 ms/frame  eta 1.1 min
+  2200/2485  170 ms/frame  eta 0.8 min
+  2300/2485  173 ms/frame  eta 0.5 min
+  2400/2485  175 ms/frame  eta 0.2 min
+  2485/2485  176 ms/frame  eta 0.0 min
+wrote benchmarks\detection\tum_fr3_long_office_full.jsonl: 2485/2485 frames
+sun_test_full: 5050 frames, 0 already done, 5050 to run
+  100/5050  208 ms/frame  eta 17.1 min
+  200/5050  181 ms/frame  eta 14.6 min
+  300/5050  172 ms/frame  eta 13.6 min
+  400/5050  169 ms/frame  eta 13.1 min
+  500/5050  168 ms/frame  eta 12.8 min
+  600/5050  167 ms/frame  eta 12.4 min
+  700/5050  167 ms/frame  eta 12.1 min
+  800/5050  164 ms/frame  eta 11.6 min
+  900/5050  163 ms/frame  eta 11.3 min
+  1000/5050  163 ms/frame  eta 11.0 min
+  1100/5050  163 ms/frame  eta 10.7 min
+  1200/5050  164 ms/frame  eta 10.5 min
+  1300/5050  165 ms/frame  eta 10.3 min
+  1400/5050  165 ms/frame  eta 10.0 min
+  1500/5050  165 ms/frame  eta 9.8 min
+  1600/5050  166 ms/frame  eta 9.5 min
+  1700/5050  166 ms/frame  eta 9.2 min
+  1800/5050  165 ms/frame  eta 9.0 min
+  1900/5050  166 ms/frame  eta 8.7 min
+  2000/5050  311 ms/frame  eta 15.8 min
+  2100/5050  304 ms/frame  eta 14.9 min
+  2200/5050  296 ms/frame  eta 14.1 min
+  2300/5050  291 ms/frame  eta 13.3 min
+  2400/5050  285 ms/frame  eta 12.6 min
+  2500/5050  282 ms/frame  eta 12.0 min
+  2600/5050  278 ms/frame  eta 11.4 min
+  2700/5050  274 ms/frame  eta 10.7 min
+  2800/5050  271 ms/frame  eta 10.2 min
+  2900/5050  267 ms/frame  eta 9.6 min
+  3000/5050  264 ms/frame  eta 9.0 min
+  3100/5050  260 ms/frame  eta 8.5 min
+  3200/5050  260 ms/frame  eta 8.0 min
+  3300/5050  263 ms/frame  eta 7.7 min
+  3400/5050  263 ms/frame  eta 7.2 min
+  3500/5050  261 ms/frame  eta 6.7 min
+  3600/5050  259 ms/frame  eta 6.3 min
+  3700/5050  257 ms/frame  eta 5.8 min
+  3800/5050  256 ms/frame  eta 5.3 min
+  3900/5050  255 ms/frame  eta 4.9 min
+  4000/5050  256 ms/frame  eta 4.5 min
+  4100/5050  255 ms/frame  eta 4.0 min
+  4200/5050  254 ms/frame  eta 3.6 min
+  4300/5050  255 ms/frame  eta 3.2 min
+  4400/5050  254 ms/frame  eta 2.8 min
+  4500/5050  253 ms/frame  eta 2.3 min
+  4600/5050  251 ms/frame  eta 1.9 min
+  4700/5050  249 ms/frame  eta 1.5 min
+  4800/5050  248 ms/frame  eta 1.0 min
+  4900/5050  247 ms/frame  eta 0.6 min
+  5000/5050  246 ms/frame  eta 0.2 min
+  5050/5050  245 ms/frame  eta 0.0 min
+wrote benchmarks\detection\sun_test_full.jsonl: 5050/5050 frames
+ALL DONE

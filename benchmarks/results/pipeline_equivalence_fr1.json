@@ -1,0 +1,34 @@
+{
+  "spec": "05.3 R2",
+  "label": "Measured: correctness check (not a timing run)",
+  "sequence": "rgbd_dataset_freiburg1_desk",
+  "stride": 1,
+  "n_frames": 573,
+  "n_frames_in_sequence": 573,
+  "detections_identical_frames": 573,
+  "detection_diff_frames": [],
+  "max_box_abs_diff_px": 0.0,
+  "tracks_identical_frames": 573,
+  "track_diff_frames": [],
+  "tracked_boxes_offline": 2502,
+  "pipeline_objects": 3130,
+  "schema_errors": 0,
+  "equal": true,
+  "wall_s_including_io": 92.3,
+  "header": {
+    "git_commit": null,
+    "git_dirty": true,
+    "created_utc": "2026-11-11T08:16:37+00:00",
+    "config_sha256": {
+      "depth": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+      "tracker": "8832026648357df7e38285345124f605ee44e4080a1fb287cefaa8ae3b59e818",
+      "detector": "05c49ce46d9f16153d678b3650c42f6cf36d6429ac4a148bad57c4c579b4e09f"
+    },
+    "input_sha256": {
+      "offline_tracks": "b9f22b8ac3389dca8c557cfb069744a0cf44f91baf5f40440fceebff4b17b1e1",
+      "detections": "792d88516e24eb52d288fc0f6cf7907f9a4a1e346874dd2e26c5e8eedb4f07df"
+    },
+    "detector_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "torch_threads": 4
+  }
+}

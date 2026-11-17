@@ -1,0 +1,212 @@
+{
+  "spec": "02.2 R3",
+  "label": "Measured: PyTorch CPU, local laptop",
+  "backend": "pytorch-cpu",
+  "machine": {
+    "cpu": "Intel Core i3-1115G4 (2C/4T)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "ram_gb": 7.7
+  },
+  "power_before": {
+    "plugged_in": true,
+    "battery_percent": 34,
+    "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)"
+  },
+  "power_after": {
+    "plugged_in": true,
+    "battery_percent": 41,
+    "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)"
+  },
+  "conf_note": "conf is provisional until spec 02.3 sets conf_operational. With the one2one head, conf only affects the postprocess filter.",
+  "peak_rss_mb": 453.5,
+  "provenance": {
+    "weights": "models/yolo26n.pt",
+    "weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "head": "one2one",
+    "imgsz": 640,
+    "conf": 0.25,
+    "max_det": 300,
+    "iou_nms": null,
+    "threads": 4,
+    "config_sha256": "4d2b70f2697a8feff0900d95a8e8792134f3a75aa1848d6be5149404b390080c",
+    "git_commit": null,
+    "git_dirty": true,
+    "versions": {
+      "torch": "2.15.0+cpu",
+      "torchvision": "0.29.2+cpu",
+      "ultralytics": "8.4.208",
+      "numpy": "2.5.4",
+      "opencv-python": "5.0.0.93"
+    },
+    "python": "3.14.0",
+    "machine": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel"
+  },
+  "lists": {
+    "sunrgbd_test_500": {
+      "n_frames": 500,
+      "warmup_frames": 10,
+      "stages_ms": {
+        "decode": {
+          "n": 500,
+          "median": 4.011,
+          "p95": 12.791,
+          "mean": 5.601,
+          "min": 2.035,
+          "max": 307.165
+        },
+        "preprocess": {
+          "n": 500,
+          "median": 7.475,
+          "p95": 9.415,
+          "mean": 7.675,
+          "min": 5.17,
+          "max": 17.889
+        },
+        "infer": {
+          "n": 500,
+          "median": 172.384,
+          "p95": 362.015,
+          "mean": 217.694,
+          "min": 86.619,
+          "max": 3481.982
+        },
+        "postprocess": {
+          "n": 500,
+          "median": 0.221,
+          "p95": 0.504,
+          "mean": 0.264,
+          "min": 0.161,
+          "max": 1.972
+        },
+        "detector": {
+          "n": 500,
+          "median": 180.378,
+          "p95": 369.755,
+          "mean": 225.633,
+          "min": 92.589,
+          "max": 3494.352
+        },
+        "end_to_end_with_decode": {
+          "n": 500,
+          "median": 185.557,
+          "p95": 380.063,
+          "mean": 231.234,
+          "min": 95.469,
+          "max": 3502.024
+        }
+      },
+      "detector_fps_from_median": 5.54
+    },
+    "tum_fr1_desk_200": {
+      "n_frames": 200,
+      "warmup_frames": 10,
+      "stages_ms": {
+        "decode": {
+          "n": 200,
+          "median": 10.727,
+          "p95": 16.046,
+          "mean": 11.508,
+          "min": 8.672,
+          "max": 45.219
+        },
+        "preprocess": {
+          "n": 200,
+          "median": 6.251,
+          "p95": 7.507,
+          "mean": 6.431,
+          "min": 5.272,
+          "max": 10.519
+        },
+        "infer": {
+          "n": 200,
+          "median": 155.362,
+          "p95": 315.043,
+          "mean": 174.957,
+          "min": 136.681,
+          "max": 554.826
+        },
+        "postprocess": {
+          "n": 200,
+          "median": 0.223,
+          "p95": 0.337,
+          "mean": 0.271,
+          "min": 0.189,
+          "max": 4.916
+        },
+        "detector": {
+          "n": 200,
+          "median": 162.87,
+          "p95": 321.959,
+          "mean": 181.659,
+          "min": 143.535,
+          "max": 561.218
+        },
+        "end_to_end_with_decode": {
+          "n": 200,
+          "median": 173.94,
+          "p95": 332.427,
+          "mean": 193.167,
+          "min": 157.004,
+          "max": 572.919
+        }
+      },
+      "detector_fps_from_median": 6.14
+    },
+    "tum_fr3_long_office_200": {
+      "n_frames": 200,
+      "warmup_frames": 10,
+      "stages_ms": {
+        "decode": {
+          "n": 200,
+          "median": 10.55,
+          "p95": 53.884,
+          "mean": 14.816,
+          "min": 8.834,
+          "max": 91.362
+        },
+        "preprocess": {
+          "n": 200,
+          "median": 6.167,
+          "p95": 7.923,
+          "mean": 6.231,
+          "min": 4.017,
+          "max": 9.806
+        },
+        "infer": {
+          "n": 200,
+          "median": 144.54,
+          "p95": 289.084,
+          "mean": 169.35,
+          "min": 96.339,
+          "max": 1762.998
+        },
+        "postprocess": {
+          "n": 200,
+          "median": 0.219,
+          "p95": 0.315,
+          "mean": 0.246,
+          "min": 0.168,
+          "max": 2.239
+        },
+        "detector": {
+          "n": 200,
+          "median": 151.012,
+          "p95": 295.889,
+          "mean": 175.826,
+          "min": 102.782,
+          "max": 1771.095
+        },
+        "end_to_end_with_decode": {
+          "n": 200,
+          "median": 164.122,
+          "p95": 308.537,
+          "mean": 190.642,
+          "min": 111.616,
+          "max": 1783.277
+        }
+      },
+      "detector_fps_from_median": 6.62
+    }
+  }
+}

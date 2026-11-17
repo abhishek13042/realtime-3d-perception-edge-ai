@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+build/
+dist/
+
+# Data, weights and generated artifacts never go into Git (docs/dataset_audit.md §5)
+# Anchored to the repo root so the code package src/perception/data/ is NOT ignored
+/data/
+/datasets/
+*.tgz
+*.tar
+*.tar.gz
+*.zip
+*.mat
+*.sens
+*.pt
+*.pth
+*.onnx
+*.engine
+*.ply
+*.pcd
+*.npz
+*.mp4
+*.avi
+
+# Generated outputs (small, reviewed figures are added explicitly with git add -f)
+benchmarks/data_quality/alignment/
+benchmarks/data_quality/annotations/
+outputs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Model weights live outside Git (hash recorded in configs/detector.yaml)
+/models/
+
+# Large generated result files: sha256 recorded in benchmarks/results/index.json; regenerate with the scripts
+benchmarks/detection/*.jsonl
+benchmarks/*.log

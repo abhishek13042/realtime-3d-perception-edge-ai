@@ -1,0 +1,34 @@
+{
+ "run": "tum_fr1_s1",
+ "n_processed_frames": 573,
+ "n_tracks": 97,
+ "n_confirmed_tracks": 88,
+ "status_counts": {
+  "valid": 2088,
+  "low_coverage": 372,
+  "no_depth": 42
+ },
+ "tracker_update_ms": {
+  "passes": 3,
+  "median": 2.959,
+  "p95": 9.732,
+  "per_pass_median": [
+   3.59,
+   2.844,
+   2.959
+  ],
+  "target_ms": 2.0,
+  "meets_target": false
+ },
+ "determinism": {
+  "identical": true,
+  "file_roundtrip_identical": true
+ },
+ "spot_check_3d": {
+  "frames": 20,
+  "boxes": 80,
+  "max_abs_diff_m": 4.973985431311334e-07,
+  "mismatches": 0,
+  "pass": true
+ }
+}

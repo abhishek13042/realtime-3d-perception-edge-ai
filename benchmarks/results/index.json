@@ -1,0 +1,763 @@
+{
+ "spec": "05.1 R3",
+ "created_utc": "2026-11-11T09:27:56+00:00",
+ "protocol": {
+  "path": "docs/evaluation_protocol.md",
+  "sha256": "58e3b4f7b07e441564a7431fea27d83c77a329b4810207d1cf4a7c1fc25dde60",
+  "frozen_utc": "2026-11-11T08:00:08+00:00",
+  "current_sha256": "58e3b4f7b07e441564a7431fea27d83c77a329b4810207d1cf4a7c1fc25dde60",
+  "matches_frozen": true
+ },
+ "frozen_inputs": {
+  "configs/depth.yaml": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+  "configs/detector.yaml": "05c49ce46d9f16153d678b3650c42f6cf36d6429ac4a148bad57c4c579b4e09f",
+  "configs/tracker.yaml": "8832026648357df7e38285345124f605ee44e4080a1fb287cefaa8ae3b59e818",
+  "configs/class_map.yaml": "2900a9d8a812d2e044f4c4ab46b6839c2267795c69aa504430bde219dec0ef4b",
+  "configs/splits/sunrgbd_test.txt": "adadcd59ea80a8252aefaeeb40639d44e9547c8547f4932f8df21f1fa82a6fd4",
+  "configs/splits/sunrgbd_val.txt": "81c57c936154ab25f25396be9b1fd4a01bd0ac2009b51f810b92d5eea2195416"
+ },
+ "n_files": 40,
+ "n_incomplete": 31,
+ "files": [
+  {
+   "path": "benchmarks/data_quality/alignment_sun.json",
+   "headline": false,
+   "file_sha256": "1a66ed7b5897d734fbe19eb07c37aab563a6e9143a8c29dcc09e3c08c11015f4",
+   "file_mtime_utc": "2026-11-08T10:08:43+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/data_quality/alignment_tum.json",
+   "headline": false,
+   "file_sha256": "b54752aa28a5e74471ee612fd5e2aed3b6cc79de15dd6f8041f2cc4409d20ceb",
+   "file_mtime_utc": "2026-11-08T09:46:01+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/data_quality/annotations_check.json",
+   "headline": false,
+   "file_sha256": "236c3fab5dcaf25800790f77dadd675734359398bdccd3484fa2d886b886a418",
+   "file_mtime_utc": "2026-11-08T12:09:44+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": "test",
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/data_quality/sunrgbd.json",
+   "headline": false,
+   "file_sha256": "b92c2c493ae155c8f12667532d6c56bc48999b074ab366eacbfdcd47475084f7",
+   "file_mtime_utc": "2026-11-08T12:22:59+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": "sunrgbd",
+   "timestamp": null,
+   "sha256": {
+    "config_sha256_16": "09b3310e99f29041"
+   },
+   "missing": [
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/data_quality/sunrgbd_annotations.json",
+   "headline": false,
+   "file_sha256": "04ace6294a780bc9cf2278068a7328d85c958b7586f16eaf12a73555051b1c73",
+   "file_mtime_utc": "2026-11-08T12:08:07+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": "SUNRGBDMeta3DBB_v2.mat, SUNRGBDMeta2DBB_v2.mat, allsplit.mat",
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/data_quality/tum.json",
+   "headline": false,
+   "file_sha256": "9a9c56733280e9a00e42d594cb6c6f5096094fb8122e2d047d50acee50e97aec",
+   "file_mtime_utc": "2026-11-08T12:16:26+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": "tum",
+   "timestamp": null,
+   "sha256": {
+    "config_sha256_16": "09b3310e99f29041"
+   },
+   "missing": [
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/detection/class_confusion.json",
+   "headline": false,
+   "file_sha256": "be9d981c927623ee9bc293a199c9bf5cc12e20459fae986cb8eebc8571e632e8",
+   "file_mtime_utc": "2026-11-10T05:25:51+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/detection/detector_check.json",
+   "headline": false,
+   "file_sha256": "73fbc7e4ab3e8c09da4a5f52a621a7493efd6334089e35b2db759fcb36d431f7",
+   "file_mtime_utc": "2026-11-10T04:31:02+00:00",
+   "spec": "02.1 T5",
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": null,
+   "sha256": {
+    "weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+   },
+   "missing": [
+    "git_commit",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/detection/eval_baseline.json",
+   "headline": true,
+   "file_sha256": "5688d6648c4d454b70ed833721237d1e1a30a33fe9ca10f150ca6212e02dd799",
+   "file_mtime_utc": "2026-11-10T05:24:30+00:00",
+   "spec": "02.3",
+   "label": "Measured: YOLO26-n pretrained (COCO), no fine-tuning, PyTorch CPU",
+   "git_commit": null,
+   "git_dirty": true,
+   "split": "sunrgbd_test",
+   "timestamp": null,
+   "sha256": {
+    "run_header.weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "run_header.config_sha256": "4d2b70f2697a8feff0900d95a8e8792134f3a75aa1848d6be5149404b390080c"
+   },
+   "missing": [
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/detection/eval_nms_ablation.json",
+   "headline": false,
+   "file_sha256": "10df68f75e7946c45194ee8f3dd4518655b6f23af23acaa02be6973a0549fd9d",
+   "file_mtime_utc": "2026-11-10T07:58:23+00:00",
+   "spec": "02.3",
+   "label": "Measured: YOLO26-n pretrained (COCO), no fine-tuning, PyTorch CPU",
+   "git_commit": null,
+   "git_dirty": true,
+   "split": "sunrgbd_test",
+   "timestamp": null,
+   "sha256": {
+    "run_header.weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "run_header.config_sha256": "05c49ce46d9f16153d678b3650c42f6cf36d6429ac4a148bad57c4c579b4e09f"
+   },
+   "missing": [
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/detection/latency_cpu_torch.json",
+   "headline": false,
+   "file_sha256": "26e3949498784bb05adf41c7e4bcd9ff4f47e1c9cdda153314acdcc31118f2e2",
+   "file_mtime_utc": "2026-11-10T04:41:27+00:00",
+   "spec": "02.2 R3",
+   "label": "Measured: PyTorch CPU, local laptop",
+   "git_commit": null,
+   "git_dirty": true,
+   "split": null,
+   "timestamp": null,
+   "sha256": {
+    "provenance.weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "provenance.config_sha256": "4d2b70f2697a8feff0900d95a8e8792134f3a75aa1848d6be5149404b390080c"
+   },
+   "missing": [
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/detection/latency_cpu_torch_run2.json",
+   "headline": false,
+   "file_sha256": "abd7f59fc57ef6511468b52677611e410d0a165932771e0c4269960b0019682f",
+   "file_mtime_utc": "2026-11-10T04:45:23+00:00",
+   "spec": "02.2 R3",
+   "label": "Measured: PyTorch CPU, local laptop",
+   "git_commit": null,
+   "git_dirty": true,
+   "split": null,
+   "timestamp": null,
+   "sha256": {
+    "provenance.weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "provenance.config_sha256": "4d2b70f2697a8feff0900d95a8e8792134f3a75aa1848d6be5149404b390080c"
+   },
+   "missing": [
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/detection/repro_check.json",
+   "headline": false,
+   "file_sha256": "dc952b658520fc346833189e017b8cf4aa659cd687c11d40a912cd34afbcafc2",
+   "file_mtime_utc": "2026-11-10T05:33:49+00:00",
+   "spec": "02.2 AC2",
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/detection/tum_presence.json",
+   "headline": false,
+   "file_sha256": "baee0a3b06eb8e04ecdfe5b7456ed0b8a4ea2c21050234220dd7925c36bfe631",
+   "file_mtime_utc": "2026-11-10T05:25:06+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/geometry/fr1_distortion.json",
+   "headline": false,
+   "file_sha256": "bebe68c7cb5ce7caaf578b399e61575244245b0de899ab9596be871b68f34052",
+   "file_mtime_utc": "2026-11-10T09:11:11+00:00",
+   "spec": "03.2 R6 / AC4",
+   "label": "Measured (no GT): centre displacement raw vs undistorted pixels",
+   "git_commit": null,
+   "git_dirty": null,
+   "split": "rgbd_dataset_freiburg1_desk",
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/geometry/geometry_timing.json",
+   "headline": false,
+   "file_sha256": "d16dd0db2caa3d25f339a96296bc75fa1d26453d86a109ffaed1d3d7138608e2",
+   "file_mtime_utc": "2026-11-10T09:15:26+00:00",
+   "spec": "03.1 R9 / AC3; 03.2 R7 / AC5",
+   "label": "Measured: numpy CPU, local laptop (decode excluded)",
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/geometry/tune_val.json",
+   "headline": false,
+   "file_sha256": "fef0e70d1367688359e760ddb8b9272316e7ab9c2cb7aff57c59f112036abf55",
+   "file_mtime_utc": "2026-11-11T06:58:47+00:00",
+   "spec": "03.3",
+   "label": "Measured on SUN RGB-D val; parameters chosen here are frozen for Phase 05",
+   "git_commit": null,
+   "git_dirty": null,
+   "split": "sunrgbd_val",
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/geometry/tune_val_smoke.json",
+   "headline": false,
+   "file_sha256": "db5372a932e65694543ed0b6aa76b94ec0a53b993c16af6173d65c9cc06b096c",
+   "file_mtime_utc": "2026-11-10T09:30:38+00:00",
+   "spec": "03.3",
+   "label": "Measured on SUN RGB-D val; parameters chosen here are frozen for Phase 05",
+   "git_commit": null,
+   "git_dirty": null,
+   "split": "sunrgbd_val",
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/geometry/viewer/sun_007753.json",
+   "headline": false,
+   "file_sha256": "cc845ae0c868d52b77842ae066a67f4e8324d3a3d4641e2fec362fedc84cf505",
+   "file_mtime_utc": "2026-11-10T09:20:11+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/geometry/viewer/sun_008574.json",
+   "headline": false,
+   "file_sha256": "adaabb08977d8fa6760def567ab09e583bedaa554da7c14d657931dfa9808bbc",
+   "file_mtime_utc": "2026-11-10T09:20:21+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/geometry/viewer/sun_009543.json",
+   "headline": false,
+   "file_sha256": "d45cbfbce7680345e538f06b0f5fa410112c6be92e8a681b572f0579d9fd530c",
+   "file_mtime_utc": "2026-11-10T09:20:33+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/geometry/viewer/tum_freiburg1_desk_0286.json",
+   "headline": false,
+   "file_sha256": "c27136f51f1908dff637a5b4ab6a02434736d0752aa79eccdc3e8191e013e61a",
+   "file_mtime_utc": "2026-11-10T09:20:39+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/geometry/viewer/tum_freiburg3_long_office_household_1242.json",
+   "headline": false,
+   "file_sha256": "6413fa1b6bcd59b5ba6634de53d64a001554b02745283affd2739ca53153818e",
+   "file_mtime_utc": "2026-11-10T09:20:48+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": null,
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256",
+    "timestamp"
+   ]
+  },
+  {
+   "path": "benchmarks/results/failure_gallery.json",
+   "headline": false,
+   "file_sha256": "2651d4dc2c351420086d2fb869d5df471036b8475d1a971a3eee623314167a45",
+   "file_mtime_utc": "2026-11-11T08:27:00+00:00",
+   "spec": "05.4 R1",
+   "label": "Measured: rule-selected SUN test failure cases (detected mode)",
+   "git_commit": null,
+   "git_dirty": true,
+   "split": null,
+   "timestamp": "2026-11-11T08:20:14+00:00",
+   "sha256": {
+    "header.input_sha256.objects_npz": "05119265ce85ec8bb4296d731ed54c697a0e10e8cab5809955f58bc74ba2777b",
+    "review_sha256": "a6c53f6eff03187b0eadd265f912dd5f7fb9b30490b7afa404590e72e064012d"
+   },
+   "missing": []
+  },
+  {
+   "path": "benchmarks/results/localization_sun_test.json",
+   "headline": true,
+   "file_sha256": "7ce1a0875fd806459aa1e1da94595de0d34b998c7170311914635a806b48913e",
+   "file_mtime_utc": "2026-11-11T08:08:35+00:00",
+   "spec": "05.2",
+   "label": "Measured on SUN RGB-D test (headline, G3/G4)",
+   "git_commit": null,
+   "git_dirty": true,
+   "split": "sunrgbd_test",
+   "timestamp": "2026-11-11T08:08:31+00:00",
+   "sha256": {
+    "protocol_sha256": "58e3b4f7b07e441564a7431fea27d83c77a329b4810207d1cf4a7c1fc25dde60",
+    "config_sha256.depth": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+    "config_sha256.detector": "05c49ce46d9f16153d678b3650c42f6cf36d6429ac4a148bad57c4c579b4e09f",
+    "config_sha256.class_map": "2900a9d8a812d2e044f4c4ab46b6839c2267795c69aa504430bde219dec0ef4b",
+    "split_sha256": "adadcd59ea80a8252aefaeeb40639d44e9547c8547f4932f8df21f1fa82a6fd4",
+    "meta.run_header.weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "meta.run_header.config_sha256": "4d2b70f2697a8feff0900d95a8e8792134f3a75aa1848d6be5149404b390080c"
+   },
+   "missing": []
+  },
+  {
+   "path": "benchmarks/results/localization_sun_val_check.json",
+   "headline": false,
+   "file_sha256": "c84cc7070c333aef3123ca40ff636acfa0e9c991e4efc680d50b53c017da600d",
+   "file_mtime_utc": "2026-11-11T08:05:28+00:00",
+   "spec": "05.2",
+   "label": "Measured on SUN RGB-D val; code check against 03.3, not a headline",
+   "git_commit": null,
+   "git_dirty": true,
+   "split": "sunrgbd_val",
+   "timestamp": "2026-11-11T08:05:27+00:00",
+   "sha256": {
+    "protocol_sha256": "58e3b4f7b07e441564a7431fea27d83c77a329b4810207d1cf4a7c1fc25dde60",
+    "config_sha256.depth": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+    "config_sha256.detector": "05c49ce46d9f16153d678b3650c42f6cf36d6429ac4a148bad57c4c579b4e09f",
+    "config_sha256.class_map": "2900a9d8a812d2e044f4c4ab46b6839c2267795c69aa504430bde219dec0ef4b",
+    "split_sha256": "81c57c936154ab25f25396be9b1fd4a01bd0ac2009b51f810b92d5eea2195416",
+    "meta.run_header.weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "meta.run_header.config_sha256": "4d2b70f2697a8feff0900d95a8e8792134f3a75aa1848d6be5149404b390080c"
+   },
+   "missing": []
+  },
+  {
+   "path": "benchmarks/results/pipeline_equivalence_fr1.json",
+   "headline": false,
+   "file_sha256": "ea6bbddfa55db222d92a4d6d7edcdd38f5768617487ad42fe02a16a657205e13",
+   "file_mtime_utc": "2026-11-11T08:16:37+00:00",
+   "spec": "05.3 R2",
+   "label": "Measured: correctness check (not a timing run)",
+   "git_commit": null,
+   "git_dirty": true,
+   "split": "rgbd_dataset_freiburg1_desk",
+   "timestamp": "2026-11-11T08:16:37+00:00",
+   "sha256": {
+    "header.config_sha256.depth": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+    "header.config_sha256.tracker": "8832026648357df7e38285345124f605ee44e4080a1fb287cefaa8ae3b59e818",
+    "header.config_sha256.detector": "05c49ce46d9f16153d678b3650c42f6cf36d6429ac4a148bad57c4c579b4e09f",
+    "header.input_sha256.offline_tracks": "b9f22b8ac3389dca8c557cfb069744a0cf44f91baf5f40440fceebff4b17b1e1",
+    "header.input_sha256.detections": "792d88516e24eb52d288fc0f6cf7907f9a4a1e346874dd2e26c5e8eedb4f07df",
+    "header.detector_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+   },
+   "missing": []
+  },
+  {
+   "path": "benchmarks/results/pipeline_profile.json",
+   "headline": true,
+   "file_sha256": "08edf8bc19c39575384a10ec5f1789608909f2070b4ec5abcddc11173d154192",
+   "file_mtime_utc": "2026-11-11T09:19:34+00:00",
+   "spec": "05.3 R3-R6",
+   "label": "Measured: PyTorch CPU pipeline, local laptop",
+   "git_commit": null,
+   "git_dirty": true,
+   "split": null,
+   "timestamp": "2026-11-11T09:19:34+00:00",
+   "sha256": {
+    "header.config_sha256.depth": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+    "header.config_sha256.tracker": "8832026648357df7e38285345124f605ee44e4080a1fb287cefaa8ae3b59e818",
+    "header.config_sha256.detector": "05c49ce46d9f16153d678b3650c42f6cf36d6429ac4a148bad57c4c579b4e09f",
+    "header.input_sha256.tum_rgbd_dataset_freiburg1_desk_200.txt": "3e5b0aab9badec5caceaa21991f7b34c4fcb05e2f1ad20b52b07476e21a04989",
+    "header.input_sha256.tum_rgbd_dataset_freiburg3_long_office_household_200.txt": "d425e412ed18bdbf8895e096dc6838bbff92d54e53081dcb36168a9211b2e8b9",
+    "header.input_sha256.sunrgbd_test_500.txt": "b0ec5a62bc42eedb1524d1ed971a029e2bca13d53758a99173b0d46217011e87",
+    "header.detector_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+   },
+   "missing": []
+  },
+  {
+   "path": "benchmarks/results/repro_check.json",
+   "headline": true,
+   "file_sha256": "7ba4806ff3248ebe79ae922f829e6748723255ddd907d4debb5754a478f5b163",
+   "file_mtime_utc": "2026-11-11T09:27:24+00:00",
+   "spec": "05.4 R3",
+   "label": "Measured: from-scratch re-runs vs the reported values",
+   "git_commit": null,
+   "git_dirty": true,
+   "split": null,
+   "timestamp": "2026-11-11T08:25:07+00:00",
+   "sha256": {
+    "items.sun_test_200.reported_sha256": "05119265ce85ec8bb4296d731ed54c697a0e10e8cab5809955f58bc74ba2777b",
+    "items.fr3_s1_metrics.reported_sha256": "f17bbf8425340eec908e86eaf05ad4b9296c04c04b3e7022954fad953b028b14",
+    "items.detection_map.reported_sha256": "5688d6648c4d454b70ed833721237d1e1a30a33fe9ca10f150ca6212e02dd799",
+    "items.pipeline_median.reported_sha256": "08edf8bc19c39575384a10ec5f1789608909f2070b4ec5abcddc11173d154192",
+    "header.config_sha256.depth": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+    "header.config_sha256.tracker": "8832026648357df7e38285345124f605ee44e4080a1fb287cefaa8ae3b59e818",
+    "header.config_sha256.detector": "05c49ce46d9f16153d678b3650c42f6cf36d6429ac4a148bad57c4c579b4e09f",
+    "header.config_sha256.class_map": "2900a9d8a812d2e044f4c4ab46b6839c2267795c69aa504430bde219dec0ef4b"
+   },
+   "missing": []
+  },
+  {
+   "path": "benchmarks/tracking/eval_fr1_report.json",
+   "headline": false,
+   "file_sha256": "7d0802a19ad324e8033d2693d1e92c384d56ecc6ad299755a855ed893e413770",
+   "file_mtime_utc": "2026-11-11T07:39:54+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": true,
+   "split": "rgbd_dataset_freiburg1_desk",
+   "timestamp": "2026-11-11T07:39:54+00:00",
+   "sha256": {
+    "header.config_sha256.tracker": "8832026648357df7e38285345124f605ee44e4080a1fb287cefaa8ae3b59e818",
+    "header.config_sha256.depth": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+    "header.config_sha256.dataset": "1a30d6c8bee1fa5375f6a541d1efcf3c424838b20d6428fc0677682d31cf8ada",
+    "header.input_sha256.inventory": "27d38fbddd38a321a0e4b34d801c38541689ecc45826ea18456b239485bab99c",
+    "header.input_sha256.tum_fr1_s1.jsonl": "b9f22b8ac3389dca8c557cfb069744a0cf44f91baf5f40440fceebff4b17b1e1",
+    "header.input_sha256.tum_fr1_s6.jsonl": "11b665a5bf950deb20398428a20166394e2148ad3615010958f31842ceb0d9df"
+   },
+   "missing": []
+  },
+  {
+   "path": "benchmarks/tracking/eval_fr1_tune.json",
+   "headline": false,
+   "file_sha256": "4054ed4008f5880e0316a97f8eb6ec8625ca34981bfb1bf2e5b59622ea17f62e",
+   "file_mtime_utc": "2026-11-11T07:33:12+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": true,
+   "split": "rgbd_dataset_freiburg1_desk",
+   "timestamp": "2026-11-11T07:33:12+00:00",
+   "sha256": {
+    "header.config_sha256.tracker_after_freeze": "3937ff39912db95e7b1eb7fbb4651d9221b3b479121beba0ac3c44d38203a8d4",
+    "header.config_sha256.depth": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+    "header.config_sha256.dataset": "1a30d6c8bee1fa5375f6a541d1efcf3c424838b20d6428fc0677682d31cf8ada",
+    "header.input_sha256.detections": "792d88516e24eb52d288fc0f6cf7907f9a4a1e346874dd2e26c5e8eedb4f07df",
+    "header.input_sha256.inventory": "27d38fbddd38a321a0e4b34d801c38541689ecc45826ea18456b239485bab99c"
+   },
+   "missing": []
+  },
+  {
+   "path": "benchmarks/tracking/eval_fr3_report.json",
+   "headline": true,
+   "file_sha256": "f17bbf8425340eec908e86eaf05ad4b9296c04c04b3e7022954fad953b028b14",
+   "file_mtime_utc": "2026-11-11T07:39:50+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": true,
+   "split": "rgbd_dataset_freiburg3_long_office_household",
+   "timestamp": "2026-11-11T07:39:50+00:00",
+   "sha256": {
+    "header.config_sha256.tracker": "8832026648357df7e38285345124f605ee44e4080a1fb287cefaa8ae3b59e818",
+    "header.config_sha256.depth": "9e51c8b6b95c3dce536b1d9daac99ead022789c8fca69cf95a330a2e517db26f",
+    "header.config_sha256.dataset": "1a30d6c8bee1fa5375f6a541d1efcf3c424838b20d6428fc0677682d31cf8ada",
+    "header.input_sha256.inventory": "27d38fbddd38a321a0e4b34d801c38541689ecc45826ea18456b239485bab99c",
+    "header.input_sha256.tum_fr3_s1.jsonl": "febdf77fe6dd402524be435d8f1849b5c8991de2d0e13129592997178f9d0293",
+    "header.input_sha256.tum_fr3_s6.jsonl": "696c7e068d62bcf2000fe427fbcff31b94d3056d907e20b43cc246f37cff2e5f"
+   },
+   "missing": []
+  },
+  {
+   "path": "benchmarks/tracking/tum_fr1_s1_summary.json",
+   "headline": false,
+   "file_sha256": "91fa71b638687b87fed0e0cc681d4c800936fc3e3998dafce25475c2f83e667a",
+   "file_mtime_utc": "2026-11-11T07:35:01+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": true,
+   "split": "rgbd_dataset_freiburg1_desk",
+   "timestamp": "2026-11-11T07:34:49+00:00",
+   "sha256": {},
+   "missing": [
+    "config_or_input_sha256"
+   ]
+  },
+  {
+   "path": "benchmarks/tracking/tum_fr1_s1_timing.json",
+   "headline": false,
+   "file_sha256": "1a88a77f96ce46787767d1ee65e62af7e5462b9de3d36d7eddd418c6af910755",
+   "file_mtime_utc": "2026-11-11T07:38:18+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": "2026-11-11T07:38:18+00:00",
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256"
+   ]
+  },
+  {
+   "path": "benchmarks/tracking/tum_fr1_s6_summary.json",
+   "headline": false,
+   "file_sha256": "b90e6c3e1ca0d1fd81bd8b1a231226c2b3cee96d69cf8d432f8d140f5da37f6e",
+   "file_mtime_utc": "2026-11-11T07:35:14+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": true,
+   "split": "rgbd_dataset_freiburg1_desk",
+   "timestamp": "2026-11-11T07:35:12+00:00",
+   "sha256": {},
+   "missing": [
+    "config_or_input_sha256"
+   ]
+  },
+  {
+   "path": "benchmarks/tracking/tum_fr1_s6_timing.json",
+   "headline": false,
+   "file_sha256": "6704dd51e0208d10022052d93a7d91a88e43ceb256770a06e123ae63f8433cdc",
+   "file_mtime_utc": "2026-11-11T07:38:23+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": "2026-11-11T07:38:23+00:00",
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256"
+   ]
+  },
+  {
+   "path": "benchmarks/tracking/tum_fr3_s1_summary.json",
+   "headline": false,
+   "file_sha256": "9ad177555198e2272de60edbace6ec5306bb1c1dc58e5c165a44b85fa6677151",
+   "file_mtime_utc": "2026-11-11T07:37:01+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": true,
+   "split": "rgbd_dataset_freiburg3_long_office_household",
+   "timestamp": "2026-11-11T07:36:32+00:00",
+   "sha256": {},
+   "missing": [
+    "config_or_input_sha256"
+   ]
+  },
+  {
+   "path": "benchmarks/tracking/tum_fr3_s1_timing.json",
+   "headline": false,
+   "file_sha256": "cb8f04962b56a4127721a485ffdff1c8535a5a3f577fc3f2584e067447e66d5c",
+   "file_mtime_utc": "2026-11-11T07:39:13+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": "2026-11-11T07:39:13+00:00",
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256"
+   ]
+  },
+  {
+   "path": "benchmarks/tracking/tum_fr3_s6_summary.json",
+   "headline": false,
+   "file_sha256": "3a492659a1a8d3349aa5964611ed360764e8a4bf21f18be608f45fdaf7eca8b8",
+   "file_mtime_utc": "2026-11-11T07:37:22+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": true,
+   "split": "rgbd_dataset_freiburg3_long_office_household",
+   "timestamp": "2026-11-11T07:37:18+00:00",
+   "sha256": {},
+   "missing": [
+    "config_or_input_sha256"
+   ]
+  },
+  {
+   "path": "benchmarks/tracking/tum_fr3_s6_timing.json",
+   "headline": false,
+   "file_sha256": "d7eea1fafa9317a3ef1ec7fc14d005369975405bd60fc3f5d36196f72c5f8267",
+   "file_mtime_utc": "2026-11-11T07:39:26+00:00",
+   "spec": null,
+   "label": null,
+   "git_commit": null,
+   "git_dirty": null,
+   "split": null,
+   "timestamp": "2026-11-11T07:39:26+00:00",
+   "sha256": {},
+   "missing": [
+    "git_commit",
+    "config_or_input_sha256"
+   ]
+  }
+ ]
+}

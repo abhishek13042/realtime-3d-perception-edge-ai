@@ -1,0 +1,79 @@
+25/528 images, 101 objects, 19s (~376s left)
+50/528 images, 210 objects, 46s (~437s left)
+75/528 images, 338 objects, 73s (~440s left)
+100/528 images, 436 objects, 1320s (~5648s left)
+125/528 images, 535 objects, 1358s (~4378s left)
+150/528 images, 723 objects, 1387s (~3496s left)
+175/528 images, 878 objects, 1414s (~2852s left)
+200/528 images, 1000 objects, 1424s (~2335s left)
+225/528 images, 1089 objects, 1431s (~1928s left)
+250/528 images, 1179 objects, 1448s (~1610s left)
+275/528 images, 1305 objects, 1460s (~1343s left)
+300/528 images, 1444 objects, 1472s (~1118s left)
+325/528 images, 1718 objects, 1491s (~931s left)
+350/528 images, 1809 objects, 1501s (~763s left)
+375/528 images, 1875 objects, 1514s (~618s left)
+400/528 images, 1922 objects, 1526s (~488s left)
+425/528 images, 2111 objects, 1550s (~376s left)
+450/528 images, 2193 objects, 1566s (~271s left)
+475/528 images, 2363 objects, 1599s (~178s left)
+500/528 images, 2447 objects, 1629s (~91s left)
+525/528 images, 2554 objects, 1664s (~10s left)
+cached 2575 objects x 150 configs -> D:\Project 5 CV\benchmarks\geometry\tune_val_objects.npz (1667.3s)
+{
+ "chosen": {
+  "estimator": "A",
+  "shrink": 0.5,
+  "bin_m": null,
+  "m_frac": null,
+  "k": 3.0
+ },
+ "selection": {
+  "best_objective_m": 0.3091,
+  "n_feasible": 90,
+  "n_within_5mm": 9,
+  "chosen_objective_m": 0.3091,
+  "chosen_valid_fraction": 0.6287
+ },
+ "thresholds": {
+  "n_min": 20,
+  "tau_cov": 0.2,
+  "tau_spread_m": 0.5
+ },
+ "n_min_check": {
+  "n_20_50": 5,
+  "median_err_20_50_m": 0.4062,
+  "n_ge_50": 1688,
+  "median_err_ge_50_m": 0.3237,
+  "ratio": 1.255,
+  "n_min": 20
+ },
+ "oracle": {
+  "status_fractions": {
+   "valid": 0.888,
+   "low_coverage": 0.105,
+   "no_depth": 0.007,
+   "n": 1705
+  },
+  "ratio_low_over_valid_median": 1.434
+ },
+ "oracle_valid_all": {
+  "n": 1514,
+  "centre_median_m": 0.3135,
+  "centre_mean_m": 0.4313,
+  "centre_p90_m": 0.9317,
+  "z_mae_m": 0.3332,
+  "z_rmse_m": 0.5063,
+  "z_signed_mean_m": -0.1287
+ },
+ "detected_valid_all": {
+  "n": 775,
+  "centre_median_m": 0.268,
+  "centre_mean_m": 0.3575,
+  "centre_p90_m": 0.8052,
+  "z_mae_m": 0.2597,
+  "z_rmse_m": 0.3889,
+  "z_signed_mean_m": -0.0668
+ }
+}
+wrote benchmarks/geometry/tune_val.json, configs/depth.yaml, docs/depth_tuning.md, depth_tuning_worst12.png

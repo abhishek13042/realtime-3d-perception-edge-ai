@@ -1,0 +1,56 @@
+{
+  "spec": "02.1 T5",
+  "n_images": 20,
+  "image_ids": [
+    "005155",
+    "005311",
+    "005466",
+    "006044",
+    "006527",
+    "006769",
+    "007918",
+    "007922",
+    "008113",
+    "008163",
+    "008293",
+    "008360",
+    "008463",
+    "008524",
+    "009075",
+    "009400",
+    "009509",
+    "009842",
+    "010050",
+    "010182"
+  ],
+  "conf": 0.25,
+  "imgsz": 640,
+  "head": "one2one",
+  "weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "digest_run1": "eda4c6f5d9e70d4e9894199266c955d3a7a90db4b791a77da5da3602944258d7",
+  "same_process_identical": true,
+  "parity": {
+    "one2one": {
+      "ours": 81,
+      "reference": 81,
+      "matched": 81,
+      "images_same_count": 20,
+      "min_matched_iou": 0.999996,
+      "max_abs_score_diff": 0.000122
+    },
+    "one2many_nms": {
+      "ours": 90,
+      "reference": 90,
+      "matched": 90,
+      "images_same_count": 20,
+      "min_matched_iou": 0.999997,
+      "max_abs_score_diff": 3.22e-06
+    }
+  },
+  "dev_timing_ms_median_preprocess_infer_postprocess": [
+    5.92,
+    117.34,
+    0.17
+  ],
+  "note": "Timing is a smoke figure (20 images, no warm-up protocol); the latency benchmark is spec 02.2."
+}

@@ -1,0 +1,65 @@
+﻿sun_val_nms: 528 frames, 0 already done, 528 to run
+  100/528  250 ms/frame  eta 1.8 min
+  200/528  228 ms/frame  eta 1.2 min
+  300/528  1041 ms/frame  eta 4.0 min
+  400/528  838 ms/frame  eta 1.8 min
+  500/528  726 ms/frame  eta 0.3 min
+  528/528  702 ms/frame  eta 0.0 min
+wrote benchmarks\detection\sun_val_nms.jsonl: 528/528 frames
+sun_test_nms: 5050 frames, 0 already done, 5050 to run
+  100/5050  514 ms/frame  eta 42.4 min
+  200/5050  490 ms/frame  eta 39.6 min
+  300/5050  392 ms/frame  eta 31.0 min
+  400/5050  341 ms/frame  eta 26.4 min
+  500/5050  316 ms/frame  eta 24.0 min
+  600/5050  298 ms/frame  eta 22.1 min
+  700/5050  287 ms/frame  eta 20.8 min
+  800/5050  277 ms/frame  eta 19.6 min
+  900/5050  268 ms/frame  eta 18.5 min
+  1000/5050  263 ms/frame  eta 17.8 min
+  1100/5050  256 ms/frame  eta 16.9 min
+  1200/5050  249 ms/frame  eta 16.0 min
+  1300/5050  245 ms/frame  eta 15.3 min
+  1400/5050  244 ms/frame  eta 14.8 min
+  1500/5050  244 ms/frame  eta 14.4 min
+  1600/5050  241 ms/frame  eta 13.8 min
+  1700/5050  239 ms/frame  eta 13.4 min
+  1800/5050  239 ms/frame  eta 12.9 min
+  1900/5050  237 ms/frame  eta 12.4 min
+  2000/5050  234 ms/frame  eta 11.9 min
+  2100/5050  232 ms/frame  eta 11.4 min
+  2200/5050  230 ms/frame  eta 10.9 min
+  2300/5050  228 ms/frame  eta 10.4 min
+  2400/5050  226 ms/frame  eta 10.0 min
+  2500/5050  226 ms/frame  eta 9.6 min
+  2600/5050  228 ms/frame  eta 9.3 min
+  2700/5050  230 ms/frame  eta 9.0 min
+  2800/5050  429 ms/frame  eta 16.1 min
+  2900/5050  425 ms/frame  eta 15.2 min
+  3000/5050  418 ms/frame  eta 14.3 min
+  3100/5050  415 ms/frame  eta 13.5 min
+  3200/5050  412 ms/frame  eta 12.7 min
+  3300/5050  406 ms/frame  eta 11.8 min
+  3400/5050  400 ms/frame  eta 11.0 min
+  3500/5050  398 ms/frame  eta 10.3 min
+  3600/5050  393 ms/frame  eta 9.5 min
+  3700/5050  387 ms/frame  eta 8.7 min
+  3800/5050  381 ms/frame  eta 7.9 min
+  3900/5050  376 ms/frame  eta 7.2 min
+  4000/5050  371 ms/frame  eta 6.5 min
+  4100/5050  367 ms/frame  eta 5.8 min
+  4200/5050  362 ms/frame  eta 5.1 min
+  4300/5050  358 ms/frame  eta 4.5 min
+  4400/5050  353 ms/frame  eta 3.8 min
+  4500/5050  349 ms/frame  eta 3.2 min
+  4600/5050  346 ms/frame  eta 2.6 min
+  4700/5050  343 ms/frame  eta 2.0 min
+  4800/5050  342 ms/frame  eta 1.4 min
+  4900/5050  340 ms/frame  eta 0.9 min
+  5000/5050  434 ms/frame  eta 0.4 min
+  5050/5050  433 ms/frame  eta 0.0 min
+wrote benchmarks\detection\sun_test_nms.jsonl: 5050/5050 frames
+val: 528 images, 2172 GT; best F1 0.502 at conf 0.2338 (P 0.503, R 0.501); val AP50 0.37261
+test: mAP 0.22633, AP50 0.32021, AR100 0.56228; at conf 0.2338: P 0.510 R 0.520 F1 0.515
+wrote benchmarks\detection\eval_nms_ablation.json
+ALL DONE

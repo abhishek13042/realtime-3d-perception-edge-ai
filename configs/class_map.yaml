@@ -1,0 +1,43 @@
+# SUN RGB-D normalized class name -> COCO class name (spec 01.4 R2; reused by Phase 02 evaluation).
+# Only classes with an unambiguous COCO counterpart are mapped. DRAFT: review before Phase 02.
+# Deliberately unmapped: desk (no COCO class; COCO "dining table" is a different object category),
+# night_stand / dresser / cabinet / shelf (no COCO class), monitor vs tv (mapped to tv; COCO has no "monitor").
+sun_to_coco:
+  chair: chair
+  sofa: couch
+  sofa_chair: couch   # kept 2026-11-11 (YOLO often says chair; see spec 02.3 — not changed after seeing test)
+  bed: bed
+  table: dining table
+  dining_table: dining table
+  toilet: toilet
+  sink: sink
+  tv: tv
+  television: tv
+  monitor: tv
+  laptop: laptop
+  keyboard: keyboard
+  mouse: mouse
+  book: book
+  books: book
+  bottle: bottle
+  cup: cup
+  mug: cup
+  bowl: bowl
+  clock: clock
+  vase: vase
+  plant: potted plant
+  potted_plant: potted plant
+  flower_vase: vase
+  refridgerator: refrigerator
+  refrigerator: refrigerator
+  fridge: refrigerator
+  microwave: microwave
+  oven: oven
+  bench: bench
+  backpack: backpack
+  suitcase: suitcase
+  teddy_bear: teddy bear
+  stuffed_animal: teddy bear
+  remote_control: remote
+  phone: cell phone
+  cell_phone: cell phone
